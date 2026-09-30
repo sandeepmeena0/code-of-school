@@ -997,3 +997,38 @@ ul li::before {
     font-size: 13px;
   }
 }
+
+/* Back to Blogs Button */
+.blog-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f1f5f9;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
+  margin-bottom: 20px;
+}
+
+.blog-back-btn i {
+  transition: transform 0.2s ease;
+}
+
+.blog-back-btn:hover {
+  background: rgba(249, 115, 22, 0.25);
+  border-color: rgba(249, 115, 22, 0.6);
+  color: #fdba74;
+  transform: translateX(-3px);
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.25);
+}
+
+.blog-back-btn:hover i {
+  transform: translateX(-3px);
+}
+

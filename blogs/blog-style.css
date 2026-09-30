@@ -554,6 +554,39 @@ body.blog-page-body {
     box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
 }
 
+/* Back to Blogs Button */
+.blog-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    background: rgba(255, 255, 255, 0.07);
+    color: #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    backdrop-filter: blur(8px);
+}
+
+.blog-back-btn i {
+    transition: transform 0.2s ease;
+}
+
+.blog-back-btn:hover {
+    background: rgba(249, 115, 22, 0.2);
+    border-color: rgba(249, 115, 22, 0.5);
+    color: #fdba74;
+    transform: translateX(-3px);
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.2);
+}
+
+.blog-back-btn:hover i {
+    transform: translateX(-3px);
+}
+
 /* Responsive Breakpoints */
 @media (max-width: 768px) {
     body.blog-page-body {
