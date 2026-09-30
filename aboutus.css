@@ -1,0 +1,1453 @@
+/* Global Resets */
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.main {
+    overflow-x: hidden;
+    width: 100%;
+    /* Consider min-height: 100vh for content that might extend beyond viewport */
+}
+
+/* Body padding to prevent content from going under fixed navbar */
+body {
+    padding-top: 10px;
+    background-color: #000000;
+    min-height: 200vh;
+    /* For demonstration of fixed navbar and scrolling */
+    margin: 0;
+    /* Remove default body margin */
+    font-family: Arial, sans-serif;
+    /* A basic font for readability */
+}
+
+/* FOR NAVIGATION BAR */
+
+header {
+    display: flex;
+    padding: 15px 30px 15px 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    align-items: center;
+    height: 100px;
+    /* Fixed height for the header */
+    box-sizing: border-box;
+    /* Include padding in height */
+}
+
+nav {
+    display: flex;
+    height: 70px;
+    /* Height for the nav content within header */
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.nav-image {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    /* Prevent shrinking on smaller screens */
+}
+
+/* FOR IMAGE OF NAV BAR */
+.nav-image img {
+    height: 70px;
+    max-height: 70px;
+    width: auto;
+}
+
+/* PAGES LIKE HOME ABOUTUS */
+.nav-pg {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.nav-page {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-page li {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.nav-page li a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+    /* Prevent text wrapping */
+}
+
+.nav-page li a:hover,
+.nav-page li a.active {
+    /* Added active state for the Courses link */
+    color: blue;
+}
+
+.nav-page li a:active {
+    transform: translateY(1px);
+    /* Slight push down effect */
+    color: darkblue;
+    /* Darker blue on press */
+}
+
+
+/* FOR BUTTON OF NAV BAR */
+.nav-but {
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
+    /* Prevent shrinking on smaller screens */
+}
+
+.nav-but button {
+    background-color: blueviolet;
+    padding: 15px 14px;
+    color: white;
+    font-size: 17px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.nav-but button:hover {
+    background: linear-gradient(180deg, rgba(211, 231, 232, 1) 0%, rgba(216, 216, 232, 1) 51%, rgba(227, 216, 216, 1) 100%);
+    padding: 17px 16px;
+    color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Hamburger Menu Icon (Hidden by default on desktop) */
+.hamburger-menu {
+    display: none;
+    /* Controlled by media queries */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+/* Dropdown Panel for Courses (Desktop) */
+.dropdown-panel {
+    display: none;
+    /* Hidden by default, shown by JS */
+    position: fixed;
+    /* Position relative to the parent header/nav for full width */
+    top: 100px;
+    /* Height of the header */
+    left: 500px;
+    width: 50%;
+    /* Spans full width of the header */
+    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.9);
+    color: black;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    z-index: 999;
+    /* Below the header but above other content */
+    border-radius: 0 0 10px 10px;
+    /* Rounded corners at the bottom */
+    overflow: hidden;
+    /* Ensure content stays within border-radius */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
+    box-sizing: border-box;
+    /* Include padding/border in width */
+}
+
+.dropdown-panel.show-dropdown {
+    /* Class added by JS to show the dropdown */
+    display: flex;
+}
+
+.dropdown-panel .categories {
+    width: 30%;
+    border-right: 1px solid #ccc;
+    color: white;
+    background-color: rgba(18, 18, 192, 0.1);
+    /* Slightly more opaque */
+    padding: 10px 0;
+    /* Add some vertical padding */
+    box-sizing: border-box;
+}
+
+.dropdown-panel .categories li {
+    list-style: none;
+    padding: 10px 20px;
+    /* Increased padding for better click area */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+    /* Prevent category text wrapping */
+}
+
+.dropdown-panel .categories li:hover,
+.dropdown-panel .categories li.active {
+    background-color: rgba(220, 220, 220, 0.2);
+    /* Lighter gray hover/active */
+    /* Removed border styles here as they can interfere with clean design */
+}
+
+.dropdown-panel .courses {
+    width: 70%;
+    padding: 15px;
+    /* Increased padding */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* Gap between course items */
+    list-style: none;
+    margin: 0;
+    background-color: rgba(18, 18, 192, 0.2);
+    /* Lighter blue, less opaque */
+    border-bottom-right-radius: 10px;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    /* Align courses to the start */
+    align-content: flex-start;
+    /* Align rows to the start */
+}
+
+.dropdown-panel .courses li {
+    width: calc(50% - 5px);
+    /* Two columns with gap */
+    border-radius: 5px;
+    /* Slightly more rounded */
+    height: 40px;
+    /* Taller items */
+    padding: 0 10px;
+    /* Horizontal padding for text */
+    box-sizing: border-box;
+    line-height: 40px;
+    /* Vertically center text */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Align text to the left */
+    border: 1px solid rgba(18, 18, 192, 0.2);
+    /* Border matching background */
+    cursor: pointer;
+    color: #ffffff;
+    /* Darker text for readability */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* White background for course items */
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.dropdown-panel .courses li:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.2);
+
+    border: rgba(255, 255, 255, 0.5) solid 1px;
+    color: white;
+}
+
+/* Mobile Navigation Overlay (Hidden by default) */
+.mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    /* Higher z-index to cover everything */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* Align items from the top */
+    padding-top: 70px;
+    /* Space from the top */
+    box-sizing: border-box;
+
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s 0.3s, pointer-events 0s 0.3s;
+}
+
+.mobile-nav-overlay.active {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s 0s, pointer-events 0s 0s;
+}
+
+.mobile-nav-overlay .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 10000;
+    /* Ensure close button is clickable */
+}
+
+.mobile-nav-overlay ul.mobile-nav-page {
+    list-style: none;
+    padding: 0;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    /* Adjusted margin for overall layout */
+    margin-bottom: 20px;
+    /* Space before button */
+}
+
+.mobile-nav-overlay ul.mobile-nav-page li {
+    margin: 15px 0;
+    width: 100%;
+    /* Make list items take full width for better tapping */
+    text-align: center;
+}
+
+.mobile-nav-overlay ul.mobile-nav-page li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 10px 20px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.mobile-nav-overlay ul.mobile-nav-page li a:hover {
+    color: blue;
+}
+
+/* Mobile Courses Sub-Dropdown (nested) */
+.mobile-courses-dropdown {
+    display: none;
+    /* Hidden by default, shown by JS */
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Slightly visible background */
+    border-radius: 5px;
+    max-height: 0;
+    /* For collapse effect */
+    overflow: hidden;
+    /* Hide overflow during collapse */
+    transition: max-height 0.3s ease-out;
+    /* Smooth transition */
+}
+
+.mobile-courses-dropdown.active {
+    display: block;
+    /* Show the block */
+    max-height: 300px;
+    /* Adjust as needed to fit all courses, or use 'none' for instant */
+    /* Consider a dynamic max-height based on content for more precise animation */
+}
+
+.mobile-courses-dropdown li {
+    margin: 0;
+    /* Reset margin */
+}
+
+.mobile-courses-dropdown li a {
+    font-size: 18px;
+    /* Smaller font for sub-items */
+    padding: 8px 15px;
+    /* Adjust padding */
+    color: lightgray;
+    /* Different color for sub-items */
+    display: block;
+}
+
+.mobile-courses-dropdown li a:hover {
+    color: skyblue;
+    /* Hover color for sub-items */
+}
+
+
+.mobile-nav-overlay .mobile-nav-button {
+    width: auto;
+    margin-top: 30px;
+    justify-content: center;
+    display: flex;
+}
+
+.mobile-nav-overlay .mobile-nav-button button {
+    padding: 12px 20px;
+    font-size: 18px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-overlay .mobile-nav-button button:hover {
+    background: linear-gradient(180deg, rgba(211, 231, 232, 1) 0%, rgba(216, 216, 232, 1) 51%, rgba(227, 216, 216, 1) 100%);
+    color: blue;
+}
+
+/* Tablets and smaller desktops (max-width: 1024px) */
+@media (max-width: 1224px) {
+    header {
+        padding: 10px 15px;
+        height: 80px;
+        /* Slightly reduced header height */
+    }
+
+    nav {
+        height: 50px;
+        /* Reduced nav content height */
+    }
+
+    .nav-image {
+        width: 18%;
+        /* Adjusted width */
+    }
+
+    .nav-image img {
+        height: 50px;
+        max-height: 50px;
+    }
+
+    .nav-pg {
+        width: 55%;
+        /* Adjusted width */
+    }
+
+    .nav-page li a {
+        font-size: 15px;
+        padding: 0 6px;
+        /* Reduced padding */
+    }
+
+    .nav-but {
+        width: 20%;
+        /* Adjusted width */
+    }
+
+    .nav-but button {
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+
+    /* Dropdown panel position for smaller screens */
+    .dropdown-panel {
+        top: 80px;
+        /* Adjust based on new header height */
+        left: 400px;
+    }
+}
+
+@media (max-width:990px) {
+    .dropdown-panel {
+        top: 80px;
+        /* Adjust based on new header height */
+        left: 300px;
+    }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 780px) {
+    header {
+        height: 70px;
+        /* Mobile header height */
+        padding: 10px 15px;
+        /* Consistent padding */
+    }
+
+    nav {
+        height: 50px;
+        justify-content: space-between;
+    }
+
+    .nav-image {
+        width: auto;
+        flex-grow: 1;
+        /* Allow image to take available space */
+    }
+
+    .nav-image img {
+        height: 45px;
+        /* Smaller logo for mobile */
+        max-height: 45px;
+    }
+
+    /* Hide desktop navigation links and button */
+    .nav-pg,
+    .nav-but {
+        display: none;
+    }
+
+    /* Hide desktop dropdown on mobile */
+    .dropdown-panel {
+        display: none !important;
+        /* Force hide the desktop dropdown */
+    }
+
+    /* Show hamburger menu icon */
+    .hamburger-menu {
+        display: block;
+        margin-right: 15px;
+    }
+
+    /* Mobile overlay adjustments */
+    .mobile-nav-overlay {
+        padding-top: 50px;
+        /* Adjusted padding */
+    }
+
+    .mobile-nav-overlay .close-btn {
+        top: 15px;
+        right: 15px;
+        font-size: 35px;
+    }
+
+    .mobile-nav-overlay ul.mobile-nav-page {
+        margin-top: 40px;
+        /* Adjusted margin */
+    }
+
+    .mobile-nav-overlay ul.mobile-nav-page li a {
+        font-size: 22px;
+        padding: 8px 15px;
+    }
+
+    .mobile-nav-overlay .mobile-nav-button button {
+        padding: 10px 18px;
+        font-size: 16px;
+    }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 8px 10px;
+        height: 60px;
+        /* Even smaller header height */
+    }
+
+    nav {
+        height: 40px;
+    }
+
+    .nav-image img {
+        height: 40px;
+        max-height: 40px;
+    }
+
+    .hamburger-menu {
+        font-size: 28px;
+        margin-right: 10px;
+    }
+
+    .mobile-nav-overlay {
+        padding-top: 40px;
+    }
+
+    .mobile-nav-overlay .close-btn {
+        font-size: 30px;
+    }
+
+    .mobile-nav-overlay ul.mobile-nav-page li a {
+        font-size: 18px;
+        padding: 6px 12px;
+    }
+
+    .mobile-nav-overlay .mobile-nav-button button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Extra small mobile devices (max-width: 280px) */
+@media (max-width: 280px) {
+    header {
+        padding: 5px 8px;
+        height: 50px;
+    }
+
+    nav {
+        height: 35px;
+    }
+
+    .nav-image img {
+        height: 35px;
+        /* Smallest logo size */
+        max-height: 35px;
+    }
+
+    .hamburger-menu {
+        font-size: 24px;
+        margin-right: 8px;
+    }
+
+    .mobile-nav-overlay {
+        padding-top: 30px;
+    }
+
+    .mobile-nav-overlay .close-btn {
+        font-size: 28px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .mobile-nav-overlay ul.mobile-nav-page li {
+        margin: 10px 0;
+    }
+
+    .mobile-nav-overlay ul.mobile-nav-page li a {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+
+    .mobile-nav-overlay .mobile-nav-button {
+        margin-top: 20px;
+    }
+
+    .mobile-nav-overlay .mobile-nav-button button {
+        padding: 6px 12px;
+        font-size: 12px;
+        width: 90%;
+        max-width: 150px;
+    }
+}
+
+/* ---------------------------ABOUT US PAGE */
+.about-faculty {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, rgba(21, 53, 158, 1) 1%, rgba(0, 0, 0, 1) 55%);
+}
+
+#heading-about {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    /* Ensure text is centered on smaller screens */
+    
+}
+
+.aboutpage-partone {
+    display: flex;
+    width: 80%;
+    padding: 100px 50px 50px 50px;
+    justify-content: space-between;
+}
+
+.aboutpage-partone-one {
+    width: 48%;
+}
+
+.aboutpage-partone-one h2 {
+    font-size: 52px;
+    font-family: sans-serif;
+    color: white;
+}
+
+.aboutpage-partone-one img {
+    width: 90%;
+    height: auto;
+    /* Ensure image scales proportionally */
+    display: block;
+    /* Remove extra space below image */
+    margin: 20px auto;
+    /* Center image if it's smaller than its container */
+}
+
+.aboutpage-partone-two {
+    width: 45%;
+}
+
+#aboutpage-head-two {
+    font-family: sans-serif;
+    font-size: 35px;
+    padding-bottom: 25px;
+    color: white;
+}
+#aboutpage-head-two em{
+     font-style: normal;
+  background: linear-gradient(110deg, #f97316 10%, #fbbf24 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-content {
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 25px;
+    line-height: 1.5;
+    color: white;
+    font-family: sans-serif;
+}
+
+#aboutpage-head-three {
+    font-size: 42px;
+    font-family: sans-serif;
+    padding-bottom: 25px;
+    color: white;
+
+}
+
+#aboutpage-head-four {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    padding-bottom: 50px;
+    /* Added padding for spacing */
+}
+        #aboutpage-head-four u {
+     font-style: normal;
+  background: linear-gradient(110deg, #f97316 10%, #fbbf24 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-content-two {
+    width: 78%;
+    /* This seems to be a standalone text block outside partone/parttwo */
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 20px;
+    /* Centered for standalone text */
+}
+
+.aboutpage-parttwo {
+    display: flex;
+    width: 80%;
+    padding-top: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
+}
+
+.member-one,
+.member-two,
+.member-three {
+    width: 25%;
+    /* Adjust width to fit three items per row */
+    padding: 20px 0;
+    /* Add some vertical padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center content within each member block */
+    text-align: center;
+    /* Center text within each member block */
+}
+
+.member-one img,
+.member-two img,
+.member-three img {
+    width: 80%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 50%;
+    /* Use 50% for perfect circle */
+    margin-bottom: 15px;
+    /* Space between image and text */
+}
+
+.member-one li,
+.member-two li,
+.member-three li {
+    list-style: none;
+    /* Remove bullet points */
+    width: 100%;
+    /* Take full width of parent member div */
+    font-size: 16px;
+    color: white;
+    font-family: sans-serif;
+    padding: 5px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Ensure text is centered */
+}
+
+
+/* PART THREE */
+.aboutpage-partthree {
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.aboutpage-partthree h2 {
+    display: flex;
+    align-items: center;
+    font-size: 37px;
+    color: white;
+    font-family: sans-serif;
+    padding-bottom: 20px;
+    text-align: center;
+    /* Center heading */
+    justify-content: center;
+}
+
+.aboutpage-partthree ul {
+    list-style: disc inside;
+    /* Ensure list items have bullets and indent */
+    padding-left: 0;
+    /* Remove default ul padding if needed */
+}
+
+.aboutpage-partthree li {
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: white;
+    font-family: sans-serif;
+    padding: 9px 0px 9px 20px;
+    /* Adjusted padding */
+    text-align: center;
+    /* Keep list item text aligned left */
+}
+
+/* ABOUT PAGE CONTENT FOUR */
+.vmv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.aboutpage-partfour {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Allow items to wrap */
+    padding-bottom: 100px;
+    /* Add bottom padding to section */
+}
+
+.partfour-head {
+    font-size: 37px;
+    font-family: sans-serif;
+    color: white;
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+    width: 100%;
+    /* Make heading take full width */
+}
+
+.partfour-one,
+.partfour-two,
+.partfour-three {
+    width: 30%;
+    /* Adjust width for three columns */
+    padding: 20px;
+    /* Add padding around each card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.partfour-one img,
+.partfour-two img,
+.partfour-three img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.partfour-para {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 0px 10px 0px;
+    /* Adjusted padding */
+    text-align: justify;
+    line-height: 1.5;
+    color: white;
+    font-family: sans-serif;
+}
+
+/* ------------------------------------------- */
+/* RESPONSIVE STYLES (MEDIA QUERIES)         */
+/* ------------------------------------------- */
+
+/* Tablets and smaller desktops (e.g., max-width: 1024px) */
+@media (max-width:1213px) {
+    .aboutpage-parttwo {
+        width: 90%;
+        padding: 70px 30px 30px 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .member-one img,
+    .member-two img,
+    .member-three img {
+        width: 80%;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 15px;
+    }
+
+    .aboutpage-partfour {
+        width: 90%;
+        padding-bottom: 70px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .partfour-one,
+    .partfour-two,
+    .partfour-three {
+        width: 80%;
+        margin-bottom: 40px;
+        padding: 15px;
+    }
+
+    .partfour-one,
+    .partfour-two,
+    .partfour-three {
+        width: 80%;
+        margin-bottom: 40px;
+        padding: 15px;
+    }
+
+    .partfour-para {
+        font-size: 20px;
+        font-weight: 500;
+        padding: 10px 0px 10px 0px;
+        line-height: 1.5;
+        color: white;
+        font-family: sans-serif;
+    }
+
+}
+
+
+@media (max-width: 1024px) {
+    .about-faculty {
+        padding-top: 70px;
+    }
+
+    #heading-about {
+        padding-top: 70px;
+        font-size: 45px;
+    }
+
+    .aboutpage-partone {
+        width: 90%;
+        padding: 70px 30px 30px 30px;
+        flex-direction: column;
+        /* Stack image and text vertically */
+        align-items: center;
+        /* Center items when stacked */
+    }
+
+    .aboutpage-partone-one,
+    .aboutpage-partone-two {
+        width: 100%;
+        /* Take full width when stacked */
+        padding: 20px 0;
+        /* Add vertical space between stacked items */
+        text-align: center;
+        /* Center text content */
+    }
+
+    .aboutpage-partone-one h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+        /* Space below heading */
+    }
+
+    .aboutpage-partone-one img {
+        width: 80%;
+        /* Adjust image size for tablets */
+        max-width: 400px;
+        /* Limit max width of image */
+    }
+
+    #aboutpage-head-two {
+        font-size: 30px;
+    }
+
+    .about-content {
+        font-size: 15px;
+    }
+
+    #aboutpage-head-three {
+        font-size: 35px;
+    }
+
+    #aboutpage-head-four {
+        font-size: 40px;
+        padding-bottom: 30px;
+    }
+
+    .about-content-two {
+        width: 80%;
+        /* Adjust width for standalone text block */
+        padding: 15px;
+        font-size: 15px;
+    }
+
+    .aboutpage-parttwo {
+        width: 90%;
+        padding: 30px 30px 30px 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .member-one,
+    .member-two,
+    .member-three {
+        width: 50%;
+        /* Two members per row on tablets */
+        margin-bottom: 30px;
+        /* Space between rows */
+    }
+
+    .member-one img,
+    .member-two img,
+    .member-three img {
+        height: 280px;
+        margin-bottom: 30px;
+        /* Space between rows */
+    }
+
+    .aboutpage-partthree {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    .aboutpage-partthree h2 {
+        font-size: 30px;
+        padding-bottom: 15px;
+    }
+
+    .aboutpage-partthree li {
+        font-size: 17px;
+        padding: 7px 0px 7px 15px;
+    }
+
+    .aboutpage-partfour {
+        width: 90%;
+        padding-bottom: 70px;
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+    }
+
+    .partfour-head {
+        font-size: 30px;
+        padding: 15px 0;
+    }
+
+    .partfour-one,
+    .partfour-two,
+    .partfour-three {
+        width: 80%;
+        /* Take more width when stacked */
+        margin-bottom: 40px;
+        /* Space between stacked items */
+        padding: 15px;
+    }
+
+    .partfour-one:last-child,
+    .partfour-two:last-child,
+    .partfour-three:last-child {
+        margin-bottom: 0;
+        /* Remove margin from last item */
+    }
+
+    .partfour-para {
+        font-size: 15px;
+        padding: 8px 0;
+    }
+}
+
+/* Mobile devices (e.g., max-width: 767px) */
+@media (max-width: 767px) {
+    .about-faculty {
+        padding-top: 20px;
+    }
+
+    #heading-about {
+        padding-top: 50px;
+        font-size: 35px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .aboutpage-partone {
+        width: 95%;
+        padding: 50px 15px 20px 15px;
+    }
+
+    .aboutpage-partone-one h2 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    .aboutpage-partone-one img {
+        width: 90%;
+        /* Adjust image size for smaller mobiles */
+        max-width: 300px;
+    }
+
+    #aboutpage-head-two {
+        font-size: 25px;
+    }
+
+    .about-content {
+        font-size: 14px;
+        padding-bottom: 15px;
+    }
+
+    #aboutpage-head-three {
+        font-size: 28px;
+        padding-bottom: 15px;
+    }
+
+    #aboutpage-head-four {
+        font-size: 30px;
+        padding-bottom: 20px;
+    }
+
+    .about-content-two {
+        width: 90%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .aboutpage-parttwo {
+        width: 95%;
+        padding: 50px 15px 20px 15px;
+        flex-direction: column;
+        /* Stack members vertically on small screens */
+        align-items: center;
+    }
+
+    .member-one,
+    .member-two,
+    .member-three {
+        width: 80%;
+        /* Each member takes more width when stacked */
+        max-width: 300px;
+        /* Prevent members from getting too wide on very large phones */
+        margin-bottom: 40px;
+        padding: 15px 0;
+    }
+
+    .member-one:last-child,
+    .member-two:last-child,
+    .member-three:last-child {
+        margin-bottom: 0;
+    }
+
+    .member-one img,
+    .member-two img,
+    .member-three img {
+        width: 100%;
+    }
+
+    .member-one li,
+    .member-two li,
+    .member-three li {
+        font-size: 14px;
+        padding: 3px 0;
+    }
+
+    .aboutpage-partthree {
+        width: 95%;
+        padding: 20px 10px;
+    }
+
+    .aboutpage-partthree h2 {
+        font-size: 25px;
+        padding-bottom: 10px;
+    }
+
+    .aboutpage-partthree li {
+        font-size: 15px;
+        padding: 5px 0px 5px 10px;
+    }
+
+    .aboutpage-partfour {
+        width: 95%;
+        padding-bottom: 50px;
+    }
+
+    .partfour-head {
+        font-size: 25px;
+        padding: 10px 0;
+    }
+
+    .partfour-one,
+    .partfour-two,
+    .partfour-three {
+        width: 90%;
+        /* Make them almost full width */
+        margin-bottom: 30px;
+        padding: 10px;
+    }
+
+    .partfour-para {
+        font-size: 14px;
+        padding: 5px 0;
+    }
+}
+
+/* Extra small mobile devices (e.g., max-width: 479px) */
+@media (max-width: 479px) {
+    #heading-about {
+        font-size: 28px;
+        padding-top: 20px;
+    }
+
+    .aboutpage-partone {
+        padding: 30px 10px 15px 10px;
+    }
+
+    .aboutpage-partone-one h2 {
+        font-size: 25px;
+    }
+
+    #aboutpage-head-two {
+        font-size: 22px;
+    }
+
+    .about-content {
+        font-size: 13px;
+    }
+
+    #aboutpage-head-three {
+        font-size: 24px;
+    }
+
+    #aboutpage-head-four {
+        font-size: 26px;
+        padding-bottom: 15px;
+    }
+
+    .about-content-two {
+        font-size: 13px;
+    }
+
+    .aboutpage-parttwo {
+        padding: 30px 10px 15px 10px;
+    }
+
+    .member-one,
+    .member-two,
+    .member-three {
+        width: 95%;
+        /* Almost full width for very small screens */
+        margin-bottom: 30px;
+    }
+
+    .member-one li,
+    .member-two li,
+    .member-three li {
+        font-size: 13px;
+    }
+
+    .aboutpage-partthree {
+        padding: 15px 5px;
+    }
+
+    .aboutpage-partthree h2 {
+        font-size: 20px;
+    }
+
+    .aboutpage-partthree li {
+        font-size: 14px;
+    }
+
+    .aboutpage-partfour {
+        padding-bottom: 30px;
+    }
+
+    .partfour-head {
+        font-size: 22px;
+    }
+
+    .partfour-one,
+    .partfour-two,
+    .partfour-three {
+        width: 95%;
+        margin-bottom: 25px;
+    }
+
+    .partfour-para {
+        font-size: 13px;
+    }
+}
+
+/* Footer */
+
+/* whatsapp css */
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  /* background-color: #25D366; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease, bottom 0.3s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(252, 29, 29);
+  border-radius: 50%;
+  border: 2px solid white;
+}
+@media (max-width: 600px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .whatsapp-float img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .notification-dot {
+    width: 10px;
+    height: 10px;
+    top: 6px;
+    right: 8px;
+  }
+  .notification-dot {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    bottom: 18px;
+    right: 18px;
+  }
+
+  .whatsapp-float img {
+    width: 50px;
+    height: 50px;
+  }
+  
+}
+.mobile-courses-dropdown {
+  max-height: 80vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: black;
+}
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color:transparent; /* light background */
+  color: #f9f8f8; /* text color */
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 7px;
+}
+
+/* Optional hover effect */
+.back-btn:hover {
+  color: #2804e0; /* blue hover */
+ 
+}
+
+/* Add small arrow for aesthetic */
+.back-btn::before {
+  content: "←";
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 4px;
+}
+
+
+

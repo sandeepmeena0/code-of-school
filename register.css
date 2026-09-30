@@ -1,0 +1,210 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(51, 74, 204, 1) 0%, rgba(0, 0, 0, 1) 56%);
+}
+
+
+.reg{
+    padding-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+        background: radial-gradient(circle, rgba(51, 74, 204, 1) 0%, rgba(0, 0, 0, 1) 56%);
+
+    align-items: center;
+}
+
+.reg-a{
+    background-color: rgba(247, 244, 244,0.1);
+    width: 40%;
+    height: 100%;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+
+#he{font-size: 30px;
+    padding-bottom: 30px;
+    color: white;
+}
+
+.a{
+    display: flex;
+    width: 50%;
+    padding: 30px 0px 8px 0px;
+}
+
+#course{
+    width: 90%;
+    padding: 4px 4px 4px 6px;
+    font-size: 16px;
+    width: 90%;
+    border-radius: 10px;
+    border: 1px solid rgb(230, 190, 190);
+    font-size: 16px;
+}
+
+.for-inquiry{
+    display: flex;
+    flex-direction: row;
+    font-size: 23px;
+    justify-content: space-evenly;
+}
+
+.for-inquiry label{
+    color: white;
+}
+
+.b{
+    display: flex;
+    /* gap: 30px; */
+    font-size: 20px;
+    justify-content:start;
+}
+
+.b-a{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+
+.b-a input{
+    padding: 4px 4px 4px 6px;
+    font-size: 16px;
+    width: 90%;
+    border-radius: 10px;
+    border: 1px solid rgb(230, 190, 190);
+}
+
+.b-a label{
+    padding:10px 0px 3px 5px;
+    color: white;
+}
+
+.c{
+    display: flex;
+    padding: 30px 0px 20px 0px;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.c button{ background-color: rgb(79, 79, 211);
+    color: white;
+    padding: 10px 20px 10px 20px ;
+    border: none;
+    border-radius: 20px;
+    cursor:pointer;
+}
+
+.c button:hover{
+    background-color: blue;
+}
+
+
+@media (max-width: 980px){
+    .b{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .b-a{width: 100%;}
+
+    .b input{
+        width: 100%;
+    }
+}
+
+/* Whatsapp css */
+
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  /* background-color: #25D366; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease, bottom 0.3s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(252, 29, 29);
+  border-radius: 50%;
+  border: 2px solid white;
+}
+@media (max-width: 600px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .whatsapp-float img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .notification-dot {
+    width: 10px;
+    height: 10px;
+    top: 6px;
+    right: 8px;
+  }
+  .notification-dot {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    bottom: 18px;
+    right: 18px;
+  }
+
+  .whatsapp-float img {
+    width: 50px;
+    height: 50px;
+  }
+  
+}

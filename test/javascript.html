@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- <title>Javascript</title> -->
+
+     <title>Javascript Course in Indore | Code of School</title>
+     <meta name="description"
+          content="Learn Java programming from basics to advanced. Master OOP, collections, multithreading, and build enterprise-level applications." />
+     <link rel="canonical" href="https://codeofschool.com/courses/java" />
+     <meta name="keywords" content="Java course Indore, Java training Indore, Core Java Indore, Advanced Java Indore" />
+
+     <!-- OG -->
+     <meta property="og:title" content="Java Core & Advanced Course in Indore | Code of School" />
+     <meta property="og:description"
+          content="Master Java and prepare for software development and enterprise projects." />
+     <meta property="og:url" content="https://codeofschool.com/courses/java" />
+     <meta property="og:image" content="https://codeofschool.com/img/cos-white-logo.webp" />
+
+     <!-- Twitter -->
+     <meta name="twitter:title" content="Java Core & Advanced Course | Code of School" />
+     <meta name="twitter:description" content="Hands-on Java training with projects and placement support." />
+     <meta name="twitter:image" content="https://codeofschool.com/img/cos-white-logo.webp" />
+
+     <!-- Favicons -->
+     <link rel="icon" href="https://codeofschool.com/img/cos-white-logo.webp" type="image/webp" sizes="32x32" />
+     <link rel="icon" href="https://codeofschool.com/img/cos-white-logo.webp" type="image/webp" sizes="48x48" />
+     <link rel="apple-touch-icon" href="https://codeofschool.com/img/cos-white-logo.webp" />
+     <link rel="manifest" href="/site.webmanifest" />
+
+     <link rel="stylesheet" href="../header-footer.css">
+     <link rel="stylesheet" href="./main.css">
+     <link rel="stylesheet" href="../header-footer.css">
+     <link rel="stylesheet" href="./main.css">
+
+</head>
+
+
+<body>
+     <div class="main">
+          <header>
+               <nav>
+                    <div class="nav-image">
+                         <a href="/"><img src="../img/cos-white-logo.webp" alt="Code OF School"></a>
+                    </div>
+
+                    <div class="nav-pg">
+
+                         <ul class="nav-page">
+                              <li><a href="/">Home</a></li>
+                              <li><a href="../about-us.html">About Us</a></li>
+                              <li><a href="../placement.html">Our Placements</a></li>
+                              <li><a href="../contact-us.html">Contact Us</a></li>
+                         </ul>
+                    </div>
+
+                    <div class="nav-but">
+                         <a href="./scholarship.html" target="_blank">
+                              <button>Scholarship</button>
+                         </a>
+                    </div>
+
+                    <div class="hamburger-menu" id="hamburger-icon">
+                         &#9776; </div>
+               </nav>
+          </header>
+          <div class="dropdown-panel" id="dropdown-panel">
+               <ul class="categories" id="category-list">
+                    <li data-category="all">All</li>
+                    <li data-category="web">Web Dev</li>
+                    <li data-category="language">Languages</li>
+                    <li data-category="app">Mobile.Dev</li>
+                    <li data-category="ai">Data & AI</li>
+                    <li data-category="other">Other</li>
+               </ul>
+               <ul class="courses" id="course-list">
+               </ul>
+          </div>
+
+          <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+               <div class="close-btn" id="close-mobile-nav">&times;</div>
+               <ul class="mobile-nav-page">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="../about-us.html">About Us</a></li>
+                    <!-- <li><a href="../course.html" id="mobile-courses-link">Courses ▼</a></li> -->
+                    <li><a href="../placement.html">Our Placements</a></li>
+                    <li><a href="../contact-us.html">Contact Us</a></li>
+               </ul>
+               <div class="mobile-nav-button">
+                    <a href="./scholarship.html" target="_blank">
+                         <button>Scholarship</button>
+                    </a>
+               </div>
+          </div>
+     </div>
+     <script src="../script.js"></script>
+
+     </header>
+
+
+     <div class="container">
+          <!-- Heading -->
+          <div class="top">
+               <h1>Javascript</h1>
+          </div>
+          <!-- Language Toggle Buttons -->
+          <div class="language-toggle">
+               <button class="lang-btn " onclick="ELanguage()">
+                    English
+               </button>
+               <button class="lang-btn" onclick="HLanguage()">
+                    <!-- हिंदी -->Hindi
+               </button>
+          </div>
+
+
+          <!-- First Section -->
+          <section class="section-one">
+               <div class="notice">
+                    <h2>📌 Important Notice & Guidelines</h2>
+                    <ul>
+                         <li><strong>Scholarship Rule:</strong> The percentage of marks you score in the test will
+                              be equal to the percentage of scholarship you receive.</li>
+                         <li><strong>Weekly Test:</strong> Tests will be conducted every Friday.</li>
+                         <li><strong>Result Update:</strong> Your marks/results will be updated on the WhatsApp
+                              Channel every Saturday.</li>
+                         <li><strong>New Batches:</strong> New batches will start every Monday.</li>
+                    </ul>
+               </div>
+          </section>
+          <!--javascript sections-->
+          <div id="englishContent">
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>1. Introduction to JavaScript</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>JavaScript is a lightweight, interpreted programming language. It is one of the core
+                                   technologies of the World Wide Web, alongside HTML and CSS. It helps to make web
+                                   pages
+                                   interactive by handling events, validating forms, creating animations, and
+                                   dynamically
+                                   updating content. JavaScript runs inside the browser, but it can also run on servers
+                                   using
+                                   Node.js.
+                              </p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+console.log('Hello World!');
+       </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>Hello World!</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!--2-->
+               <div class="section">
+
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>2. Variables (var, let, const)</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>Variables are containers for storing data values. In JavaScript, variables can be
+                                   declared
+                                   in
+                                   three ways: 1. var (function scoped, older way), 2. let (block scoped, modern way),
+                                   3.
+                                   const
+                                   (for constants which cannot be reassigned). Using meaningful variable names improves
+                                   code
+                                   readability.</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+var city = 'Delhi';
+let age = 22;
+const country = 'India';
+console.log(city);
+console.log(age);
+console.log(country);
+</pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>Delhi</p>
+                                   <p>22</p>
+                                   <p>India</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>3. Data Types</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>JavaScript supports various data types such as: 1. String - text values 2. Number -
+                                   numeric
+                                   values 3. Boolean - true/false 4. Object - collection of key-value pairs 5. Array -
+                                   list
+                                   of
+                                   values 6. Null - empty value 7. Undefined - not assigned. Data types help in
+                                   organizing
+                                   and
+                                   working with values correctly.</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+let name = 'Avinash';
+let age = 25;
+let isStudent = true;
+let car = null;
+let marks;
+console.log(typeof name);
+console.log(typeof age);
+console.log(typeof isStudent);
+console.log(car);
+console.log(marks);
+</pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>string</p>
+                                   <p>number</p>
+                                   <p>boolean</p>
+                                   <p>null</p>
+                                   <p>undefined</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>4. Operators</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>Operators are special symbols that perform operations on values and variables. Common
+                                   operators include: - Arithmetic (+, -, *, /, %) - Assignment (=, +=, -=) - Comparison
+                                   (==,
+                                   ===, >, <) - Logical (&&, ||, !) Operators allow us to build expressions.</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+let a = 10, b = 3;
+console.log(a + b);
+console.log(a - b);
+console.log(a * b);
+console.log(a / b);
+console.log(a % b);
+console.log(a > b);
+console.log(a == 10 && b == 3);
+</pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>13</p>
+                                   <p>7</p>
+                                   <p>30</p>
+                                   <p>3.333...</p>
+                                   <p>1</p>
+                                   <p>true</p>
+                                   <p>true</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>5. Functions</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>Functions are reusable blocks of code designed to perform a specific task. Functions
+                                   can
+                                   accept inputs (parameters) and return outputs. They help to avoid code repetition and
+                                   improve maintainability.</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+function add(a, b){
+return a + b;
+}
+let result = add(5, 7);
+console.log(result);
+</pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>12</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <!-- 6. Conditional Statements -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>6. Conditional Statements (if, else, switch)</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>
+                                   Conditional statements in JavaScript are used to control the flow of a program. This
+                                   means the code will only run if the condition is true. The most common statement is
+                                   <code>if</code>, which checks a condition and runs its block if true.
+                                   If the condition is false, it is skipped. The <code>else</code> block runs when the
+                                   condition is false.
+                                   We can also check multiple conditions using <code>else if</code>. The
+                                   <code>switch</code> statement is useful when comparing multiple values against a
+                                   single variable.
+                                   These statements are very useful in real-world programs, such as creating login
+                                   systems, showing error messages, or navigation based on user roles.
+                                   Without them, decision-making is not possible.
+                              </p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+let marks = 75;
+if(marks >= 80){
+  console.log("Grade A");
+} else if(marks >= 60){
+  console.log("Grade B");
+} else {
+  console.log("Grade C");
+}
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>Grade B</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- 7. Loops -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>7. Loops (for, while, do...while)</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>
+                                   Loops in JavaScript are used to run the same code multiple times without rewriting
+                                   it.
+                                   The <code>for</code> loop is used when we know how many times the loop should run. It
+                                   runs with initialization, condition, and increment.
+                                   The <code>while</code> loop continues to run as long as the condition is true, which
+                                   is useful when the number of iterations is not fixed.
+                                   The <code>do...while</code> loop is similar to the while loop, but it runs the code
+                                   at least once, regardless of the condition.
+                                   Loops are important in real-life programming, such as printing numbers from 1 to 100,
+                                   processing array elements, or creating animations.
+                                   They make repetitive tasks easy and fast.
+                              </p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+for(let i=1; i<=5; i++){
+  console.log("Number:", i);
+}
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>Number: 1<br>
+                                        Number: 2<br>
+                                        Number: 3<br>
+                                        Number: 4<br>
+                                        Number: 5
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- 8. Arrays -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>8. Arrays</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>
+                                   An array in JavaScript is a special object that can store multiple values in a single
+                                   variable.
+                                   Arrays are useful when handling lists like names, marks, or fruits. Each element in
+                                   an array has an index number starting from 0.
+                                   We can access or modify elements using this index. JavaScript arrays have many
+                                   built-in methods such as <code>.push()</code> (add an element), <code>.pop()</code>
+                                   (remove last element), <code>.shift()</code> (remove first element), and
+                                   <code>.unshift()</code> (add element at the start).
+                                   Arrays are widely used in real-life applications like product lists in e-commerce or
+                                   user posts in social media.
+                                   They are a flexible and dynamic data structure and an important part of JavaScript.
+                              </p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+let fruits = ["Apple", "Banana", "Mango"];
+console.log(fruits[0]);
+console.log(fruits.length);
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>Apple<br>
+                                        3
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- 9. Objects -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>9. Objects</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>
+                                   Objects in JavaScript are an important data structure that store data in key-value
+                                   pairs.
+                                   In arrays, elements are stored using indices, but in objects, keys describe the
+                                   values directly.
+                                   Objects are powerful when representing real-world entities like a person, car, or
+                                   product.
+                                   For example, a person object can store name, age, and city.
+                                   Values can be accessed using dot notation (<code>object.key</code>) or bracket
+                                   notation (<code>object["key"]</code>).
+                                   Objects are useful in JavaScript for creating APIs, managing settings, and storing
+                                   structured information.
+                                   They help represent and manipulate complex data.
+                              </p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+let person = {
+  name: "Avinash",
+  age: 25,
+  city: "Delhi"
+};
+console.log(person.name);
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>Avinash</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- 10. Functions with Parameters & Return -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>10. Functions with Parameters & Return</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>
+                                   Functions are reusable blocks of code that make programs modular and simple.
+                                   Using parameters and return values makes functions even more powerful. Parameters
+                                   provide input to the function, and the <code>return</code> statement can send a value
+                                   back.
+                                   This makes the code flexible and reduces repetition. For example, a multiplication
+                                   function can take two parameters and return their product.
+                                   In real-world programming, functions are used for calculations, form validation, and
+                                   data processing.
+                                   They make programs more reusable and maintainable.
+                              </p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+function multiply(x, y){
+  return x * y;
+}
+console.log(multiply(4, 6));
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>24</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <!-- 11. String Methods -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>11. String Methods</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>
+                                   JavaScript provides many built-in methods for strings that help in manipulating text.
+                                   For example, <code>length</code> gives the size of the string,
+                                   <code>toUpperCase()</code> and <code>toLowerCase()</code> convert the case,
+                                   <code>slice()</code> extracts a substring, and <code>replace()</code> is used to
+                                   replace text.
+                                   String methods are very useful in real-world programming for input validation,
+                                   formatting, and displaying data.
+                              </p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+let text = "Hello World";
+console.log(text.length);
+console.log(text.toUpperCase());
+console.log(text.slice(0,5));
+console.log(text.replace("World","JavaScript"));
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>11<br>
+                                        HELLO WORLD<br>
+                                        Hello<br>
+                                        Hello JavaScript</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- 12. Date & Time -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>12. Date & Time</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>
+                                   The <code>Date</code> object in JavaScript is used to handle the current date and
+                                   time.
+                                   We can retrieve the current day, month, year, hours, minutes, and seconds.
+                                   This feature is important in real-world applications for timers, event scheduling,
+                                   and logging.
+                              </p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+let now = new Date();
+console.log(now);
+console.log("Year:", now.getFullYear());
+console.log("Month:", now.getMonth() + 1);
+console.log("Date:", now.getDate());
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        <!-- Example output, actual will vary based on current date -->
+                                        Wed Sep 12 2025 10:00:00 GMT+0530 (India Standard Time)<br>
+                                        Year: 2025<br>
+                                        Month: 9<br>
+                                        Date: 12
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- 13. DOM Manipulation -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>13. DOM Manipulation</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>
+                                   DOM (Document Object Model) in JavaScript is used to manipulate HTML elements.
+                                   We can select elements, change their content, create new elements, and remove
+                                   existing ones.
+                                   This is essential for making web pages interactive and dynamic.
+                              </p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+document.body.innerHTML += "&lt;p&gt;Hello DOM!&lt;/p&gt;";
+let heading = document.createElement("h2");
+heading.innerText = "New Heading";
+document.body.appendChild(heading);
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Hello DOM!<br>
+                                        New Heading
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- 14. Event Handling -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>14. Event Handling</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>
+                                   Events in JavaScript are used to detect and handle user actions such as clicks, mouse
+                                   movements, and keyboard inputs.
+                                   We can define functions for specific events using <code>addEventListener()</code>.
+                                   This is very important in creating interactive web applications.
+                              </p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+let button = document.createElement("button");
+button.innerText = "Click Me";
+document.body.appendChild(button);
+button.addEventListener("click", function(){
+  alert("Button Clicked!");
+});
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Button Clicked! (alert appears on clicking the button)
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- 15. Local Storage -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>15. Local Storage</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>
+                                   Local Storage in JavaScript is used to store data permanently in the browser.
+                                   The data remains available even after the page is reloaded or the browser is closed.
+                                   Local Storage stores data as key-value pairs and is useful for small settings,
+                                   preferences, and temporary data.
+                              </p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+localStorage.setItem("username", "Avinash");
+console.log(localStorage.getItem("username"));
+localStorage.removeItem("username");
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Avinash
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+
+
+
+
+
+
+
+          </div>
+          <div id="hindiContent" class="hidden">
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>1. JavaScript का परिचय</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>JavaScript एक हल्का और interpreted प्रोग्रामिंग भाषा है। यह World Wide Web की मुख्य
+                                   तकनीकों में से एक है, HTML और CSS के साथ। यह वेब पेज को interactive बनाता है जैसे
+                                   events handle करना, forms validate करना, animations बनाना और dynamically content
+                                   update करना। JavaScript browser में चलता है, लेकिन Node.js का उपयोग करके यह server पर
+                                   भी चल सकता है।</p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+console.log('Hello World!');
+                   </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>Hello World!</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!--2-->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>2. Variables (var, let, const)</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>Variables डेटा को store करने के लिए containers होते हैं। JavaScript में variables
+                                   declare करने के तीन तरीके हैं: 1. var (function scoped, पुराना तरीका), 2. let (block
+                                   scoped, आधुनिक तरीका), 3. const (constants के लिए जिन्हें reassign नहीं किया जा
+                                   सकता)। Meaningful variable names को use करने से code पढ़ने में आसान होता है।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+var city = 'Delhi';
+let age = 22;
+const country = 'India';
+console.log(city);
+console.log(age);
+console.log(country);
+                   </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>Delhi</p>
+                                   <p>22</p>
+                                   <p>India</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>3. Data Types</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>JavaScript विभिन्न डेटा प्रकारों का समर्थन करता है जैसे: 1. String - टेक्स्ट मान, 2.
+                                   Number - संख्यात्मक मान, 3. Boolean - true/false, 4. Object - key-value pairs का
+                                   संग्रह, 5. Array - मानों की सूची, 6. Null - खाली मान, 7. Undefined - असाइन नहीं किया
+                                   गया। डेटा प्रकार values को सही तरीके से organize और manipulate करने में मदद करते हैं।
+                              </p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+let name = 'Avinash';
+let age = 25;
+let isStudent = true;
+let car = null;
+let marks;
+console.log(typeof name);
+console.log(typeof age);
+console.log(typeof isStudent);
+console.log(car);
+console.log(marks);
+                   </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>string</p>
+                                   <p>number</p>
+                                   <p>boolean</p>
+                                   <p>null</p>
+                                   <p>undefined</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>4. Operators</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>Operators विशेष प्रतीक होते हैं जो values और variables पर operations perform करते हैं।
+                                   सामान्य operators में शामिल हैं: Arithmetic (+, -, *, /, %), Assignment (=, +=, -=),
+                                   Comparison (==, ===, >, <), Logical (&&, ||, !)। Operators का उपयोग expressions बनाने
+                                        के लिए किया जाता है।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+let a = 10, b = 3;
+console.log(a + b);
+console.log(a - b);
+console.log(a * b);
+console.log(a / b);
+console.log(a % b);
+console.log(a > b);
+console.log(a == 10 && b == 3);
+                   </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>13</p>
+                                   <p>7</p>
+                                   <p>30</p>
+                                   <p>3.333...</p>
+                                   <p>1</p>
+                                   <p>true</p>
+                                   <p>true</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>5. Functions</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>Functions पुन: उपयोग योग्य कोड के ब्लॉक होते हैं जो किसी विशेष कार्य को पूरा करने के
+                                   लिए बनाए जाते हैं। Functions input (parameters) ले सकते हैं और output return कर सकते
+                                   हैं। ये code repetition को कम करते हैं और maintainability बढ़ाते हैं।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+function add(a, b){
+return a + b;
+}
+let result = add(5, 7);
+console.log(result);
+                   </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>12</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- 6. Conditional Statements -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>6. Conditional Statements (if, else, switch)</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>
+                                   JavaScript में conditional statements का उपयोग प्रोग्राम के flow को control करने के
+                                   लिए किया जाता है। इसका मतलब है कि code सिर्फ तब चलेगा जब condition true होगी। सबसे
+                                   सामान्य statement <code>if</code> है, जो condition check करता है और true होने पर उसका
+                                   block run होता है। अगर condition false है तो वो skip हो जाता है। <code>else</code>
+                                   block तब run होता है जब condition false हो। हम <code>else if</code> के जरिए multiple
+                                   conditions भी check कर सकते हैं। <code>switch</code> statement तब उपयोगी है जब एक
+                                   variable की multiple values के साथ comparison करना हो। ये statements login system,
+                                   error messages, और user role-based navigation जैसी situations में काम आते हैं।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+let marks = 75;
+if(marks >= 80){
+  console.log("Grade A");
+} else if(marks >= 60){
+  console.log("Grade B");
+} else {
+  console.log("Grade C");
+}
+                   </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>Grade B</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- 7. Loops -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>7. Loops (for, while, do...while)</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>
+                                   JavaScript में loops एक ही code को बार-बार चलाने के लिए उपयोग किए जाते हैं बिना उसे
+                                   बार-बार लिखे। <code>for</code> loop तब उपयोगी है जब हमें पता हो कि loop कितनी बार
+                                   चलेगा। <code>while</code> loop तब तक चलता है जब तक condition true हो।
+                                   <code>do...while</code> loop कम से कम एक बार code execute करता है, चाहे condition
+                                   false हो। Loops repetitive tasks जैसे numbers print करना, array के elements process
+                                   करना, और animations बनाने में मदद करते हैं।
+                              </p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+for(let i=1; i<=5; i++){
+  console.log("Number:", i);
+}
+                   </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>Number: 1<br>
+                                        Number: 2<br>
+                                        Number: 3<br>
+                                        Number: 4<br>
+                                        Number: 5
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- 8. Arrays -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>8. Arrays</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>
+                                   JavaScript में array एक special object है जिसमें एक ही variable के अंदर multiple
+                                   values store की जा सकती हैं। Arrays list handle करने के लिए useful हैं, जैसे names,
+                                   marks, या fruits। Array elements का index 0 से शुरू होता है। Arrays के built-in
+                                   methods हैं: <code>.push()</code> (element add करना), <code>.pop()</code> (last
+                                   element हटाना), <code>.shift()</code> (first element हटाना), और
+                                   <code>.unshift()</code> (start में element add करना)। Arrays dynamic data structure
+                                   हैं और real-world applications जैसे products list या user posts में इस्तेमाल होते
+                                   हैं।
+                              </p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+let fruits = ["Apple", "Banana", "Mango"];
+console.log(fruits[0]);
+console.log(fruits.length);
+                   </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>Apple<br>
+                                        3
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- 9. Objects -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>9. Objects</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>
+                                   JavaScript में objects एक महत्वपूर्ण data structure हैं जो key-value pairs के रूप में
+                                   data store करते हैं। Arrays index के जरिए store होते हैं, लेकिन objects में keys
+                                   values को describe करती हैं। Objects का उपयोग real-world entities जैसे person, car,
+                                   या product को represent करने के लिए होता है। Dot notation (<code>object.key</code>)
+                                   या bracket notation (<code>object["key"]</code>) से values access की जाती हैं।
+                                   Objects APIs, settings, और structured information के लिए उपयोगी हैं।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+let person = {
+  name: "Avinash",
+  age: 25,
+  city: "Delhi"
+};
+console.log(person.name);
+                   </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>Avinash</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- 10. Functions with Parameters & Return -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>10. Parameters और Return वाले Functions</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>
+                                   Functions code के reusable blocks हैं। Parameters input provide करने के लिए और
+                                   <code>return</code> statement value वापस देने के लिए उपयोग होते हैं। ये functions को
+                                   flexible और modular बनाते हैं। उदाहरण के लिए multiplication function दो parameters ले
+                                   सकता है और उनका product return करता है।
+                              </p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+function multiply(x, y){
+  return x * y;
+}
+console.log(multiply(4, 6));
+                   </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>24</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- 11. String Methods -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>11. String Methods</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>
+                                   JavaScript में strings के लिए built-in methods होते हैं जो text को manipulate करने
+                                   में मदद करते हैं। जैसे <code>length</code> string की length बताता है,
+                                   <code>toUpperCase()</code> और <code>toLowerCase()</code> case बदलते हैं,
+                                   <code>slice()</code> substring निकालता है, और <code>replace()</code> text को बदलता
+                                   है। ये methods input validation, formatting और data display के लिए useful हैं।
+                              </p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+let text = "Hello World";
+console.log(text.length);
+console.log(text.toUpperCase());
+console.log(text.slice(0,5));
+console.log(text.replace("World","JavaScript"));
+                   </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>11<br>
+                                        HELLO WORLD<br>
+                                        Hello<br>
+                                        Hello JavaScript</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- 12. Date & Time -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>12. Date & Time</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>
+                                   JavaScript में <code>Date</code> object का उपयोग current date और time को handle करने
+                                   के लिए होता है। हम day, month, year, hours, minutes, और seconds retrieve कर सकते हैं।
+                                   यह timers, event scheduling और logging के लिए उपयोगी है।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+let now = new Date();
+console.log(now);
+console.log("Year:", now.getFullYear());
+console.log("Month:", now.getMonth() + 1);
+console.log("Date:", now.getDate());
+                   </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Wed Sep 12 2025 10:00:00 GMT+0530 (India Standard Time)<br>
+                                        Year: 2025<br>
+                                        Month: 9<br>
+                                        Date: 12
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- 13. DOM Manipulation -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>13. DOM Manipulation</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>
+                                   JavaScript में DOM (Document Object Model) का उपयोग HTML elements को manipulate करने
+                                   के लिए होता है। हम elements select कर सकते हैं, उनका content change कर सकते हैं, नए
+                                   elements create कर सकते हैं और remove कर सकते हैं। यह web pages को interactive और
+                                   dynamic बनाता है।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+document.body.innerHTML += "&lt;p&gt;Hello DOM!&lt;/p&gt;";
+let heading = document.createElement("h2");
+heading.innerText = "New Heading";
+document.body.appendChild(heading);
+                   </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Hello DOM!<br>
+                                        New Heading
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- 14. Event Handling -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>14. Event Handling</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>
+                                   JavaScript में events का उपयोग user actions detect और handle करने के लिए होता है जैसे
+                                   clicks, mouse movements, और keyboard inputs। हम <code>addEventListener()</code> use
+                                   करके event-specific functions define कर सकते हैं। यह interactive web applications में
+                                   महत्वपूर्ण है।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+let button = document.createElement("button");
+button.innerText = "Click Me";
+document.body.appendChild(button);
+button.addEventListener("click", function(){
+  alert("Button Clicked!");
+});
+                   </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Button Clicked! (alert appears on clicking the button)
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- 15. Local Storage -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>15. Local Storage</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>
+                                   JavaScript में Local Storage का उपयोग browser में data को permanently store करने के
+                                   लिए होता है। यह data page reload या browser close होने के बाद भी उपलब्ध रहता है।
+                                   Local Storage key-value pairs में data store करता है और settings, preferences, या
+                                   temporary data के लिए useful है।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+localStorage.setItem("username", "Avinash");
+console.log(localStorage.getItem("username"));
+localStorage.removeItem("username");
+                   </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Avinash
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+
+          </div>
+
+
+
+
+     </div>
+     <section class="section-final">
+          <h1>Best of Luck to All Students! </h1>
+          <p>Give your best in the test, stay focused, and keep learning something new every day. Believe in
+               yourself,
+               and let each lesson make you stronger and smarter.</p>
+     </section>
+  <!-- WhatsApp -->
+        <a href="https://wa.me/919977723584?text=Hi%20I%20need%20help" class="whatsapp-float" id="whatsappButton"
+            target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
+            <span class="notification-dot"></span>
+        </a>
+
+
+     <footer>
+
+          <div class="footer-partone">
+
+               <div class="footer-inforag">
+                    <div class="footer-image"><img src="../img/cos-white-logo.webp" alt="Code OF School"></div>
+                    <div class="footer-dis">
+                         <p>
+                              Code of School by Inforag Technology empowers future tech innovators through hands-on
+                              training in coding, data science, AI, and full-stack development. Our practical,
+                              industry-driven curriculum ensures students gain job-ready skills and real-world project
+                              experience.</p>
+                    </div>
+                    <div class="footer-logo">
+                         <a href="https://www.instagram.com/codeofschool/" target="_blank"><svg
+                                   xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                   class="bi bi-instagram" viewBox="0 0 16 16">
+                                   <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                              </svg></a>
+
+                         <a href="https://www.linkedin.com/company/code-of-school" target="_blank"><svg
+                                   xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                   class="bi bi-linkedin" viewBox="0 0 16 16">
+                                   <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                              </svg></a>
+
+                         <a href="https://www.facebook.com/codeofschool" target="_blank"><svg
+                                   xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                   class="bi bi-facebook" viewBox="0 0 16 16">
+                                   <path
+                                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                              </svg></a>
+
+                         <a href="https://x.com/codeofschool" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                                   width="20" height="20" fill="currentColor" class="bi bi-twitter-x"
+                                   viewBox="0 0 16 16">
+                                   <path
+                                        d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                              </svg></a>
+                    </div>
+               </div>
+
+               <div class="footer-quicklink">
+                    <ul>
+                         <h3 id="heading">Quick Links</h3>
+                         <li><a href="/">Home</a></li>
+                         <li><a href="../about-us.html">About Us</a></li>
+                         <li><a href="../contact-us.html">Contact Us</a></li>
+                         <li>
+                              <h3>Legal & Info </h3>
+                         </li>
+                         <li><a href="../Frequently-asked-questions.html">FAQ</a></li>
+                         <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                         <li><a href="../termsandcondition.html">Terms & Conditions</a></li>
+                    </ul>
+                    <div class="footer-login-btn"><a href="../login.html"><button>Login</button></a></div>
+               </div>
+
+               <div class="footer-service">
+                    <h3 id="heading-two">Courses Offered</h3>
+                    <ul>
+                    <li><a href="./marketing.html">Digital Marketing with AI</a></li>
+                    <li><a href="./frontend.html">Full Stack Development</a></li>
+                    <li><a href="./mern.html">MERN Stack Development</a></li>
+                    <li><a href="./frontend.html">Frontend Development</a></li>
+                    <li><a href="./mobile_app.html">Mobile App Development</a></li>
+                    <li><a href="./data_science.html">Data Science</a></li>
+                    <li><a href="./analysis.html">Data Analysis</a></li>
+                    <li><a href="./ui_ux.html">UI/UX Design</a></li>
+                    <li><a href="./python.html">Python</a></li>
+                    <li><a href="./c.html">C & C++</a></li>
+                </ul>
+               </div>
+
+               <div class="footer-contact">
+                    <h3 id="heading-three">Contact Us</h3>
+
+                    <div class="footer-contact-loc">
+                         <div class="footer-contact-logo">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                   class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                   <path
+                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                              </svg>
+                         </div>
+                         <div class="footer-contact-location">
+                              <a href="https://www.google.com/maps/place/Inforag+Technology+-+Web+%7C+App+%7C+Digital+Marketing+%7C+Software+Company+in+Indore/@22.7496616,75.8953251,3a,75y/data=!3m8!1e2!3m6!1sAF1QipP1gRwG7pwN49gQMMzKXwBFGqWpqR2oBXTp7Kna!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fp%2FAF1QipP1gRwG7pwN49gQMMzKXwBFGqWpqR2oBXTp7Kna%3Dw114-h86-k-no!7i4160!8i3120!4m7!3m6!1s0x3962fd13477b7e61:0x8cfc2e3f59b0c1b3!8m2!3d22.749631!4d75.8954539!10e5!16s%2Fg%2F11x1jbjxtj?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D"
+                                   target="_blank">Office No. 421 Fourth Floor, Shagun Tower, Rasoma Square, Vijay
+                                   Nagar,
+                                   Ratna Lok Colony, Indore, Madhya Pradesh 452010</a>
+                         </div>
+                    </div>
+
+                    <div class="footer-contact-phoneno">
+                         <div class="footer-contact-logo"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                   fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                   <path fill-rule="evenodd"
+                                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                              </svg>
+                         </div>
+                         <div class="contact-no">
+                              <ul>
+                                   <li><a href="tel:9977723584">+91 99777-23-584</a></li>
+                                   <li><a href="tel:9977701948">+91 99777-019-48</a></li>
+                                   <li><a href="tel:9165234695">+91 9165-234-695</a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="footer-contact-mail">
+                         <div class="footer-contact-logo">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                   class="bi bi-send" viewBox="0 0 16 16">
+                                   <path
+                                        d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
+                              </svg>
+                         </div>
+                         <div class="mail-add">
+                              <ul>
+                                   <li><a href="mailto:thecodeofschool@gmail.com">thecodeofschool@gmail.com</a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="footer-contact-time">
+                         <div class="footer-contact-logo">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                   class="bi bi-clock-fill" viewBox="0 0 16 16">
+                                   <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                              </svg>
+                         </div>
+
+                         <div class="office">
+                              <ul>
+                                   <li>Mon-Sat : 10:00 - 20:00 </li>
+                                   <!-- <li>Sat: 12:00 18:00 </li> -->
+                                   <li>Sunday : Closed </li>
+                              </ul>
+                         </div>
+                    </div>
+               </div>
+
+
+
+          </div>
+          <div class="footer-parttwo">
+               <h3>Copyright &#169; 2025 <a href="https://inforag.com/" target="_blank">Inforag Technology</a> All
+                    rights reserved</h3>
+          </div>
+
+     </footer>
+
+     <script src="./main.js"></script>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+         STEP 1: EDIT YOUR BLOG SEO META TAGS HERE
+         ════════════════════════════════════════════════════════════════════════ -->
+    <title>Blog Post Title Here | Code of School Indore</title>
+    <meta name="description"
+        content="Enter a concise 150-160 characters summary of this blog post for Google Search results and social media preview." />
+    <meta name="keywords" content="web development, full stack course, digital marketing, coding classes indore" />
+    <meta name="author" content="Code of School" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://codeofschool.com/blogs/your-blog-filename.html" />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Blog Post Title Here | Code of School" />
+    <meta property="og:description" content="Enter short description for WhatsApp and social shares." />
+    <meta property="og:image" content="../img/cos-white-logo2.png" />
+    <meta property="og:url" content="https://codeofschool.com/blogs/your-blog-filename.html" />
+
+    <!-- Favicons & Stylesheets -->
+    <link rel="icon" href="../img/cos-white-logo2.png" type="image/webp" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../header-footer.css">
+    <link rel="stylesheet" href="../home_location.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./blog-style.css">
+</head>
+
+<body class="blog-page-body">
+    <div class="main">
+
+        <!-- ========================================================
+             SITE HEADER / NAVIGATION BAR
+             ======================================================== -->
+        <header>
+            <nav>
+                <div class="nav-image">
+                    <a href="../index.html"><img src="../img/cos-white-logo.webp" alt="Code of School Logo"></a>
+                </div>
+
+                <div class="nav-pg">
+                    <ul class="nav-page">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about-us.html">About Us</a></li>
+                        <li><a href="../course.html" id="courses-link">Courses ▼</a></li>
+                        <li><a href="../blogs.html" class="active">Blogs</a></li>
+                        <li><a href="../placement.html">Our Placements</a></li>
+                        <li><a href="../contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-but">
+                    <a href="tel:+919977723584" class="call-btn">
+                        <i class="fa-solid fa-phone"></i> Enroll Now
+                    </a>
+                </div>
+
+                <div class="hamburger-menu" id="hamburger-icon">&#9776;</div>
+            </nav>
+        </header>
+
+        <!-- Dropdown Courses Panel -->
+        <div class="dropdown-panel" id="dropdown-panel">
+            <ul class="categories" id="category-list">
+                <li data-category="all">All</li>
+                <li data-category="web">Web Dev</li>
+                <li data-category="language">Languages</li>
+                <li data-category="app">Mobile.Dev</li>
+                <li data-category="ai">Data & AI</li>
+                <li data-category="other">Other</li>
+            </ul>
+            <ul class="courses" id="course-list"></ul>
+        </div>
+
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+            <div class="close-btn" id="close-mobile-nav">&times;</div>
+            <ul class="mobile-nav-page">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about-us.html">About Us</a></li>
+                <li><a href="../course.html" id="mobile-courses-link">Courses ▼</a></li>
+                <li><a href="../blogs.html">Blogs</a></li>
+                <li><a href="../placement.html">Our Placements</a></li>
+                <li><a href="../contact-us.html">Contact Us</a></li>
+            </ul>
+            <div class="mobile-nav-button">
+                <a href="tel:+919977723584" class="call-btn">
+                    <i class="fa-solid fa-phone"></i> Enroll Now
+                </a>
+            </div>
+        </div>
+
+        <!-- ========================================================
+             SINGLE ARTICLE CONTAINER
+             ======================================================== -->
+        <main class="article-container">
+
+            <!-- Breadcrumbs -->
+            <nav class="article-breadcrumb">
+                <a href="../index.html"><i class="fa-solid fa-house"></i> Home</a>
+                <span>&gt;</span>
+                <a href="../blogs.html">Blogs</a>
+                <span>&gt;</span>
+                <!-- STEP 2: Category Name Link -->
+                <a href="../blogs.html">Full Stack Web Development</a>
+                <span>&gt;</span>
+                <!-- STEP 3: Current Article Title -->
+                <span style="color: #cbd5e1;">Article Title Here</span>
+            </nav>
+
+            <!-- Article Header -->
+            <header class="article-header">
+                <!-- Change Category Badge: badge-web / badge-digital / badge-ai -->
+                <span class="article-category badge-web">Full Stack Development</span>
+
+                <!-- STEP 4: Write your Main Blog Heading (H1) -->
+                <h1 class="article-title">
+                    Write Your Catchy Blog Title Here: Step-by-Step Guide for 2026
+                </h1>
+
+                <!-- Article Meta Details -->
+                <div class="article-meta-bar">
+                    <div class="article-author-block">
+                        <img src="../img/Ritendra_gour_sir.png" alt="Author Photo" class="article-author-img">
+                        <div>
+                            <div style="font-weight:700; color:#fff;">Ritendra Gour</div>
+                            <div style="font-size:12px; color:#94a3b8;">Senior Tech Mentor • Code of School</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 15px;">
+                        <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                        <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- STEP 5: Featured Image (Thumbnail / Cover Banner) -->
+            <div class="article-featured-image">
+                <img src="../img/fullstack-hero.png" alt="Featured Article Cover">
+            </div>
+
+            <!-- ========================================================
+                 STEP 6: ARTICLE BODY CONTENT (WRITE YOUR TEXT HERE)
+                 ======================================================== -->
+            <article class="article-content">
+
+                <!-- Introduction Paragraph -->
+                <p>
+                    Start your article with an engaging introductory paragraph. Explain the topic clearly, 
+                    why it matters for students or professionals in 2026, and what they will learn after reading this guide.
+                </p>
+
+                <!-- Key Highlights Callout Box -->
+                <div class="article-callout">
+                    <h4>💡 Key Takeaway:</h4>
+                    <p style="margin-bottom:0;">
+                        Highlight the most important insight or summary tip in this glowing callout box to immediately capture the reader's attention.
+                    </p>
+                </div>
+
+                <!-- Section Heading 1 -->
+                <h2>1. What is the Core Topic and Why is it Trending?</h2>
+                <p>
+                    Dive deeper into the foundational concepts. Break your explanations into short, readable paragraphs (2-3 sentences each) for maximum readability.
+                </p>
+                <p>
+                    You can emphasize <strong>important keywords</strong> or technical terms to make the text easy to scan.
+                </p>
+
+                <!-- Subheading -->
+                <h3>Essential Prerequisites & Tools</h3>
+                <ul>
+                    <li><strong>Tool / Library 1:</strong> Description of what it does and why it's useful.</li>
+                    <li><strong>Tool / Library 2:</strong> Explain key benefits and performance advantages.</li>
+                    <li><strong>Industry Best Practice:</strong> How top companies apply this in production.</li>
+                </ul>
+
+                <!-- Section Heading 2 -->
+                <h2>2. Code Example / Implementation Steps</h2>
+                <p>
+                    If you are sharing technical coding steps, you can write code snippets inside the formatted code block below:
+                </p>
+
+                <!-- Code Block Example -->
+                <pre class="article-code-block"><code>// Example: Express.js API Endpoint
+const express = require('express');
+const app = express();
+
+app.get('/api/courses', (req, res) => {
+    res.json({
+        institute: "Code of School",
+        city: "Indore",
+        courses: ["MERN Stack", "Python AI", "Digital Marketing"]
+    });
+});
+
+app.listen(5000, () => console.log('Server running on port 5000'));</code></pre>
+
+                <!-- Section Heading 3 -->
+                <h2>3. Career Opportunities & Salary Expectations</h2>
+                <p>
+                    Explain the industry placement landscape, average fresher vs experienced salary packages in Indore, Bangalore, and across India, and how practical portfolio projects help candidates stand out.
+                </p>
+
+                <!-- In-Article Course CTA Box -->
+                <div class="article-course-cta">
+                    <h3>🚀 Want to Master this Skill with Real-World Projects?</h3>
+                    <p>Join our comprehensive, classroom-led training at Code of School, Indore. Get 100% placement support, mock interviews, and live mentorship.</p>
+                    <a href="../contact-us.html" class="article-cta-btn">Enquire Now / Free Demo <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Section Heading 4: Conclusion -->
+                <h2>Summary & Next Steps</h2>
+                <p>
+                    Conclude the blog with actionable next steps. Encourage readers to build sample projects, practice regularly, and reach out to Code of School counselors for career guidance.
+                </p>
+
+            </article>
+
+            <!-- Social Share Bar -->
+            <div style="margin-top: 40px; padding: 20px 0; border-top: 1px solid var(--border-color); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:15px;">
+                <span style="font-weight:700; color:#fff;">Share this article:</span>
+                <div style="display:flex; gap:10px;">
+                    <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20article%20from%20Code%20of%20School!" target="_blank" class="category-tab-btn" style="background:#25D366; color:#000; border:none;">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank" class="category-tab-btn" style="background:#0A66C2; color:#fff; border:none;">
+                        <i class="fa-brands fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+
+            <!-- Back to All Blogs Button -->
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="../blogs.html" class="category-tab-btn" style="padding: 12px 28px; font-size: 15px;">
+                    <i class="fa-solid fa-arrow-left"></i> Back to All Blogs
+                </a>
+            </div>
+
+        </main>
+
+        <!-- ========================================================
+             SITE FOOTER
+             ======================================================== -->
+        <footer>
+            <div class="footer-partone">
+                <div class="footer-inforag">
+                    <div class="footer-image">
+                        <a href="../index.html"><img src="../img/cos-white-logo.webp" alt="Code of School Logo"></a>
+                    </div>
+                    <div class="footer-dis">
+                        <p>Code of School by Inforag Technology empowers future tech innovators through hands-on training in coding, data science, AI, and full-stack development.</p>
+                    </div>
+                </div>
+
+                <div class="footer-quicklink">
+                    <ul>
+                        <h3 id="heading">Quick Links</h3>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about-us.html">About Us</a></li>
+                        <li><a href="../course.html">Courses</a></li>
+                        <li><a href="../blogs.html">Blogs</a></li>
+                        <li><a href="../placement.html">Our Placement</a></li>
+                        <li><a href="../contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3 id="heading-three">Connect With Us</h3>
+                    <div class="footer-contact-location" style="color: #cbd5e1; font-size:14px; margin-bottom:10px;">
+                        <b>Head Office:</b> 421 Shagun Tower, Rasoma Square, Vijay Nagar, Indore, MP
+                    </div>
+                    <div class="contact-no">
+                        <ul class="phone-list">
+                            <li><a href="tel:9977723584" style="color:#fff; text-decoration:none;">+91 9977-723-584</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <div class="footer-parttwo">
+                <h3>Copyright &#169; 2026 <a href="https://inforag.com/" target="_blank">Inforag Technology</a> All rights reserved</h3>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

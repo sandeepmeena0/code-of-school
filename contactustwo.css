@@ -1,0 +1,725 @@
+/* Global Resets */
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%; /* Changed from 90% for better full-viewport usage */
+    height: 100%; /* Changed from 100vh to allow content to dictate height */
+}
+
+
+/* Body padding to prevent content from going under fixed navbar */
+body {
+    padding-top: 100px;     background-color:#000000; 
+    min-height: 200vh; /* For demonstration of fixed navbar and scrolling */
+    margin: 0; /* Remove default body margin */
+    font-family: Arial, sans-serif; /* A basic font for readability */
+}
+
+
+/* ----------------- Contact Part One ----------------- */
+.contact-part-one {
+    /* padding-top: 70px; */
+    border-bottom: rgba(255, 255, 255,0.3) 1px solid;
+    width: 100%; /* Changed from 100% for full viewport width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: radial-gradient(circle, rgba(110, 73, 184, 1) 0%, rgba(0, 0, 0, 1) 42%);
+}
+
+.contact-head-one {
+    padding: 120px 0px 70px 0px;
+    font-size: 50px;
+    font-family: sans-serif;
+    color: white;
+    text-align: center; /* Ensures heading centers on all screen sizes */
+}
+
+.form-part {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.left-one {
+    width: 100%; /* Base width for larger screens */
+}
+
+.contact-head-zero {
+    font-size: 35px;
+    color: white;
+    padding: 20px 10px 0px 30px;
+    font-family: sans-serif;
+}
+.contact-add-label{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.contact-add-label a, .contact-head-four a{
+    text-decoration: none;
+    color: white;
+}
+.editing{
+    width: 60%;
+}
+.form-left-part {
+    width: 100%; /* Base width for larger screens */
+    display: flex;
+    margin-top: 20px;
+     /* Changed to column for better mobile stacking */
+    padding: 0% 0px 20% 0px;
+}
+/* .contact-medium {
+    width: 100%;
+} */
+
+.contact-medium h3 {
+    font-size: 22px 22px 22px 0px;
+    padding: 10px 10px 10px 0px;
+    font-family: sans-serif;
+    color: white;
+}
+
+.contact-add a {
+    text-decoration: none;
+    display: flex; /* Use flex to align icon and text */
+    align-items: center; /* Vertically align icon and text */
+    font-size: 20px;
+    padding: 12px;
+    font-family: sans-serif;
+    color: white;
+    text-wrap: initial; /* Allows browser to determine wrapping */
+}
+
+.contact-add a:hover {
+    color: aqua;
+}
+
+.contact-add a svg {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.form-right-part {
+    display: flex;
+    width: 50%; /* Base width for larger screens */
+    height: 100%; /* Consider 'auto' or 'fit-content' for better adaptability */
+    flex-direction: column;
+    padding: 25px;
+}
+
+.contact-head-five {
+    font-size: 35px;
+    color: white;
+    padding: 0px 10px 20px 10px;
+    font-family: sans-serif;
+}
+
+.for-inp {
+    display: flex;
+    flex-direction: column;
+}
+
+#for-label {
+    font-size: 20px;
+    padding: 7px;
+    font-weight: 550;
+    font-family: sans-serif;
+    color: white;
+}
+
+.for-inp-field {
+    width: calc(100% - 10px); /* Adjust width to account for margin/padding */
+    padding: 10px; /* Increased padding for better touch targets */
+    margin: 0px 0px 15px 5px; /* Adjusted margin */
+    border: rgba(255, 255, 255, 0.5) 1px solid;
+    border-radius: 15px;
+    font-size: 18px; /* Slightly smaller font for inputs */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+.btn button {
+    padding: 13px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    margin: 25px 0px 0px 5px;
+    background: linear-gradient(0deg, rgba(138, 115, 240, 1) 0%, rgba(113, 102, 232, 1) 100%);
+    cursor: pointer; /* Add cursor pointer for better UX */
+}
+
+.btn button:hover {
+    transition: 0.3s ease; /* Shorter transition for smoother hover */
+    background: linear-gradient(0deg, rgba(73, 41, 217, 1) 0%, rgba(45, 32, 186, 1) 100%);
+}
+
+/* ------SOCIAL MEDIA LOGOS------- */
+.form-part-two {
+    display: flex;
+    width: 56%;
+    justify-content: space-between; /* Center icons for better mobile layout */
+  
+}
+
+.form-part-two svg {
+    color: white;
+    margin-right: 10px;
+    font-size: 30px; /* Make icons slightly larger for better visibility */
+}
+
+.form-part-two svg:hover {
+    color: rgb(255, 162, 0);
+}
+
+/* 
+
+/* ------------------------------------------- */
+/* RESPONSIVE STYLES (MEDIA QUERIES)         */
+/* ------------------------------------------- */
+@media (max-width:1500px) {
+     .contact-part-one {
+        width: 100%;
+    }
+
+    .contact-head-one {
+        padding: 30px 0px 50px 0px;
+        font-size: 45px;
+    }
+
+    .form-part {
+        width: 80%; /* Increase width for tablets */
+        /* flex-direction: column; Stack left and right parts */
+        /* align-items: center;  */
+        /* Center the stacked items */
+    }
+
+     .form-left-part{
+        width: 100%; /* Take full width when stacked */
+        padding: 0px 0px; Adjust padding for stacked layout
+    }
+    .form-right-part {
+        width: 80%; /* Take full width when stacked */
+        
+        /* padding: 5% 20px; Adjust padding for stacked layout */
+    }
+    .section-two {
+    display: flex;
+    width: 100%; /* Changed from 100% for full viewport width */
+}
+}
+
+/* Tablets and smaller desktops (e.g., max-width: 1024px) */
+@media (max-width: 1024px) {
+    .contact-part-one {
+        width: 100%;
+    }
+
+    .contact-head-one {
+        padding: 80px 0px 50px 0px;
+        font-size: 45px;
+    }
+
+    .form-part {
+        width: 80%; /* Increase width for tablets */
+        flex-direction: column-reverse; /* Stack left and right parts */
+        align-items: center; 
+    }
+
+    .form-left-part,
+    .form-right-part {
+        width: 100%; /* Take full width when stacked */
+        padding: 5% 20px; /* Adjust padding for stacked layout */
+    }
+
+    .contact-head-zero,
+    .contact-head-five {
+        font-size: 30px;
+        padding: 15px 0px; /* Adjust padding after stacking */
+        text-align: center; /* Center headings */
+    }
+
+    .contact-medium h3 {
+        font-size: 20px;
+        /* text-align: center; Center text */
+    }
+
+    .contact-add {
+        justify-content: center; /* Center contact info */
+    }
+
+    .contact-add a {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .for-inp-field {
+        width: 95%; /* Adjust input field width */
+        margin-left: auto; /* Auto margins to center */
+        margin-right: auto;
+    }
+
+    .btn button {
+        margin-left: auto; /* Auto margins to center */
+        margin-right: auto;
+    }
+
+    .form-part-two {
+        width: 80%; /* Adjust width for social icons */
+        padding: 30px 0px;
+    }
+
+    .form-part-two svg {
+        font-size: 28px;
+        margin: 0 20px; /* Adjust spacing between icons */
+    }
+    .section-two {
+    display: flex;
+    width: 100%; /* Changed from 100% for full viewport width */
+}
+    .section-two iframe {
+        display: flex;
+        width: 100%;
+        height: 350px; /* Slightly smaller map height */
+    }
+}
+
+/* Mobile devices (e.g., max-width: 767px) */
+@media (max-width: 767px) {
+    .main {
+        width: 100%;
+    }
+
+    .contact-part-one {
+        border-bottom: rgb(255, 255, 255) 2px solid;
+    }
+
+    .contact-head-one {
+        padding: 60px 15px 30px 15px;
+        font-size: 35px;
+    }
+
+    .form-part {
+        width: 95%; /* Almost full width for mobile */
+    }
+
+    .editing{width: 100%;}
+
+    .form-left-part,
+    .form-right-part {
+        padding: 8% 15px; /* Further adjust padding */
+    }
+
+    .contact-head-zero,
+    .contact-head-five {
+        font-size: 25px;
+        padding: 10px 0;
+    }
+
+    .contact-medium h3 {
+        font-size: 18px;
+    }
+
+    .contact-add a {
+        font-size: 16px;
+        padding: 12px;
+        text-wrap: wrap; /* Allow text to wrap for smaller screens */
+    }
+    .contact-add a svg {
+        margin-right: 8px;
+        min-width: 20px; /* Prevent icons from shrinking too much */
+    }
+
+    #for-label {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .for-inp-field {
+        font-size: 16px;
+        padding: 8px;
+        margin-bottom: 10px;
+        width: 100%; /* Full width for inputs on small mobile */
+    }
+
+    .btn button {
+        padding: 10px 15px;
+        font-size: 14px;
+        margin-top: 15px;
+    }
+
+    .form-part-two {
+        width: 90%;
+        padding: 20px 0;
+        justify-content: space-around; /* Distribute icons more evenly */
+    }
+
+    .form-part-two svg {
+        font-size: 25px;
+        margin: 10px; /* Adjust margin for wrapped icons */
+    }
+
+    .section-two iframe {
+        height: 300px; /* Smaller map height for mobile */
+        width: 100%;
+    }
+}
+
+/* Small mobile devices (e.g., max-width: 479px) */
+@media (max-width: 479px) {
+    .map{
+    padding: 0px 0px 0 0px;
+   
+    
+width: 100%;}
+    .contact-head-one {
+        font-size: 28px;
+        padding: 40px 10px 20px 10px;
+    }
+
+    .form-left-part,
+    .form-right-part {
+        padding: 5% 10px;
+    }
+
+    .contact-head-zero,
+    .contact-head-five {
+        font-size: 22px;
+    }
+
+    .contact-medium h3 {
+        font-size: 16px;
+    }
+
+    .contact-add a {
+        font-size: 14px;
+        padding: 11px;
+    }
+
+    #for-label {
+        font-size: 14px;
+    }
+
+    .for-inp-field {
+        font-size: 14px;
+        padding: 7px;
+    }
+
+    .btn button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .form-part-two {
+        width: 95%;
+    }
+
+    .form-part-two svg {
+        font-size: 22px;
+        margin: 8px;
+    }
+
+    .section-two iframe {
+        height: 250px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 420px) {
+    /* Adjust padding for the left and right form sections */
+    .form-left-part,
+    .form-right-part {
+        padding: 5% 10px; 
+        width: 100%;}
+
+        .left-one{width: 100%;}
+
+        .editing{width: 100%;}
+
+    /* Main form container adjustments for very small screens */
+    .form-part {
+        justify-content: center;
+        width: 95%; /* IMPORTANT: Make the form take up almost full width on small mobiles */
+        /* display: flex; is likely already set in a broader media query or base styles. */
+        /* If not, ensure flex-direction: column; is applied here or in a parent media query */
+        flex-direction: column; /* Ensure left and right parts stack vertically */
+        /* align-items: center;  */
+    }
+
+    /* Ensure contact address/info handles long strings */
+    .contact-add {
+        overflow-wrap: break-word; /* Prevents long unbreakable strings from overflowing */
+        /* word-break: break-word;  */
+        text-align: center; /* Center the contact info for better mobile presentation */
+    }
+
+    /* Further reduce font sizes for very small screens for readability */
+    .contact-head-one {
+        font-size: 28px; /* Smaller main heading */
+        padding: 30px 10px 15px 10px; /* Reduced padding */
+    }
+
+    .contact-head-zero,
+    .contact-head-five {
+        font-size: 20px; /* Smaller sub-headings */
+        padding: 10px 0;
+    }
+
+    .contact-medium h3 {
+        font-size: 15px; /* Smaller contact medium heading */
+    }
+
+    .contact-add a {
+        font-size: 13px; /* Smaller contact link text */
+        padding: 12px;
+        /* justify-content: center; Center the icons and text within the link */
+    }
+
+    #for-label {
+        font-size: 13px; /* Smaller label text */
+        padding: 5px 0;
+    }
+
+    .for-inp-field {
+        font-size: 13px; /* Smaller input text */
+        padding: 8px;
+        margin-bottom: 10px;
+        width: 100%; /* Ensure inputs take full available width */
+    }
+
+    .btn button {
+        padding: 10px 15px; /* Smaller button padding */
+        font-size: 13px; /* Smaller button text */
+        margin-top: 15px;
+    }
+
+    /* Social media icons adjustments */
+    .form-part-two {
+        width: 95%; /* Make social icons container wider */
+        padding: 15px 0;
+        justify-content: space-around; /* Distribute icons more evenly */
+    }
+
+    .form-part-two svg {
+        font-size: 22px; /* Slightly smaller icons */
+        margin: 8px; /* Adjust margin for wrapped icons */
+    }
+
+    /* Map section height adjustment */
+    .section-two iframe {
+        height: 200px; /* Make map shorter on very small screens */
+    }
+}
+
+/* whatsapp css */
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  /* background-color: #25D366; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease, bottom 0.3s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(252, 29, 29);
+  border-radius: 50%;
+  border: 2px solid white;
+}
+@media (max-width: 600px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .whatsapp-float img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .notification-dot {
+    width: 10px;
+    height: 10px;
+    top: 6px;
+    right: 8px;
+  }
+  .notification-dot {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    bottom: 18px;
+    right: 18px;
+  }
+
+  .whatsapp-float img {
+    width: 50px;
+    height: 50px;
+  }
+  
+}
+/* .for-inp-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background:transparent;
+  color: #191717;
+  background-color: aliceblue;
+}
+
+.for-inp-field:focus {
+
+  outline: none;
+} */
+
+.for-inp-field {
+  /* width: 100%; */
+  
+/*   
+  font-size: 16px; */
+  /* background: transparent; */
+  /* color: white; */
+  /* appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer; */
+}
+
+/* Dropdown list options */
+.for-inp-field option {
+  background-color: rgba(0, 0, 0, 0.9); /* dark transparent background */
+  color: white;
+}
+
+/* When an option is selected */
+.for-inp-field:focus,
+.for-inp-field:valid {
+   background: rgb(226, 242, 248); 
+  color: black;
+
+}
+
+/* Optional hover styling */
+.for-inp-field option:hover {
+  /* background-color: #007bff; */
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .for-inp-field {
+    font-size: 14px;
+    padding: 8px 10px;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .for-inp-field {
+    font-size: 13px;
+    padding: 7px 8px;
+    width: 100%;
+  }
+}
+
+
+
+
+
+/* footer courses and city */
+
+
+.footer-offer{
+    margin: 0px 40px;
+   
+}
+.footer-coures{
+    margin: 25px auto;
+}
+.footer-coures h4{
+    margin: 10px auto;
+    color: rgb(226, 139, 18);
+    font-size: medium;
+}
+.footer-coures p{
+
+    color: #fafafa;
+    margin: 10px auto;
+}
+.coures-location h4{
+    margin: 15px auto;
+    color: rgb(232, 131, 8);
+    font-size: medium;
+}
+.coures-location p{
+    color: #f9f8f8;
+    margin: 15px auto;
+    word-spacing:2px;
+    font-size:16px;
+}
+
+.coures-location{
+    margin: 25px auto;
+}
+@media (max-width:768px){
+    .footer-coures h4{
+    
+    font-size:medium;
+}
+.coures-location h4{
+  
+    font-size:medium;
+}
+
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+

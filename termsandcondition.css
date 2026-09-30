@@ -1,0 +1,327 @@
+/* Global Resets */
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+
+}
+.main{
+    width: 100%;
+}
+/* Body padding to prevent content from going under fixed navbar */
+body {
+    padding-top: 100px;     background-color:#000000; 
+    min-height: 200vh; /* For demonstration of fixed navbar and scrolling */
+    margin: 0; /* Remove default body margin */
+    font-family: Arial, sans-serif; /* A basic font for readability */
+}
+
+
+/* SECTIONS */
+
+.tandc-first-section {
+    width: 100%; /* Changed from 99% for full viewport width */
+    background: radial-gradient(circle, rgba(51, 74, 204, 1) 0%, rgba(0, 0, 0, 1) 56%);
+    padding-top: 50px; /* Added initial top padding for overall section */
+}
+.tandc-mainhead{width: 100%;}
+.tandc-mainhead h1 {
+    font-size: 50px;
+    font-family: sans-serif;
+    padding-bottom: 65px;
+    display: flex; /* Keep flex for alignment */
+    justify-content: center; /* Align to start */
+    width: 78%;
+    color: white;
+    margin: 0 auto; /* Center the heading block */
+    text-align: left; /* Ensure text aligns left within its block */
+}
+
+.tandc-first-part {
+    width: 100%;
+    padding: 50px; /* Will adjust */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.part-one-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 20px 23px; /* Will adjust */
+    width: 80%; /* Will adjust */
+    flex-wrap: wrap; /* Allow content blocks to wrap */
+    margin-bottom: 30px; /* Space between content blocks */
+}
+
+.part-one-content-one {
+    width: 60%; /* Will adjust */
+}
+
+.part-one-content-image {
+    width: 40%; /* Will adjust */
+    padding: 20px; /* Will adjust */
+}
+
+.part-one-content-image img {
+    width: 100%;
+    height: auto; /* Ensure image scales proportionally */
+    display: block; /* Remove extra space below image */
+    border-radius: 10px; /* Added for consistency */
+}
+
+.tandc-para {
+    color: white;
+    font-size: 19px;
+    font-family: sans-serif;
+    padding: 20px 20px 15px 22px; /* Will adjust */
+    line-height: 1.6; /* Improved readability */
+}
+
+.tandc-subheading {
+    color: white;
+    font-weight: 600;
+    font-size: 27px;
+    font-family: sans-serif;
+    padding: 20px 20px 0px 20px; /* Will adjust */
+}
+
+.part-one-content-two,
+.part-one-content-three {
+    width: 50%; /* These likely need a common parent to flex and wrap */
+    /* Assuming these are part of a larger flex container not shown */
+    /* For now, they will behave as 50% width elements.
+       If they are meant to stack, their parent needs flex-direction: column. */
+    /* padding: 10px 20px; Added some padding */
+}
+
+
+/* --------------------------------------------------- */
+/* RESPONSIVE STYLES (MEDIA QUERIES)                   */
+/* --------------------------------------------------- */
+
+/* Tablets and smaller desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .tandc-first-section {
+        padding-top: 30px; /* Reduce top padding */
+    }
+
+    .tandc-mainhead h1 {
+        font-size: 40px; /* Smaller main heading */
+        padding: 40px 50px 30px 50px;
+        width: 90%; /* Take up more width */
+    }
+
+    .tandc-first-part {
+        padding: 30px; /* Reduce general padding */
+    }
+
+    .part-one-content {
+        width: 90%; /* Wider content area */
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center items when stacked */
+        padding: 10px 0; /* Adjust padding */
+    }
+
+    .part-one-content-one {
+        width: 100%; /* Take full width when stacked */
+        text-align: center; /* Center text content */
+        margin-bottom: 20px; /* Space between text and image */
+    }
+
+    .part-one-content-image {
+        width: 80%; /* Image takes more width */
+        max-width: 400px; /* Limit max size of image */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .tandc-para {
+        font-size: 17px; /* Smaller paragraph text */
+        padding: 15px 15px 10px 15px; /* Adjust padding */
+    }
+
+    .tandc-subheading {
+        font-size: 24px; /* Smaller subheading */
+        padding: 0px 15px 15px 15px; /* Adjust padding */
+    }
+
+    .part-one-content-two,
+    .part-one-content-three {
+        width: 90%; /* Take more width on tablets */
+        padding: 10px 15px;
+        text-align: center; /* Center text */
+        margin-bottom: 20px; /* Space between these blocks if they stack */
+    }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .tandc-first-section {
+        padding-top: 20px;
+    }
+
+    .tandc-mainhead h1 {
+        font-size: 32px; /* Even smaller main heading */
+        padding: 30px 20px 20px 20px;
+        width: 95%; /* Almost full width */
+        text-align: center; /* Center heading text */
+        justify-content: center; /* Center the flex item */
+    }
+
+    .tandc-first-part {
+        padding: 20px; /* Reduce padding further */
+    }
+
+    .part-one-content {
+        width: 95%; /* Wider content area */
+        padding: 5px 0;
+        margin-bottom: 20px;
+    }
+
+    .part-one-content-image {
+        width: 90%; /* Image takes almost full width */
+        max-width: 350px;
+        padding: 5px;
+    }
+
+    .tandc-para {
+        font-size: 15px; /* Smaller paragraph text */
+        padding: 10px 10px 8px 10px;
+    }
+
+    .tandc-subheading {
+        font-size: 20px; /* Smaller subheading */
+        padding: 0px 10px 10px 10px;
+    }
+
+    .part-one-content-two,
+    .part-one-content-three {
+        width: 95%; /* Take almost full width */
+        padding: 8px 10px;
+        margin-bottom: 15px;
+    }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .tandc-mainhead h1 {
+        font-size: 26px; /* Smallest main heading */
+        padding: 25px 15px 15px 15px;
+        width: 100%; /* Full width */
+    }
+
+    .tandc-first-part {
+        padding: 15px;
+    }
+
+    .part-one-content {
+        width: 100%; /* Full width */
+        padding: 0;
+        margin-bottom: 15px;
+    }
+
+    .part-one-content-image {
+        width: 100%; /* Image full width */
+        max-width: 300px;
+        padding: 0;
+    }
+
+    .tandc-para {
+        font-size: 14px; /* Smallest paragraph text */
+        padding: 8px 8px 5px 8px;
+    }
+
+    .tandc-subheading {
+        font-size: 18px; /* Smallest subheading */
+        padding: 0px 8px 8px 8px;
+    }
+
+    .part-one-content-two,
+    .part-one-content-three {
+        width: 100%; /* Full width */
+        padding: 5px 8px;
+        margin-bottom: 10px;
+    }
+}
+/* Whatsapp Css */
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  /* background-color: #25D366; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease, bottom 0.3s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(252, 29, 29);
+  border-radius: 50%;
+  border: 2px solid white;
+}
+@media (max-width: 600px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .whatsapp-float img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .notification-dot {
+    width: 10px;
+    height: 10px;
+    top: 6px;
+    right: 8px;
+  }
+  .notification-dot {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    bottom: 18px;
+    right: 18px;
+  }
+
+  .whatsapp-float img {
+    width: 50px;
+    height: 50px;
+  }
+  
+}

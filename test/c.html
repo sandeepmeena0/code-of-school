@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- <title>C Programming</title> -->
+
+        <title>C Programming Tutorial for Beginners | Learn C Language Step-by-Step</title>
+     <!-- <title>Code Of School - C & C++</title>  -->
+     <link rel="icon" href="https://codeofschool.com/img/cos-white-logo.webp" type="image/webp" />
+     <meta name="description"
+          content="Learn C programming from basics to advanced. Understand data structures, OOP, and build strong programming logic with hands-on practice." />
+     <link rel="canonical" href="https://codeofschool.com/courses/c-cpp" />
+     <meta name="keywords"
+          content="C Programming course Indore,C Training Indore, Coding Classes Indore, Code of School Indore" />
+
+     <!-- OG -->
+     <meta property="og:title" content="C & C++ Programming Course in Indore | Code of School" />
+     <meta property="og:description"
+          content="Strengthen your programming logic with C and C++ – the foundation of software development." />
+     <meta property="og:url" content="https://codeofschool.com/courses/c-cpp" />
+     <meta property="og:image" content="https://codeofschool.com/img/cos-white-logo.webp" />
+
+     <!-- Twitter -->
+     <meta name="twitter:title" content="C Programming Course | Learn DSA & Logic" />
+     <meta name="twitter:description" content="Master programming fundamentals and data structures with C & C++." />
+     <meta name="twitter:image" content="https://codeofschool.com/img/cos-white-logo.webp" />
+
+     <!-- Favicons -->
+     <link rel="icon" href="https://codeofschool.com/img/cos-white-logo.webp" type="image/webp" sizes="32x32" />
+     <link rel="icon" href="https://codeofschool.com/img/cos-white-logo.webp" type="image/webp" sizes="48x48" />
+     <link rel="apple-touch-icon" href="https://codeofschool.com/img/cos-white-logo.webp" />
+     <link rel="manifest" href="/site.webmanifest" />
+
+
+     <link rel="stylesheet" href="../header-footer.css">
+     <link rel="stylesheet" href="./main.css">
+
+
+       <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "C Programming Tutorial – Learn C Language Step-by-Step",
+      "description": "C programming tutorial for beginners covering basics, syntax, examples, and exercises.",
+      "image": "https://yourwebsite.com/images/c-language-banner.png",
+      "author": {
+        "@type": "Person",
+        
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "YourWebsiteName",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://yourwebsite.com/logo.png"
+        }
+      },
+      "mainEntityOfPage": "https://yourwebsite.com/c_programming.html",
+      "datePublished": "2025-01-10",
+      "dateModified": "2025-01-10"
+    }
+    </script>
+
+</head>
+
+
+<body>
+     <div class="main">
+          <header>
+               <nav>
+                    <div class="nav-image">
+                         <a href="/"><img src="../img/cos-white-logo.webp" alt="Code OF School"></a>
+                    </div>
+
+                    <div class="nav-pg">
+
+                         <ul class="nav-page">
+                              <li><a href="/">Home</a></li>
+                              <li><a href="../about-us.html">About Us</a></li>
+                              <li><a href="../placement.html">Our Placements</a></li>
+                              <li><a href="../contact-us.html">Contact Us</a></li>
+                         </ul>
+                    </div>
+
+                    <div class="nav-but">
+                         <a href="./scholarship.html" target="_blank">
+                              <button>Scholarship</button>
+                         </a>
+                    </div>
+
+                    <div class="hamburger-menu" id="hamburger-icon">
+                         &#9776; </div>
+               </nav>
+          </header>
+          <div class="dropdown-panel" id="dropdown-panel">
+               <ul class="categories" id="category-list">
+                    <li data-category="all">All</li>
+                    <li data-category="web">Web Dev</li>
+                    <li data-category="language">Languages</li>
+                    <li data-category="app">Mobile.Dev</li>
+                    <li data-category="ai">Data & AI</li>
+                    <li data-category="other">Other</li>
+               </ul>
+               <ul class="courses" id="course-list">
+               </ul>
+          </div>
+
+          <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+               <div class="close-btn" id="close-mobile-nav">&times;</div>
+               <ul class="mobile-nav-page">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="../about-us.html">About Us</a></li>
+                    <!-- <li><a href="../course.html" id="mobile-courses-link">Courses ▼</a></li> -->
+                    <li><a href="../placement.html">Our Placements</a></li>
+                    <li><a href="../contact-us.html">Contact Us</a></li>
+               </ul>
+               <div class="mobile-nav-button">
+                    <a href="./scholarship.html" target="_blank">
+                         <button>Scholarship</button>
+                    </a>
+               </div>
+          </div>
+     </div>
+     <script src="../script.js"></script>
+
+     </header>
+
+
+     <div class="container">
+          <!-- Heading -->
+          <div class="top">
+               <h1>C Programming</h1>
+          </div>
+          <!-- Language Toggle Buttons -->
+          <div class="language-toggle">
+               <button class="lang-btn " onclick="ELanguage()">
+                    English
+               </button>
+               <button class="lang-btn" onclick="HLanguage()">
+                    <!-- हिंदी -->Hindi
+               </button>
+          </div>
+
+
+          <!-- First Section -->
+          <section class="section-one">
+               <div class="notice">
+                    <h2>📌 Important Notice & Guidelines</h2>
+                    <ul>
+                         <li><strong>Scholarship Rule:</strong> The percentage of marks you score in the test will
+                              be equal to the percentage of scholarship you receive.</li>
+                         <li><strong>Weekly Test:</strong> Tests will be conducted every Friday.</li>
+                         <li><strong>Result Update:</strong> Your marks/results will be updated on the WhatsApp
+                              Channel every Saturday.</li>
+                         <li><strong>New Batches:</strong> New batches will start every Monday.</li>
+                    </ul>
+               </div>
+          </section>
+
+          <!--c content-->
+
+          <div id="englishContent">
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2> Introduction</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>C is known as the mother language of many modern programming languages. It is a
+                                   high-level,
+                                   procedural language developed in the early 1970s and is widely used in system
+                                   programming,
+                                   application development, embedded systems, and software engineering. Many languages
+                                   like
+                                   C++, Java, and Python have roots in C. Being called the “mother language” emphasizes
+                                   its
+                                   foundational importance, as understanding C gives a strong base for learning other
+                                   languages and understanding computer programming concepts.</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    printf("C Programming Basics\n");
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>C Programming Basics</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>1. Basic Structure of C Program</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>Every C program has a basic structure: header files, main function, statements, and
+                                   return.
+                                   Header files provide libraries for input/output and other functions. int main() is
+                                   the
+                                   entry point. Statements define logic and each ends with a semicolon. return 0;
+                                   indicates
+                                   successful execution.</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    printf("C Programming Basics\n");
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>C Programming Basics</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>2. Variables and Data Types</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>Variables store data in memory. Data types include int, float, char, double, etc.
+                                   Correct
+                                   data type selection ensures efficiency and prevents errors.</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int a = 10;
+    float b = 5.5;
+    char c = 'A';
+    double d = 20.55;
+    printf("Integer: %d\n", a);
+    printf("Float: %.2f\n", b);
+    printf("Char: %c\n", c);
+    printf("Double: %.2lf\n", d);
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Integer: 10<br>
+                                        Float: 5.50<br>
+                                        Char: A<br>
+                                        Double: 20.55
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>3. Input/Output in C</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>scanf() is used to get input, printf() is used to display output. Both are part of
+                                   stdio.h.
+                              </p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("You entered: %d\n", num);
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Enter a number: 25<br>
+                                        You entered: 25
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>4. Operators</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>C uses arithmetic, relational, logical, and assignment operators to perform operations
+                                   on
+                                   data.</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int a = 10, b = 5;
+    printf("Addition: %d\n", a+b);
+    printf("Subtraction: %d\n", a-b);
+    printf("Multiplication: %d\n", a*b);
+    printf("Division: %d\n", a/b);
+    printf("Modulo: %d\n", a%b);
+    printf("Greater? %d\n", a>b);
+    printf("Equal? %d\n", a==b);
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Addition: 15<br>
+                                        Subtraction: 5<br>
+                                        Multiplication: 50<br>
+                                        Division: 2<br>
+                                        Modulo: 0<br>
+                                        Greater? 1<br>
+                                        Equal? 0
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>5. Conditional Statements</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>if, if-else, else-if allow decision-making based on conditions.</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    if(num % 2 == 0)
+        printf("Even Number\n");
+    else
+        printf("Odd Number\n");
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Enter a number: 8<br>
+                                        Even Number
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>6. Nested if and else-if</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>For multiple conditions, nested if or else-if statements are used.</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int marks;
+    printf("Enter marks: ");
+    scanf("%d", &marks);
+    if(marks >= 90)
+        printf("Grade A\n");
+    else if(marks >= 75)
+        printf("Grade B\n");
+    else if(marks >= 50)
+        printf("Grade C\n");
+    else
+        printf("Grade F\n");
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Enter marks: 82<br>
+                                        Grade B
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>7. Switch Case</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>switch allows multiple choice selection for different cases.</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int choice;
+    printf("Enter 1-3: ");
+    scanf("%d", &choice);
+    switch(choice) {
+        case 1: printf("One\n"); break;
+        case 2: printf("Two\n"); break;
+        case 3: printf("Three\n"); break;
+        default: printf("Invalid choice\n");
+    }
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Enter 1-3: 2<br>
+                                        Two
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>8. Loops (for, while, do-while)</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>Loops allow repeated execution of a block of code. for, while, and do-while loops are
+                                   used
+                                   based on the condition and number of iterations.</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int i;
+    for(i=1; i<=5; i++) {
+        printf("Number: %d\n", i);
+    }
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Number: 1<br>
+                                        Number: 2<br>
+                                        Number: 3<br>
+                                        Number: 4<br>
+                                        Number: 5
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>9. Arrays</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>Arrays store multiple values of the same data type. They are useful for storing lists
+                                   and
+                                   performing operations on sequential data.</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int arr[5] = {10, 20, 30, 40, 50};
+    for(int i=0; i<5; i++) {
+        printf("Element %d: %d\n", i, arr[i]);
+    }
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Element 0: 10<br>
+                                        Element 1: 20<br>
+                                        Element 2: 30<br>
+                                        Element 3: 40<br>
+                                        Element 4: 50
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>10. Strings</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>Strings are arrays of characters used to store text. Standard library functions help in
+                                   string manipulation.</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+int main() {
+    char name[20] = "Avinash";
+    printf("Name: %s\n", name);
+    printf("Length: %lu\n", strlen(name));
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Name: Avinash<br>
+                                        Length: 7
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>11. Functions</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>Functions allow modular code by breaking a program into smaller reusable blocks.</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int add(int a, int b) {
+    return a + b;
+}
+int main() {
+    int result = add(10, 20);
+    printf("Sum: %d\n", result);
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>Sum: 30</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>12. Pointers</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>Pointers store memory addresses and allow efficient manipulation of data.</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int a = 10;
+    int *ptr = &a;
+    printf("Value: %d\n", *ptr);
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>Value: 10</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>13. Structures</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>Structures allow grouping of different data types under a single name.</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+struct Student {
+    int id;
+    char name[20];
+};
+int main() {
+    struct Student s1 = {1, "Avinash"};
+    printf("ID: %d, Name: %s\n", s1.id, s1.name);
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>ID: 1, Name: Avinash</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>14. File Handling</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>C allows reading/writing files using fopen, fclose, fprintf, fscanf.</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    FILE *fp = fopen("test.txt", "w");
+    fprintf(fp, "Hello File\n");
+    fclose(fp);
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>File created with text: Hello File</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>15. Recursion</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>Recursion is when a function calls itself to solve smaller instances of a problem. It
+                                   helps
+                                   in tasks like factorial, Fibonacci series, etc.</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int factorial(int n) {
+    if(n == 0)
+        return 1;
+    else
+        return n * factorial(n-1);
+}
+int main() {
+    int num = 5;
+    printf("Factorial of %d is %d\n", num, factorial(num));
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>Factorial of 5 is 120</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+
+
+
+
+          <!-- hindi content-->
+          <div id="hindiContent" class="hidden">
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2> परिचय (Introduction)</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>C को कई आधुनिक प्रोग्रामिंग भाषाओं की "मदर लैंग्वेज" कहा जाता है। यह एक हाई-लेवल,
+                                   प्रोसीजरल
+                                   भाषा है जिसे 1970 के दशक में विकसित किया गया था। यह सिस्टम प्रोग्रामिंग, एप्लिकेशन
+                                   डेवलपमेंट, एम्बेडेड सिस्टम और सॉफ्टवेयर इंजीनियरिंग में व्यापक रूप से उपयोग की जाती
+                                   है। कई
+                                   भाषाएं जैसे C++, Java और Python, C से प्रभावित हुई हैं। इसे "मदर लैंग्वेज" कहने का
+                                   मतलब है
+                                   कि C को सीखने से आपको प्रोग्रामिंग का मजबूत आधार मिलता है और अन्य भाषाएं सीखना आसान
+                                   हो
+                                   जाता है।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    printf("C Programming Basics\n");
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>C Programming Basics</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>1. C प्रोग्राम की बेसिक संरचना</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>हर C प्रोग्राम का एक बेसिक स्ट्रक्चर होता है: हेडर फाइल्स, main() फंक्शन, स्टेटमेंट्स
+                                   और
+                                   return।
+                                   हेडर फाइल्स इनपुट/आउटपुट और अन्य फंक्शन्स के लिए लाइब्रेरी प्रोवाइड करती हैं।
+                                   int main() प्रोग्राम का entry point होता है।
+                                   स्टेटमेंट्स प्रोग्राम की लॉजिक को डिफाइन करते हैं और हर स्टेटमेंट सेमीकोलन से खत्म
+                                   होता
+                                   है।
+                                   return 0; का मतलब है कि प्रोग्राम सफलतापूर्वक चला।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    printf("C Programming Basics\n");
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>C Programming Basics</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>2. वेरिएबल और डाटा टाइप</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>वेरिएबल्स मेमोरी में डाटा स्टोर करने के लिए उपयोग किए जाते हैं। डाटा टाइप यह बताता है
+                                   कि किस
+                                   प्रकार का डाटा स्टोर होगा (int, float, char आदि)।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int age = 21;
+    float marks = 85.5;
+    char grade = 'A';
+    printf("Age: %d\n", age);
+    printf("Marks: %.1f\n", marks);
+    printf("Grade: %c\n", grade);
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Age: 21<br>
+                                        Marks: 85.5<br>
+                                        Grade: A
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>3. इनपुट और आउटपुट</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>printf() आउटपुट दिखाने के लिए और scanf() यूज़र से इनपुट लेने के लिए उपयोग होता है।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("You entered: %d\n", num);
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Enter a number: 10<br>
+                                        You entered: 10
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>4. ऑपरेटर्स</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>C में Arithmetic, Relational, Logical और Assignment ऑपरेटर्स का उपयोग डाटा पर ऑपरेशन
+                                   करने के
+                                   लिए होता है।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int a = 10, b = 5;
+    printf("Addition: %d\n", a+b);
+    printf("Subtraction: %d\n", a-b);
+    printf("Multiplication: %d\n", a*b);
+    printf("Division: %d\n", a/b);
+    printf("Modulo: %d\n", a%b);
+    printf("Greater? %d\n", a>b);
+    printf("Equal? %d\n", a==b);
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Addition: 15<br>
+                                        Subtraction: 5<br>
+                                        Multiplication: 50<br>
+                                        Division: 2<br>
+                                        Modulo: 0<br>
+                                        Greater? 1<br>
+                                        Equal? 0
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>5. कंडीशनल स्टेटमेंट्स</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>if, if-else, else-if का उपयोग conditions के आधार पर decision लेने के लिए किया जाता है।
+                              </p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    if(num % 2 == 0)
+        printf("Even Number\n");
+    else
+        printf("Odd Number\n");
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Enter a number: 8<br>
+                                        Even Number
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>6. Nested if और else-if</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>जब एक से अधिक conditions check करनी हों तब nested if या else-if का प्रयोग किया जाता है।
+                              </p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int marks;
+    printf("Enter marks: ");
+    scanf("%d", &marks);
+    if(marks >= 90)
+        printf("Grade A\n");
+    else if(marks >= 75)
+        printf("Grade B\n");
+    else if(marks >= 50)
+        printf("Grade C\n");
+    else
+        printf("Grade F\n");
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Enter marks: 82<br>
+                                        Grade B
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>7. स्विच केस</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>switch का उपयोग एक से अधिक विकल्पों में से किसी एक को चुनने के लिए किया जाता है।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int choice;
+    printf("Enter 1-3: ");
+    scanf("%d", &choice);
+    switch(choice) {
+        case 1: printf("One\n"); break;
+        case 2: printf("Two\n"); break;
+        case 3: printf("Three\n"); break;
+        default: printf("Invalid choice\n");
+    }
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Enter 1-3: 2<br>
+                                        Two
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>8. लूप्स (for, while, do-while)</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>लूप्स का उपयोग किसी कोड को बार-बार चलाने के लिए किया जाता है। for loop का उपयोग तब किया
+                                   जाता
+                                   है जब iterations की संख्या पता हो। while और do-while का उपयोग तब किया जाता है जब
+                                   condition
+                                   के आधार पर कोड बार-बार चलाना हो।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int i;
+    for(i=1; i<=5; i++) {
+        printf("Number: %d\n", i);
+    }
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Number: 1<br>
+                                        Number: 2<br>
+                                        Number: 3<br>
+                                        Number: 4<br>
+                                        Number: 5
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>9. एरेज़ (Arrays)</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>एरेज़ का उपयोग एक ही प्रकार के कई डाटा को एक साथ स्टोर करने के लिए किया जाता है। यह
+                                   sequential डाटा के साथ काम करने में सहायक होते हैं।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int arr[5] = {10, 20, 30, 40, 50};
+    for(int i=0; i<5; i++) {
+        printf("Element %d: %d\n", i, arr[i]);
+    }
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Element 0: 10<br>
+                                        Element 1: 20<br>
+                                        Element 2: 30<br>
+                                        Element 3: 40<br>
+                                        Element 4: 50
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>10. स्ट्रिंग्स (Strings)</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>स्ट्रिंग्स character का एक समूह होती हैं जिनका उपयोग टेक्स्ट स्टोर करने के लिए किया
+                                   जाता है।
+                                   C में स्ट्रिंग्स null character ('\0') से terminate होती हैं।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+int main() {
+    char name[20] = "Avinash";
+    printf("Name: %s\n", name);
+    printf("Length: %lu\n", strlen(name));
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Name: Avinash<br>
+                                        Length: 7
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>11. फंक्शन्स (Functions)</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>फंक्शन्स प्रोग्राम को छोटे-छोटे reusable ब्लॉक्स में बांट देते हैं जिससे कोड modular और
+                                   maintain करने में आसान बन जाता है।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int add(int a, int b) {
+    return a + b;
+}
+int main() {
+    int result = add(10, 20);
+    printf("Sum: %d\n", result);
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Sum: 30
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>12. पॉइंटर्स (Pointers)</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>पॉइंटर्स वे वेरिएबल्स होते हैं जो किसी अन्य वेरिएबल के memory address को स्टोर करते
+                                   हैं।
+                                   इनका उपयोग memory को direct access करने और efficient प्रोग्रामिंग के लिए किया जाता
+                                   है।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int a = 10;
+    int *ptr = &a;
+    printf("Value: %d\n", *ptr);
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Value: 10
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>13. स्ट्रक्चर्स (Structures)</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>स्ट्रक्चर्स का उपयोग अलग-अलग डाटा टाइप्स को एक ही नाम के अंदर group करने के लिए किया
+                                   जाता
+                                   है। यह user-defined data type बनाने की सुविधा देता है।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+struct Student {
+    int id;
+    char name[20];
+};
+int main() {
+    struct Student s1 = {1, "Avinash"};
+    printf("ID: %d, Name: %s\n", s1.id, s1.name);
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        ID: 1, Name: Avinash
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>14. फाइल हैंडलिंग (File Handling)</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>C में फाइल को पढ़ने और लिखने के लिए fopen(), fclose(), fprintf(), fscanf() जैसे
+                                   फंक्शन्स का
+                                   उपयोग किया जाता है।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    FILE *fp = fopen("test.txt", "w");
+    fprintf(fp, "Hello File\n");
+    fclose(fp);
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        File created with text: Hello File
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>15. रिकर्शन (Recursion)</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>रिकर्शन तब होती है जब कोई फंक्शन खुद को ही call करता है। इसका उपयोग factorial,
+                                   Fibonacci
+                                   series और complex problems को छोटे टुकड़ों में solve करने के लिए किया जाता है।</p>
+                         </div>
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+#include &lt;stdio.h&gt;
+int factorial(int n) {
+    if(n == 0)
+        return 1;
+    else
+        return n * factorial(n-1);
+}
+int main() {
+    int num = 5;
+    printf("Factorial of %d is %d\n", num, factorial(num));
+    return 0;
+}
+                </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p>
+                                        Factorial of 5 is 120
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+
+          <!---->
+     </div>
+     <section class="section-final">
+          <h1>Best of Luck to All Students! </h1>
+          <p>Give your best in the test, stay focused, and keep learning something new every day. Believe in
+               yourself,
+               and let each lesson make you stronger and smarter.</p>
+     </section>
+  <!-- WhatsApp -->
+        <a href="https://wa.me/919977723584?text=Hi%20I%20need%20help" class="whatsapp-float" id="whatsappButton"
+            target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
+            <span class="notification-dot"></span>
+        </a>
+
+
+     <footer>
+
+          <div class="footer-partone">
+
+               <div class="footer-inforag">
+                    <div class="footer-image"><img src="../img/cos-white-logo.webp" alt="Code OF School"></div>
+                    <div class="footer-dis">
+                         <p>
+                              Code of School by Inforag Technology empowers future tech innovators through hands-on
+                              training in coding, data science, AI, and full-stack development. Our practical,
+                              industry-driven curriculum ensures students gain job-ready skills and real-world project
+                              experience.</p>
+                    </div>
+                    <div class="footer-logo">
+                         <a href="https://www.instagram.com/codeofschool/" target="_blank"><svg
+                                   xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                   class="bi bi-instagram" viewBox="0 0 16 16">
+                                   <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                              </svg></a>
+
+                         <a href="https://www.linkedin.com/company/code-of-school" target="_blank"><svg
+                                   xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                   class="bi bi-linkedin" viewBox="0 0 16 16">
+                                   <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                              </svg></a>
+
+                         <a href="https://www.facebook.com/codeofschool" target="_blank"><svg
+                                   xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                   class="bi bi-facebook" viewBox="0 0 16 16">
+                                   <path
+                                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                              </svg></a>
+
+                         <a href="https://x.com/codeofschool" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                                   width="20" height="20" fill="currentColor" class="bi bi-twitter-x"
+                                   viewBox="0 0 16 16">
+                                   <path
+                                        d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                              </svg></a>
+                    </div>
+               </div>
+
+               <div class="footer-quicklink">
+                    <ul>
+                         <h3 id="heading">Quick Links</h3>
+                         <li><a href="/">Home</a></li>
+                         <li><a href="../about-us.html">About Us</a></li>
+                         <li><a href="../contact-us.html">Contact Us</a></li>
+                         <li>
+                              <h3>Legal & Info </h3>
+                         </li>
+                         <li><a href="../Frequently-asked-questions.html">FAQ</a></li>
+                         <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                         <li><a href="../termsandcondition.html">Terms & Conditions</a></li>
+                    </ul>
+                    <div class="footer-login-btn"><a href="../login.html"><button>Login</button></a></div>
+               </div>
+
+               <div class="footer-service">
+                    <h3 id="heading-two">Courses Offered</h3>
+                    <ul>
+                    <li><a href="./marketing.html">Digital Marketing with AI</a></li>
+                    <li><a href="./frontend.html">Full Stack Development</a></li>
+                    <li><a href="./mern.html">MERN Stack Development</a></li>
+                    <li><a href="./frontend.html">Frontend Development</a></li>
+                    <li><a href="./mobile_app.html">Mobile App Development</a></li>
+                    <li><a href="./data_science.html">Data Science</a></li>
+                    <li><a href="./analysis.html">Data Analysis</a></li>
+                    <li><a href="./ui_ux.html">UI/UX Design</a></li>
+                    <li><a href="./python.html">Python</a></li>
+                    <li><a href="./c.html">C & C++</a></li>
+                </ul>
+               </div>
+
+               <div class="footer-contact">
+                    <h3 id="heading-three">Contact Us</h3>
+
+                    <div class="footer-contact-loc">
+                         <div class="footer-contact-logo">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                   class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                   <path
+                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                              </svg>
+                         </div>
+                         <div class="footer-contact-location">
+                              <a href="https://www.google.com/maps/place/Inforag+Technology+-+Web+%7C+App+%7C+Digital+Marketing+%7C+Software+Company+in+Indore/@22.7496616,75.8953251,3a,75y/data=!3m8!1e2!3m6!1sAF1QipP1gRwG7pwN49gQMMzKXwBFGqWpqR2oBXTp7Kna!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fp%2FAF1QipP1gRwG7pwN49gQMMzKXwBFGqWpqR2oBXTp7Kna%3Dw114-h86-k-no!7i4160!8i3120!4m7!3m6!1s0x3962fd13477b7e61:0x8cfc2e3f59b0c1b3!8m2!3d22.749631!4d75.8954539!10e5!16s%2Fg%2F11x1jbjxtj?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D"
+                                   target="_blank">Office No. 421 Fourth Floor, Shagun Tower, Rasoma Square, Vijay
+                                   Nagar,
+                                   Ratna Lok Colony, Indore, Madhya Pradesh 452010</a>
+                         </div>
+                    </div>
+
+                    <div class="footer-contact-phoneno">
+                         <div class="footer-contact-logo"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                   fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                   <path fill-rule="evenodd"
+                                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                              </svg>
+                         </div>
+                         <div class="contact-no">
+                              <ul>
+                                   <li><a href="tel:9977723584">+91 99777-23-584</a></li>
+                                   <li><a href="tel:9977701948">+91 99777-019-48</a></li>
+                                   <li><a href="tel:9165234695">+91 9165-234-695</a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="footer-contact-mail">
+                         <div class="footer-contact-logo">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                   class="bi bi-send" viewBox="0 0 16 16">
+                                   <path
+                                        d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
+                              </svg>
+                         </div>
+                         <div class="mail-add">
+                              <ul>
+                                   <li><a href="mailto:thecodeofschool@gmail.com">thecodeofschool@gmail.com</a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="footer-contact-time">
+                         <div class="footer-contact-logo">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                   class="bi bi-clock-fill" viewBox="0 0 16 16">
+                                   <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                              </svg>
+                         </div>
+
+                         <div class="office">
+                              <ul>
+                                   <li>Mon-Sat : 10:00 - 20:00 </li>
+                                   <!-- <li>Sat: 12:00 18:00 </li> -->
+                                   <li>Sunday : Closed </li>
+                              </ul>
+                         </div>
+                    </div>
+               </div>
+
+
+
+          </div>
+          <div class="footer-parttwo">
+               <h3>Copyright &#169; 2025 <a href="https://inforag.com/" target="_blank">Inforag Technology</a> All
+                    rights reserved</h3>
+          </div>
+
+     </footer>
+     <script src="./main.js"></script>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,253 @@
+
+/* ================================================================
+   VARIABLES  ←  Edit these to change look without touching HTML
+   ================================================================ */
+:root {
+  /* Backgrounds */
+  --bg-page    : #020306;
+  --bg-card    : #08080f;
+  --bg-body    : #060610;
+
+  /* Card 1 → Pink glow */
+  --pink       : #ff1f8e;
+  /* Card 2 → Cyan glow */
+  --cyan       : #00e5ff;
+  /* Card 3 → Gold glow */
+  --gold       : #d4a017;
+
+  /* Text */
+  --white      : #aaa7a7;
+  --soft       : rgba(255,255,255,0.60);
+  --dim        : rgba(255,255,255,0.28);
+
+  /* Fonts */
+  --f-head     : 'Orbitron', sans-serif;
+  --f-body     : 'Inter', Arial, sans-serif;
+
+  /* Sizes */
+  --photo-h    : 238px;    /* office photo height   */
+  --r-card     : 16px;     /* card corner radius    */
+  --r-btn      : 30px;     /* button corner radius  */
+  --gap        : 1.5rem;   /* space between cards   */
+}
+
+/* ── Reset ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100% }
+
+body{
+  font-family:var(--f-body);
+  background:var(--bg-page);
+  color:var(--white);
+  min-height:100vh;
+  /* display:flex;
+  align-items:center; */
+  justify-content:center;
+  /* padding:5rem 1.25rem 4rem; */
+}
+
+/* ── Section wrapper ── */
+.offices{width:100%;
+    /* max-width:1200px; */
+    text-align:center}
+
+/* ── Top label ── */
+.tag{
+  font-family:var(--f-head);
+  font-size:11px;font-weight:600;letter-spacing:4px;
+  text-transform:uppercase;color:var(--dim);margin-bottom:.85rem;
+  margin-top: 0px;
+}
+
+/* ── Main heading ── */
+.h-main{
+  font-size:clamp(15px,3.0vw,26px);font-weight:600;
+  line-height:1.35;margin-bottom:3.5rem;color:var(--white);
+  text-shadow:0 0 40px rgba(255,255,255,.08);
+}
+
+/* ── Grid ── */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:var(--gap);
+  margin-bottom:3.5rem;
+  margin: auto 100px;
+  align-items:stretch;
+}
+
+/* ── Card base ── */
+.card{
+  background:var(--bg-card);
+  border-radius:var(--r-card);
+  overflow:hidden;
+  display:flex;flex-direction:column;
+  position:relative;
+  transition:transform .35s cubic-bezier(.25,.46,.45,.94);
+}
+.card:hover{transform:translateY(-10px)}
+
+/* ── Card 1 Pink ── */
+.c-pink{
+  border:1.5px solid var(--pink);
+  box-shadow:
+    0 0 25px rgba(255,31,142,.32),
+    0 0 70px rgba(255,31,142,.13),
+    inset 0 0 40px rgba(255,31,142,.05);
+}
+.c-pink:hover{
+  box-shadow:
+    0 0 38px rgba(255,31,142,.60),
+    0 0 95px rgba(255,31,142,.22);
+}
+
+/* ── Card 2 Cyan ── */
+.c-cyan{
+  border:1.5px solid var(--cyan);
+  box-shadow:
+    0 0 25px rgba(0,229,255,.32),
+    0 0 70px rgba(0,229,255,.13),
+    inset 0 0 40px rgba(0,229,255,.05);
+}
+.c-cyan:hover{
+  box-shadow:
+    0 0 38px rgba(0,229,255,.60),
+    0 0 95px rgba(0,229,255,.22);
+}
+
+/* ── Card 3 Gold ── */
+.c-gold{
+  border:1.5px solid var(--gold);
+  box-shadow:
+    0 0 25px rgba(212,160,23,.32),
+    0 0 70px rgba(212,160,23,.13),
+    inset 0 0 40px rgba(212,160,23,.05);
+}
+.c-gold:hover{
+  box-shadow:
+    0 0 38px rgba(212,160,23,.60),
+    0 0 95px rgba(212,160,23,.22);
+}
+
+/* ── Card top label (above photo) ── */
+.card-lbl{
+  display:flex;flex-direction:column;
+  align-items:center;gap:.35rem;
+  padding:1rem 1rem .7rem;
+}
+.card-lbl .lbl-pin{font-size:22px;line-height:1}
+.c-pink .lbl-pin{filter:drop-shadow(0 0 8px var(--pink))}
+.c-cyan .lbl-pin{filter:drop-shadow(0 0 8px var(--cyan))}
+.c-gold .lbl-pin{filter:drop-shadow(0 0 8px var(--gold))}
+
+.card-lbl .lbl-txt{
+  font-size:13.5px;font-weight:500;
+  color:var(--soft);letter-spacing:.3px;
+}
+
+/* ── Photo ── */
+.photo{
+  width:100%;height:var(--photo-h);
+  /* object-fit:cover; */
+  object-position:center top;flex-shrink:0;
+}
+
+/* ── Placeholder (when photo missing) ── */
+.placeholder{
+  width:100%;height:var(--photo-h);
+  display:flex;align-items:center;justify-content:center;
+  font-size:60px;flex-shrink:0;
+}
+.c-pink .placeholder{background:linear-gradient(160deg,#1a0812,#3a0a22)}
+.c-cyan .placeholder{background:linear-gradient(160deg,#02141a,#053347)}
+.c-gold .placeholder{background:linear-gradient(160deg,#1a1300,#342600)}
+
+/* ── Card body (text below photo) ── */
+.card-body{
+  flex:1;background:var(--bg-body);
+  padding:1.25rem 1.4rem 1.5rem;
+  display:flex;flex-direction:column;gap:.55rem;
+}
+
+/* Office title */
+.o-title{
+  display:flex;align-items:flex-start;gap:.5rem;
+}
+.o-title .body-pin{
+  font-size:22px;line-height:1.2;flex-shrink:0;
+}
+.c-pink .body-pin{filter:drop-shadow(0 0 6px var(--pink))}
+.c-cyan .body-pin{filter:drop-shadow(0 0 6px var(--cyan))}
+.c-gold .body-pin{filter:drop-shadow(0 0 6px var(--gold))}
+
+.o-title .title-txt{
+  font-size:17px;font-weight:700;
+  color:var(--white);line-height:1.3;
+}
+
+/* Address */
+.o-addr{
+  font-size:13px;color:var(--soft);line-height:1.8;
+  padding-left:0.6rem;
+  text-decoration:underline;
+  text-decoration-color:rgba(255,255,255,.18);
+  text-underline-offset:3px;
+  text-align: justify;
+}
+
+/* ── View Map button ── */
+.map-btn{
+  display:block;margin-top:.75rem;
+  padding:.72rem 1.5rem;border-radius:var(--r-btn);
+  font-size:12px;font-weight:700;letter-spacing:1.8px;
+  text-transform:uppercase;text-align:center;
+  background:transparent;cursor:pointer;
+  transition:background .2s,box-shadow .2s,transform .2s;
+}
+.map-btn:hover{transform:scale(1.04)}
+
+.c-pink .map-btn{color:var(--pink);border:1.5px solid var(--pink);box-shadow:0 0 12px rgba(255,31,142,.25)}
+.c-pink .map-btn:hover{background:rgba(255,31,142,.12);box-shadow:0 0 26px rgba(255,31,142,.55)}
+
+.c-cyan .map-btn{color:var(--cyan);border:1.5px solid var(--cyan);box-shadow:0 0 12px rgba(0,229,255,.25)}
+.c-cyan .map-btn:hover{background:rgba(0,229,255,.12);box-shadow:0 0 26px rgba(0,229,255,.55)}
+
+.c-gold .map-btn{color:var(--gold);border:1.5px solid var(--gold);box-shadow:0 0 12px rgba(212,160,23,.25)}
+.c-gold .map-btn:hover{background:rgba(212,160,23,.12);box-shadow:0 0 26px rgba(212,160,23,.55)}
+
+/* ── Bottom heading ── */
+.h-bottom{
+  font-size:clamp(20px,3vw,30px);font-weight:700;
+  color:var(--white);margin-bottom:2rem;
+  margin: 20px 10px ;
+}
+
+/* ── Map strip ── */
+
+
+@keyframes pinBounce{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-9px)}
+}
+.p-pink{filter:drop-shadow(0 0 8px rgba(255,31,142,.9)) drop-shadow(0 0 16px rgba(255,31,142,.5))}
+.p-cyan{filter:drop-shadow(0 0 8px rgba(0,229,255,.9))  drop-shadow(0 0 16px rgba(0,229,255,.5))}
+.p-gold{filter:drop-shadow(0 0 8px rgba(212,160,23,.9)) drop-shadow(0 0 16px rgba(212,160,23,.5))}
+
+.pin-lbl{font-size:11px;font-weight:600;color:var(--soft);line-height:1.45}
+
+/* ── Responsive: tablet ── */
+
+@media(max-width:900px){
+  .grid{grid-template-columns:1fr 1fr ; margin: auto 30px;}
+  .card:last-child{grid-column:1/3;max-width:420px;margin:0 auto;width:100%}
+  .pins-row{gap:3.5rem}
+}
+/* ── Responsive: mobile ── */
+@media(max-width:580px){
+  body{padding:3rem 1rem}
+  .grid{grid-template-columns:1fr;gap:1.25rem;margin: 10px 10px;}
+  .card:last-child{grid-column:auto;max-width:100%}
+  .pins-row{gap:2rem}
+  .h-main{margin-bottom:2.5rem}
+}

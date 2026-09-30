@@ -1,0 +1,194 @@
+<!-- {% load static %} -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+
+    <title>Registration | Code of School</title>
+<meta name="description" content="Register for courses at Code of School. Sign up for web development, data science, Java, DevOps, and other IT training programs in Indore." />
+<link rel="canonical" href="https://codeofschool.com/registration" />
+<meta name="keywords" content="Code of School registration, course registration, sign up for coding classes, IT training registration, web development registration" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Registration | Code of School" />
+<meta property="og:description" content="Sign up for courses at Code of School and start your journey in coding, web development, and data science." />
+<meta property="og:url" content="https://codeofschool.com/registration" />
+<meta property="og:image" content="https://codeofschool.com/img/cos-white-logo2.png" />
+
+<!-- Twitter -->
+<meta name="twitter:title" content="Registration | Code of School" />
+<meta name="twitter:description" content="Register for IT and coding courses at Code of School. Join web development, data science, Java, DevOps, and more." />
+<meta name="twitter:image" content="https://codeofschool.com/img/cos-white-logo2.png" />
+
+
+ <!-- Favicons -->
+        <link rel="icon" href="https://codeofschool.com/img/cos-white-logo2.png" type="image/webp" sizes="32x32" />
+    <link rel="icon" href="https://codeofschool.com/img/cos-white-logo2.png" type="image/webp" sizes="48x48" />
+    <link rel="apple-touch-icon" href="https://codeofschool.com/img/cos-white-logo2.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="./contactustwo.css">
+    <link rel="stylesheet" href="./header-footer.css">
+       <link rel="icon" href="./img/cos-white-logo2.png" type="image/webp"/>
+
+    <link rel="stylesheet" href="register.css">
+    
+</head>
+<body>
+
+    <!-- <a href="#" class="what-btn fa fa-whatsapp"></a> -->
+    
+<div class="main">
+        <!-- {% include 'header.html' %} -->
+        <header>
+            <nav>
+                <div class="nav-image">
+                    <a href="#home"><img src="./img/cos-white-logo.webp" alt="Company Logo"></a>
+                </div>
+                
+                <div class="nav-pg">
+                    
+                    <ul class="nav-page">
+                      <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="course.html" id="courses-link">Courses ▼</a></li>
+                        <li><a href="placement.html">Our Placements</a></li>
+                        <li><a href="contactustwo.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+               <div class="nav-but">
+                        <a href="tel:+919977723584" class="call-btn">
+        <i class="fa-solid fa-phone"></i> Enroll Now
+    </a>
+                </div>
+
+                <div class="hamburger-menu" id="hamburger-icon">
+                    &#9776; </div>
+            </nav>
+        </header>
+
+        
+<div class="dropdown-panel" id="dropdown-panel">
+            <ul class="categories" id="category-list">
+                <li data-category="all">All</li>
+                <li data-category="web">Web Dev</li>
+                <li data-category="language">Languages</li>
+                <li data-category="app">Mobile.Dev</li>
+                <li data-category="ai">Data & AI</li>
+                <li data-category="other">Other</li>
+            </ul>
+            <ul class="courses" id="course-list">
+                </ul>
+        </div>
+
+        <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+            <div class="close-btn" id="close-mobile-nav">&times;</div> <ul class="mobile-nav-page">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactustwo.html">Contact Us</a></li>
+                <li><a href="course.html" id="mobile-courses-link">Courses ▼</a></li> 
+                <li><a href="placement.html">Our Placements</a></li>
+            </ul>
+            <div class="mobile-nav-button">
+                <button>Login</button>
+                <button>Connect Us</button>
+            </div>
+        </div>
+    </div>
+
+
+<section class="reg">
+<section class="reg-a">
+    <h1 id="he">Registration Form</h1>
+    <form method="POST">
+        {% csrf_token %}
+    <div class="for-inquiry">
+        <div>
+        <input type="radio"  name="work" id="work" value="10">
+        <label for="iquiry">Inquiry</label>
+        </div>
+        <div>
+        <input type="radio" name="work" id="work" value="20" checked>
+        <label for="register">Registration</label>
+        </div>
+    </div>
+    <div class="a">
+        <select name="course" id="course">
+            <option value="" disabled selected>Course</option>
+            <option value="Fullstack">Fullstack</option>
+            <option value="JAVA">JAVA</option>
+            <option value="Python">Python</option>
+            <option value="C++">C++</option>
+            <option value="Digital marketing">Digital marketing</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="Blockchain">Blockchain</option>
+        </select>
+    </div>     
+    <div class="b">
+        <div class="b-a">
+        <label for="name">Name</label>
+        <input type="text"  name="student" id="student">
+        </div>
+        <div class="b-a">
+            <label for="reference">Reference</label>
+            <input type="text" name="reference" id="reference">
+        </div>
+    </div>
+    <div class="b">
+        <div class="b-a">
+        <label for="E_mail">E-mail</label>
+        <input type="email" name="E_mail" id="E_mail">
+        </div>
+        <div class="b-a">
+            <label for="duration">Duration</label>
+            <input type="number" name="duration" id="duration">
+        </div>
+    </div>
+    <div class="b">
+        <div class="b-a">
+        <label for="fee">Total Fee</label>
+        <input type="number" name="fee" id="fee">
+        </div>
+    </div>
+    <div class="b">
+        <div class="b-a">
+        <label for="first_installment">First</label>
+        <input type="number" name="first_installment" id="first_installment">
+        </div>
+        <!-- <div class="b-a">
+            <label for="second_installment">Second</label>
+            <input type="number" name="second_installment" id="second_installment">
+        </div> -->
+    </div>
+    <!-- <div class="b">
+        <div class="b-a">
+        <label for="third_installment">Third</label>
+        <input type="number" name="third_installment" id="third_installment">
+        </div>
+        <div class="b-a">
+            <label for="last_installment">Last</label>
+            <input type="number" name="last_installment" id="last_installment">
+        </div>
+    </div> -->
+    <div class="c">
+    <button><b>Submit</b></button>
+    </div>
+    <div class="c">
+    <!-- <a href="loout">
+    <button type="button">Log out</button></a> -->
+    </div>
+    </form>
+</section>
+</section>
+
+<script src="script.js"></script>
+</div>   
+
+
+
+
+</body>
+</html>

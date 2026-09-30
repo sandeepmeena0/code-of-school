@@ -1,0 +1,1902 @@
+/* Global Resets */
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    /* border: red 1px; */
+
+}
+
+.main {
+    width: 100%;
+    /* Use 100% for full viewport width */
+    background-color: black !important;
+    overflow-x: hidden;
+}
+
+/* Body padding to prevent content from going under fixed navbar */
+body {
+    padding-top: 50px;
+    background-color: #000000;
+    min-height: 200vh;
+    /* For demonstration of fixed navbar and scrolling */
+    margin: 0;
+    /* Remove default body margin */
+    font-family: Arial, sans-serif;
+    /* A basic font for readability */
+}
+
+/* --------------------------------------------------- */
+/* PLACE SECTION ONE (Hero Section)                    */
+/* --------------------------------------------------- */
+.place-section-one {
+    width: 100%;
+    background: radial-gradient(circle, rgba(27, 51, 171, 1) 0%, rgba(0, 0, 0, 1) 45%);
+}
+
+.sec-one-partone {
+    width: 100%;
+    display: flex;
+    padding: 100px 100px 25px 100px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Allow items to wrap on smaller screens */
+}
+
+.sec-two-partone a {
+    text-decoration: none;
+    color: white;
+}
+
+.one-partone-one {
+    width: 49%;
+    padding: 10px;
+}
+
+#partone-one-headone {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: rgba(62, 13, 146, 0.586);
+    border-radius: 25px;
+    color: white;
+    width: 20%;
+    /* Keep as-is for large screen, will adjust */
+    min-width: fit-content;
+    /* Ensure it doesn't shrink too much */
+    padding: 2px 8px 1px 8px;
+    /* Adjusted padding for better text fit */
+    border: rgb(165, 154, 232) solid 1px;
+    font-family: sans-serif;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    text-align: center;
+    /* Center text within its small box */
+}
+
+#partone-one-headtwo,
+#partone-one-headthree {
+    font-size: 54px;
+    color: white;
+    /* #partone-one-headthree was rgb(255, 255, 255) */
+    padding: 2px 0px 2px 5px;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+    /* Only on headthree originally, added to headtwo for consistency */
+}
+
+#partone-one-paraone {
+    font-size: 19px;
+    font-family: sans-serif;
+    padding: 2px 0px 2px 5px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.one-partone-one a {
+    text-decoration: none;
+    color: white;
+}
+
+#partone-one-headfour {
+    font-size: 15px;
+    font-family: sans-serif;
+    padding: 12px 20px;
+    background-color: rgba(7, 7, 248, 0.3);
+    width: fit-content;
+    /* Use fit-content to allow it to shrink/grow with text */
+    color: white;
+    font-weight: 500;
+    border-radius: 5px;
+    /* Added some border-radius for consistency */
+}
+
+.one-partone-two {
+    width: 48%;
+    object-fit: contain;
+    /* object-fit is for img directly, not container */
+}
+
+.one-partone-two img {
+    width: 100%;
+    /* height: 90%; Will need adjustment for responsiveness */
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+    /* Remove extra space below img */
+}
+
+.sec-one-parttwo {
+    width: 100%;
+    padding: 25px 100px 25px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.one-parttwo-one {
+    display: flex;
+    justify-content: center;
+    font-size: 34px;
+    font-family: sans-serif;
+    padding-bottom: 20px;
+    color: wheat;
+    text-align: center;
+    /* For multi-line headings */
+}
+
+.parttwo-one-paraone {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+}
+
+.one-parttwo-two {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 60px 10px 20px 10px;
+    flex-wrap: wrap;
+    /* Allow cards to wrap */
+}
+
+.card-cover {
+    width: 20%;
+    /* Keep as-is, will adjust */
+    height: 160px;
+    /* Fixed height can be problematic, consider min-height/auto */
+    margin-bottom: 20px;
+    /* Space between rows of cards */
+}
+
+.parttwo-card {
+    padding: 5px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    /* Fixed height, will adjust */
+    background-color: rgba(255, 255, 255, 0.1);
+    border: solid rgba(255, 255, 255, 0.3) 1px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effects */
+}
+
+.parttwo-card:hover {
+    width: 100%;
+    /* Slightly larger on hover */
+    height: 155px;
+    box-shadow: 4px 4px 80px rgba(255, 255, 255, 0.2);
+}
+
+.parttwo-card-head {
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 0px; 
+    color: wheat;
+    text-align: center;
+}
+
+.parttwo-card-headtwo {
+    font-size: 15px;
+    padding: 2px;
+    font-family: sans-serif;
+    font-weight: 550;
+    color: wheat;
+    text-align: center;
+}
+
+.parttwo-card-para {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 30px;
+    margin-bottom: 8px;
+    width: 45px;
+    /* Adjust as needed for icon circle */
+    height: 45px;
+    /* Adjust as needed for icon circle */
+}
+
+.parttwo-card-para svg {
+    color: white;
+}
+
+/* --------------------------------------------------- */
+/* PLACEMENT-SECTIONTWO                                */
+/* --------------------------------------------------- */
+#studentCarousel {
+    width: 100%;
+}
+
+.sec-two-partone {
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    /* Use min-height if content can grow */
+}
+
+.two-partone-one {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 80%;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+.card-width {
+    width: 30%;
+    /* 3 cards per row */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.two-partone-one-card {
+
+    padding: 10px;
+    width: 100%;
+    height: 250px;
+    background-color: rgba(69, 69, 247, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    border: solid rgba(96, 97, 99, 0.5) 1px;
+    transition: all 0.3s ease;
+}
+
+.two-partone-one-card img {
+    /* width: 37%; */
+
+    max-width: 120px;
+    /* Limit image size */
+    height: 120px;
+    /* Keep height fixed for circular crop */
+    border-radius: 50%;
+    /* Use 50% for perfect circle */
+    object-fit: cover;
+    border: rgba(247, 243, 243, 0.4) solid 1px;
+    object-fit: cover;
+    padding: 2px;
+}
+
+.two-partone-one-head {
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 5px;
+    color: white;
+    text-align: center;
+
+}
+
+.two-partone-one-headtwo {
+    font-size: 30px;
+    font-family: sans-serif;
+    padding: 3px;
+    color: white;
+    text-align: center;
+}
+
+.two-partone-one-para {
+    font-size: 14px;
+    font-family: sans-serif;
+    padding: 3px;
+    color: white;
+    text-align: center;
+}
+
+
+
+@media (max-width:924px) {
+
+    /* Force only one card per slide */
+    .two-partone-one {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    .card-width {
+        width: 80%;
+        /* Card takes full width */
+        flex: 0 0 100%;
+        /* Each card acts as full slide */
+        max-width: 300px;
+        margin-left: 15px;
+        /* Optional: set a max size */
+    }
+
+
+    .two-partone-one .card-width:not(:first-child) {
+        display: none;
+    }
+}
+
+@media (max-width:700px) {
+
+    /* Force only one card per slide */
+    .two-partone-one {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    .card-width {
+        width: 80% !important;
+        /* Card takes full width */
+        flex: 0 0 100%;
+        /* Each card acts as full slide */
+        max-width: 300px;
+        /* Optional: set a max size */
+    }
+
+    /* Hide extra cards inside same slide */
+    .two-partone-one .card-width:not(:first-child) {
+        display: none;
+    }
+
+}
+
+@media (max-width:317px) {
+    .card-width {
+        width: 60% !important;
+        /* Card takes full width */
+        flex: 0 0 80%;
+        /* Each card acts as full slide */
+        max-width: 300px;
+        /* Optional: set a max size */
+    }
+
+}
+
+
+
+ .carousel-control-prev,
+  .carousel-control-next {
+    display: flex !important;
+    width: 38px;
+    height: 38px;
+    margin-top: 140px;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 50%;
+    opacity: 1;
+  }
+
+@media (max-width: 700px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: flex !important;
+    width: 38px;
+    height: 38px;
+    margin-top:115px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 50%;
+    opacity: 1;
+  }
+
+  .carousel-control-prev { left: 6px; }
+  .carousel-control-next { right: 6px; }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
+
+
+
+
+
+
+#two-partone-headone {
+    font-size: 35px;
+    font-family: sans-serif;
+    padding: 30px 30px 10px 30px;
+    color: rgb(195, 195, 231);
+    text-align: center;
+}
+
+.two-partone-para {
+    font-size: 17px;
+    font-family: sans-serif;
+    padding: 0px 20px 20px 20px;
+    color: white;
+    text-align: center;
+    /* Center paragraph text */
+    /* width: 70%; */
+    /*Limit width for readability on large screens*/
+}
+
+/* .two-partone-one {
+    display: flex;
+    margin: 30px;
+    height: 260px; /* Fixed height, will adjust */
+/* width: 80%;
+    justify-content: center;
+    flex-wrap: wrap; Allow cards to wrap
+} */
+/* 
+.card-width {
+    width: 32%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px; /* Space between rows of cards */
+/* } */
+
+/* .two-partone-one-card {
+    width: 92%;
+    height: 250px; /* Fixed height, will adjust */
+/* background-color: rgba(69, 69, 247, 0.1);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    border: solid rgba(126, 157, 236, 0.5) 1px;
+    transition: all 0.3s ease; Smooth transition for hover effects
+} 
+
+/* .two-partone-one-card:hover {
+    height: 258px;
+    box-shadow: 4px 3px 80px rgb(73, 73, 179, 0.3);
+} */
+
+/* .two-partone-one-card img {
+    /* width: 33%; */
+/* max-width: 120px; /* Limit image size */
+/* height: 120px; Keep height fixed for circular crop */
+/* border-radius: 50%; Use 50% for perfect circle
+    border: rgba(247, 243, 243, 0.4) solid 1px;
+    object-fit: cover;
+    padding: 5px;
+} */
+
+/* .two-partone-one-head {
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 5px;
+    color: white;
+    text-align: center;
+}
+
+.two-partone-one-headtwo {
+    font-size: 30px;
+    font-family: sans-serif;
+    padding: 3px;
+    color: white;
+    text-align: center;
+}
+
+.two-partone-one-para {
+    font-size: 14px;
+    font-family: sans-serif;
+    padding: 2px;
+    color: white;
+    text-align: center;
+} */
+
+/* #two-partone-btn {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: sans-serif;
+    background-color: rgba(139, 45, 227, 0.2);
+    border-radius: 10px;
+    font-weight: 600;
+    color: white;
+    border: rgba(250, 246, 246, 0.5) solid 1px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+/* margin-top: 30px; Add some space above button
+} */
+
+/* #two-partone-btn:hover {
+    padding: 12px 22px; /* Slightly adjusted padding for smoother hover */
+/* background-color: rgba(139, 45, 227, 0.3);
+} */
+
+/* --------------------------------------------------- */
+/* PLACEMENT-SECTION-THREE                             */
+/* --------------------------------------------------- */
+.sec-three-partone {
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+    /* Use min-height */
+}
+
+.sec-three-parttwo {
+    width: 100%;
+    /* Corrected from '100' */
+    background-color: rgb(0, 0, 0);
+}
+
+.sec-three-parttwo-container {
+    width: 100%;
+    /* Corrected from '100' */
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+}
+
+.three-parttwo-one {
+    width: 80%;
+    /* Will adjust */
+    background-color: rgba(69, 69, 247, 0.1);
+    padding: 30px 30px 0px 30px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    border: solid rgba(181, 181, 244, 0.4) 1px;
+}
+
+#three-parttwo-one-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: rgb(192, 179, 236);
+    padding: 10px 10px 30px 10px;
+    text-align: center;
+}
+
+.three-parttwo-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Allow content containers to wrap */
+}
+
+.three-parttwo-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    justify-content: space-evenly;
+    width: 49%;
+    /* Will adjust */
+}
+
+.three-parttwo-one-content {
+    padding-bottom: 20px;
+}
+
+.three-parttwo-one-content-heading {
+    font-size: 21px;
+    font-family: sans-serif;
+    padding: 5px;
+    color: rgb(185, 185, 234);
+}
+
+.three-parttwo-one-content-para {
+    font-size: 17px;
+    font-family: sans-serif;
+    padding: 5px;
+    color: white;
+}
+
+#three-parttwo-one-headtwo {
+    color: rgb(185, 185, 234);
+    display: flex;
+    justify-content: center;
+    padding: 50px 30px 100px 30px;
+    margin: 20px;
+    font-size: 28px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+/* --------------------------------------------------- */
+/* SECTION-FOUR                                        */
+/* --------------------------------------------------- */
+.place-section-four {
+    width: 100%;
+    background: radial-gradient(circle, rgba(27, 51, 171, 1) 0%, rgba(0, 0, 0, 1) 45%);
+    padding-bottom: 50px;
+    /* Added bottom padding */
+}
+
+.section-four-partone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    /* Will adjust */
+    width: 100%;
+    align-items: center;
+}
+
+.four-partone-one {
+    width: 85%;
+    /* Will adjust */
+    padding: 50px;
+    /* Will adjust */
+}
+
+.four-partone-one-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#four-partone-one-content-head {
+    font-size: 40px;
+    color: rgb(185, 185, 234);
+    font-family: sans-serif;
+    padding: 0px 30px 30px 30px;
+    text-align: center;
+}
+
+#four-partone-one-content-para {
+    background-color: rgba(69, 69, 247, 0.1);
+    font-size: 18px;
+    font-family: sans-serif;
+    padding: 10px 15px;
+    /* Adjusted padding */
+    margin-bottom: 40px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    /* Added border-radius */
+    width: 70%;
+    /* Limit width for readability */
+}
+
+.four-partone-one-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Allow cards to wrap */
+}
+
+.four-partone-one-card {
+    width: 23%;
+    /* Will adjust */
+    background-color: rgba(69, 69, 247, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    border: solid rgba(252, 247, 247, 0.3) 1px;
+    margin-bottom: 20px;
+    /* Space between rows */
+    transition: all 0.3s ease;
+    /* Smooth hover transition */
+}
+
+.four-partone-one-card:hover {
+    background-color: rgba(177, 177, 245, 0.1);
+    box-shadow: 4px 3px 80px rgb(73, 73, 179, 0.3);
+}
+
+.four-partone-one-card-no {
+    width: 40px;
+    /* Fixed size for numbers */
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(69, 69, 247, 0.1);
+    border-radius: 50%;
+    /* Perfect circle */
+    color: white;
+    font-size: 1.2em;
+    /* Ensure number is visible */
+    margin-bottom: 10px;
+}
+
+.four-partone-one-card-headone {
+    font-size: 18px;
+    font-family: sans-serif;
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
+
+.four-partone-one-card-para {
+    text-align: center;
+    font-size: 15px;
+    font-family: sans-serif;
+    color: white;
+}
+
+.section-four-parttwo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    /* Add some top padding */
+}
+
+.four-parttwo-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    /* Will adjust */
+    width: 80%;
+    /* Will adjust */
+    background-color: rgba(177, 177, 245, 0.1);
+    border: solid rgba(255, 255, 255, 0.3) 1px;
+    border-radius: 15px;
+    flex-wrap: wrap;
+    /* Allow parts to wrap */
+}
+
+.four-parttwo-container-one {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    /* Will adjust */
+    padding: 5px;
+}
+
+#four-parttwo-container-head {
+    font-size: 33px;
+    font-family: sans-serif;
+    padding: 20px;
+    color: rgb(185, 185, 234);
+    text-align: center;
+}
+
+#four-parttwo-container-para {
+    font-size: 18px;
+    color: white;
+    font-family: sans-serif;
+    padding: 0px 20px 20px 20px;
+    text-align: center;
+}
+
+.four-parttwo-container-btn {
+    padding: 20px;
+    height: auto;
+    /* Allow height to adjust */
+    display: flex;
+    /* Make button container a flex container */
+    justify-content: center;
+    /* Center the button */
+    align-items: center;
+}
+
+.four-parttwo-container-btn button {
+    padding: 12px 25px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: white;
+    background-color: rgb(100, 100, 222);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Smooth hover transition */
+}
+
+.four-parttwo-container-btn button:hover {
+    background-color: rgb(72, 72, 232);
+    padding: 14px 28px;
+}
+
+.four-parttwo-container-two {
+    width: 35%;
+    /* Will adjust */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Vertically center content */
+}
+
+.four-parttwo-container-two-para {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 65%;
+    /* padding: 15px; */
+    border-radius: 5000px;
+    min-height: 100px;
+    text-align: center;
+    color: white;
+    height: 100%;
+    font-size: 1.1em;
+}
+
+.four-parttwo-container-two-para svg {
+    padding: 10px;
+}
+
+
+/* --------------------------------------------------- */
+/* RESPONSIVE STYLES (MEDIA QUERIES)                   */
+/* --------------------------------------------------- */
+
+/* Tablets and smaller desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+
+    /* General adjustments */
+    .sec-one-partone,
+    .sec-one-parttwo,
+    .sec-two-partone,
+    .sec-three-partone,
+    .section-four-partone,
+    .section-four-parttwo {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    /* SECTION ONE */
+    .sec-one-partone {
+        padding-top: 70px;
+    }
+
+    .one-partone-one,
+    .one-partone-two {
+        width: 100%;
+        /* Stack items vertically */
+        text-align: center;
+        /* Center text content */
+    }
+
+    .one-partone-one {
+        margin-bottom: 30px;
+        /* Space between stacked content and image */
+        padding: 0 20px;
+        /* Adjust padding */
+    }
+
+    #partone-one-headone {
+        width: fit-content;
+        /* Allow it to shrink/grow */
+        margin: 0 auto 20px auto;
+        /* Center it */
+        padding: 5px 10px;
+        /* Adjusted padding */
+    }
+
+    #partone-one-headtwo,
+    #partone-one-headthree {
+        font-size: 44px;
+        /* Smaller font size */
+        padding: 0;
+        /* Remove left padding */
+    }
+
+    #partone-one-paraone {
+        font-size: 17px;
+        /* Smaller font size */
+        padding: 0;
+        /* Remove left padding */
+    }
+
+    #partone-one-headfour {
+        width: fit-content;
+        margin: 0 auto;
+        /* Center it */
+        font-size: 14px;
+        /* padding: 5px 12px; */
+    }
+
+    .one-partone-two img {
+        height: auto;
+        /* Allow height to adjust proportionally */
+        max-height: 400px;
+        /* Limit max height for large images */
+    }
+
+    .sec-one-parttwo {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .one-parttwo-one {
+        font-size: 30px;
+        /* Smaller heading */
+    }
+
+    .parttwo-one-paraone {
+        width: 70%;
+        /* Wider paragraph for readability */
+        font-size: 18px;
+        /* Slightly smaller */
+    }
+
+    .one-parttwo-two {
+        padding: 40px 0px 20px 0px;
+        justify-content: space-around;
+        /* Distribute cards */
+    }
+
+    .card-cover {
+        width: 45%;
+        /* Two cards per row */
+        height: auto;
+        /* Allow height to adapt */
+        margin-bottom: 30px;
+        /* More space between rows */
+    }
+
+    .parttwo-card {
+        height: auto;
+        /* Allow height to adapt */
+        padding: 15px;
+        /* More padding */
+    }
+
+    .parttwo-card-head {
+        font-size: 26px;
+        /* Smaller card heading */
+    }
+
+    .parttwo-card-headtwo {
+        font-size: 14px;
+        /* Smaller sub-heading */
+    }
+
+    /* SECTION TWO */
+    #two-partone-headone {
+        font-size: 30px;
+        /* Smaller heading */
+        padding: 20px 20px 10px 20px;
+    }
+
+    .two-partone-para {
+        font-size: 16px;
+        /* Smaller paragraph */
+        width: 80%;
+        /* Wider for readability */
+    }
+
+    .two-partone-one {
+        width: 90%;
+        /* Wider container */
+        height: auto;
+        /* Allow height to adjust */
+        margin: 20px 0;
+    }
+
+    .card-width {
+        width: 48%;
+        /* Two cards per row */
+        margin-bottom: 30px;
+        /* Space between rows */
+    }
+
+    .two-partone-one-card {
+        height: auto;
+        /* Allow height to adjust */
+        padding-bottom: 15px;
+        /* Ensure content fits */
+    }
+
+    .two-partone-one-card img {
+        margin-top: 5px;
+        width: 40%;
+        /* Slightly larger image */
+        height: 100px;
+        /* Adjust fixed height */
+        max-width: 100px;
+    }
+
+    #two-partone-btn {
+        font-size: 15px;
+        padding: 10px 18px;
+    }
+
+    /* SECTION THREE */
+    .sec-three-parttwo-container {
+        padding: 0 30px;
+        /* Add horizontal padding */
+    }
+
+    .three-parttwo-one {
+        width: 90%;
+        /* Wider container */
+        padding: 20px;
+    }
+
+    #three-parttwo-one-head {
+        font-size: 26px;
+        /* Smaller heading */
+        padding: 10px 0 20px 0;
+    }
+
+    .three-parttwo-container {
+        flex-direction: column;
+        /* Stack content containers */
+    }
+
+    .three-parttwo-content-container {
+        width: 100%;
+        /* Take full width when stacked */
+        padding: 10px 0;
+    }
+
+    .three-parttwo-one-content-heading {
+        font-size: 19px;
+        /* Smaller heading */
+    }
+
+    .three-parttwo-one-content-para {
+        font-size: 16px;
+        /* Smaller paragraph */
+    }
+
+    #three-parttwo-one-headtwo {
+        font-size: 24px;
+        /* Smaller heading */
+        padding: 30px 20px 70px 20px;
+        /* Adjusted padding */
+    }
+
+    /* SECTION FOUR */
+    .section-four-partone {
+        padding: 40px;
+    }
+
+    .four-partone-one {
+        width: 90%;
+        /* Wider container */
+        padding: 30px;
+    }
+
+    #four-partone-one-content-head {
+        font-size: 35px;
+        /* Smaller heading */
+        padding: 0px 20px 20px 20px;
+    }
+
+    #four-partone-one-content-para {
+        font-size: 16px;
+        /* Smaller paragraph */
+        width: 85%;
+        /* Wider for readability */
+        padding: 10px;
+    }
+
+    .four-partone-one-cards {
+        justify-content: space-around;
+        /* Distribute cards */
+    }
+
+    .four-partone-one-card {
+        width: 45%;
+        /* Two cards per row */
+        padding: 15px;
+        margin-bottom: 25px;
+        /* Space between rows */
+    }
+
+    .four-partone-one-card-no {
+        width: 35px;
+        /* Slightly smaller circle */
+        height: 35px;
+        font-size: 1.1em;
+    }
+
+    .four-partone-one-card-headone {
+        font-size: 16px;
+        /* Smaller heading */
+    }
+
+    .four-partone-one-card-para {
+        font-size: 14px;
+        /* Smaller paragraph */
+    }
+
+    .section-four-parttwo {
+        padding-top: 20px;
+    }
+
+    .four-parttwo-container {
+        width: 90%;
+        /* Wider container */
+        padding: 20px;
+        flex-direction: column;
+        /* Stack container parts */
+        align-items: center;
+    }
+
+    .four-parttwo-container-one,
+    .four-parttwo-container-two {
+        width: 100%;
+        /* Take full width when stacked */
+        padding: 10px;
+        margin-bottom: 20px;
+        /* Space between stacked parts */
+    }
+
+    .four-parttwo-container-two:last-child {
+        margin-bottom: 0;
+    }
+
+    #four-parttwo-container-head {
+        font-size: 28px;
+        /* Smaller heading */
+        padding: 10px;
+    }
+
+    #four-parttwo-container-para {
+        font-size: 16px;
+        /* Smaller paragraph */
+        padding: 0 10px 15px 10px;
+    }
+
+    .four-parttwo-container-btn {
+        padding: 10px;
+    }
+
+    .four-parttwo-container-two-para {
+        width: 90%;
+        /* Wider for mobile */
+        min-height: 80px;
+        /* Adjust min height */
+        font-size: 1em;
+    }
+}
+
+/* Mobile devices (max-width: 767px) */
+@media (max-width: 767px) {
+
+    /* General adjustments */
+    .sec-one-partone,
+    .sec-one-parttwo,
+    .sec-two-partone,
+    .sec-three-partone,
+    .section-four-partone,
+    .section-four-parttwo {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* SECTION ONE */
+    .sec-one-partone {
+        padding-top: 50px;
+        padding-bottom: 15px;
+    }
+
+    .one-partone-one {
+        margin-bottom: 20px;
+        padding: 0 10px;
+    }
+
+    #partone-one-headone {
+        font-size: 14px;
+        padding: 4px 8px;
+        margin-bottom: 15px;
+    }
+
+    #partone-one-headtwo,
+    #partone-one-headthree {
+        font-size: 34px;
+        /* Even smaller font size */
+    }
+
+    #partone-one-paraone {
+        font-size: 15px;
+        /* Even smaller font size */
+        margin-bottom: 20px;
+    }
+
+    #partone-one-headfour {
+        font-size: 13px;
+        /* padding: 4px 10px; */
+    }
+
+    .one-partone-two img {
+        max-height: 300px;
+    }
+
+    .sec-one-parttwo {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 0;
+    }
+
+    .one-parttwo-one {
+        font-size: 26px;
+        /* Smaller heading */
+        padding-bottom: 15px;
+    }
+
+    .parttwo-one-paraone {
+        width: 90%;
+        /* Wider for small screens */
+        font-size: 16px;
+        /* Smaller */
+    }
+
+    .one-parttwo-two {
+        padding: 30px 0 0 0;
+        justify-content: center;
+        /* Center cards */
+        flex-direction: column;
+        /* Stack cards */
+        align-items: center;
+    }
+
+    .card-cover {
+        width: 80%;
+        /* Single card per row */
+        height: auto;
+        margin-bottom: 25px;
+    }
+
+    .parttwo-card {
+        height: auto;
+        padding: 10px;
+    }
+
+    .parttwo-card-head {
+        font-size: 24px;
+    }
+
+    .parttwo-card-headtwo {
+        font-size: 13px;
+    }
+
+    /* SECTION TWO */
+    #two-partone-headone {
+        font-size: 26px;
+        /* Smaller heading */
+        padding: 15px 15px 10px 15px;
+    }
+
+    .two-partone-para {
+        font-size: 15px;
+        width: 90%;
+        padding: 0 15px 15px 15px;
+    }
+
+    .two-partone-one {
+        width: 95%;
+        /* Even wider container */
+        margin: 15px 0;
+        flex-direction: column;
+        /* Stack cards */
+        align-items: center;
+    }
+
+    .card-width {
+        width: 90%;
+        /* Single card per row */
+        margin-bottom: 25px;
+    }
+
+    .two-partone-one-card {
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    .two-partone-one-card img {
+        width: 35%;
+        /* Adjust size */
+        height: 90px;
+        max-width: 90px;
+    }
+
+    .two-partone-one-head {
+        font-size: 18px;
+    }
+
+    .two-partone-one-headtwo {
+        font-size: 14px;
+    }
+
+    .two-partone-one-para {
+        font-size: 13px;
+    }
+
+    #two-partone-btn {
+        font-size: 14px;
+        padding: 8px 15px;
+        margin-top: 20px;
+    }
+
+    /* SECTION THREE */
+    .sec-three-parttwo-container {
+        padding: 0 15px;
+    }
+
+    .three-parttwo-one {
+        width: 95%;
+        /* Wider container */
+        padding: 15px;
+    }
+
+    #three-parttwo-one-head {
+        font-size: 22px;
+        padding: 10px 0 15px 0;
+    }
+
+    .three-parttwo-content-container {
+        padding: 5px 0;
+    }
+
+    .three-parttwo-one-content-heading {
+        font-size: 18px;
+    }
+
+    .three-parttwo-one-content-para {
+        font-size: 15px;
+    }
+
+    #three-parttwo-one-headtwo {
+        font-size: 20px;
+        padding: 20px 15px 50px 15px;
+    }
+
+    /* SECTION FOUR */
+    .section-four-partone {
+        padding: 30px;
+    }
+
+    .four-partone-one {
+        width: 95%;
+        padding: 20px;
+    }
+
+    #four-partone-one-content-head {
+        font-size: 30px;
+        padding: 0px 15px 15px 15px;
+    }
+
+    #four-partone-one-content-para {
+        font-size: 15px;
+        width: 95%;
+        padding: 8px 10px;
+        margin-bottom: 30px;
+    }
+
+    .four-partone-one-cards {
+        flex-direction: column;
+        /* Stack cards */
+        align-items: center;
+    }
+
+    .four-partone-one-card {
+        width: 80%;
+        /* Single card per row */
+        margin-bottom: 20px;
+    }
+
+    .four-partone-one-card-no {
+        width: 30px;
+        height: 30px;
+        font-size: 1em;
+    }
+
+    .four-partone-one-card-headone {
+        font-size: 15px;
+    }
+
+    .four-partone-one-card-para {
+        font-size: 13px;
+    }
+
+    .section-four-parttwo {
+        padding-top: 15px;
+    }
+
+    .four-parttwo-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .four-parttwo-container-one,
+    .four-parttwo-container-two {
+        margin-bottom: 15px;
+    }
+
+    #four-parttwo-container-head {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    #four-parttwo-container-para {
+        font-size: 15px;
+        padding: 0 10px 10px 10px;
+    }
+
+    .four-parttwo-container-btn {
+        padding: 5px;
+    }
+
+    .four-parttwo-container-btn button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .four-parttwo-container-two-para {
+        width: 95%;
+        min-height: 70px;
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}
+
+/* Extra small mobile devices (max-width: 479px) */
+@media (max-width: 479px) {
+
+    /* General adjustments */
+    .sec-one-partone,
+    .sec-one-parttwo,
+    .sec-two-partone,
+    .sec-three-partone,
+    .section-four-partone,
+    .section-four-parttwo {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* SECTION ONE */
+    .sec-one-partone {
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    .one-partone-one {
+        padding: 0 5px;
+    }
+
+    #partone-one-headone {
+        font-size: 12px;
+        padding: 3px 6px;
+        margin-bottom: 10px;
+    }
+
+    #partone-one-headtwo,
+    #partone-one-headthree {
+        font-size: 28px;
+    }
+
+    #partone-one-paraone {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    #partone-one-headfour {
+        font-size: 12px;
+        /* padding: 3px 8px; */
+    }
+
+    .one-partone-two img {
+        max-height: 250px;
+    }
+
+    .sec-one-parttwo {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .one-parttwo-one {
+        font-size: 22px;
+        padding-bottom: 10px;
+    }
+
+    .parttwo-one-paraone {
+        font-size: 14px;
+        width: 95%;
+    }
+
+    .one-parttwo-two {
+        padding: 20px 0 0 0;
+    }
+
+    .card-cover {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .parttwo-card-head {
+        font-size: 20px;
+    }
+
+    .parttwo-card-headtwo {
+        font-size: 12px;
+    }
+
+    /* SECTION TWO */
+    #two-partone-headone {
+        font-size: 22px;
+        padding: 10px 10px 5px 10px;
+    }
+
+    .two-partone-para {
+        font-size: 14px;
+        padding: 0 10px 10px 10px;
+    }
+
+    .two-partone-one {
+        margin: 10px 0;
+    }
+
+    .card-width {
+        width: 95%;
+        margin-bottom: 20px;
+    }
+
+    .two-partone-one-card img {
+        height: 70px;
+        max-width: 70px;
+    }
+
+    .two-partone-one-head {
+        font-size: 16px;
+    }
+
+    .two-partone-one-headtwo {
+        font-size: 13px;
+    }
+
+    .two-partone-one-para {
+        font-size: 12px;
+    }
+
+    #two-partone-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+        margin-top: 15px;
+    }
+
+    /* SECTION THREE */
+    .sec-three-parttwo-container {
+        padding: 0 10px;
+    }
+
+    .three-parttwo-one {
+        width: 95%;
+        padding: 10px;
+    }
+
+    #three-parttwo-one-head {
+        font-size: 18px;
+        padding: 5px 0 10px 0;
+    }
+
+    .three-parttwo-one-content-heading {
+        font-size: 16px;
+    }
+
+    .three-parttwo-one-content-para {
+        font-size: 14px;
+    }
+
+    #three-parttwo-one-headtwo {
+        font-size: 18px;
+        padding: 15px 10px 40px 10px;
+        margin: 10px;
+    }
+
+    /* SECTION FOUR */
+    .section-four-partone {
+        padding: 20px;
+    }
+
+    .four-partone-one {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #four-partone-one-content-head {
+        font-size: 25px;
+        padding: 0px 10px 10px 10px;
+    }
+
+    #four-partone-one-content-para {
+        font-size: 14px;
+        width: 95%;
+        padding: 6px 8px;
+        margin-bottom: 20px;
+    }
+
+    .four-partone-one-card {
+        width: 95%;
+        margin-bottom: 15px;
+    }
+
+    .four-partone-one-card-no {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9em;
+    }
+
+    .four-partone-one-card-headone {
+        font-size: 14px;
+    }
+
+    .four-partone-one-card-para {
+        font-size: 12px;
+    }
+
+    .section-four-parttwo {
+        padding-top: 10px;
+    }
+
+    .four-parttwo-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .four-parttwo-container-one,
+    .four-parttwo-container-two {
+        margin-bottom: 10px;
+    }
+
+    #four-parttwo-container-head {
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    #four-parttwo-container-para {
+        font-size: 14px;
+        padding: 0 5px 5px 5px;
+    }
+
+    .four-parttwo-container-btn button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .four-parttwo-container-two-para {
+        min-height: 60px;
+        font-size: 0.8em;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 333px) {
+    .one-parttwo-one {
+        /* width: 10%; */
+        font-size: 15px;
+    }
+}
+
+/* FOOTER */
+
+
+
+/* Default — show all cards normally */
+.two-partone-one {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  overflow: hidden; /* no scroll on large screens */
+}
+
+/* Each card stays fixed size */
+.card-width {
+  flex: 0 0 auto;
+}
+
+/* --- Responsive for screens smaller than 900px --- */
+@media (max-width: 900px) {
+  .two-partone-one {
+    display: flex;
+    overflow-x: auto;           /* enables horizontal scroll */
+    scroll-snap-type: x mandatory; /* smooth snapping */
+    -webkit-overflow-scrolling: touch; /* smooth scroll on mobile */
+    gap: 10px;
+  }
+
+  .card-width {
+    flex: 0 0 100%;            /* each card takes full width */
+    scroll-snap-align: center; /* snap each card in center */
+  }
+
+  /* Hide scrollbar (optional) */
+  .two-partone-one::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  /* background-color: #25D366; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease, bottom 0.3s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(252, 29, 29);
+  border-radius: 50%;
+  border: 2px solid white;
+}
+@media (max-width: 600px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .whatsapp-float img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .notification-dot {
+    width: 10px;
+    height: 10px;
+    top: 6px;
+    right: 8px;
+  }
+  .notification-dot {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    bottom: 18px;
+    right: 18px;
+  }
+
+  .whatsapp-float img {
+    width: 50px;
+    height: 50px;
+  }
+  
+}
+.mobile-courses-dropdown {
+  max-height: 80vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: black;
+}
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color:transparent; /* light background */
+  color: #f9f8f8; /* text color */
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 7px;
+}
+
+/* Optional hover effect */
+.back-btn:hover {
+  background-color: #87a6c7; /* blue hover */
+  color: #2a2929;
+}
+
+/* Add small arrow for aesthetic */
+.back-btn::before {
+  content: "←";
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 4px;
+}
+
+
+footer {
+  background:#000000 !important;
+  position: relative;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.footer-parttw {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .75rem;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.footer-parttw h3 {
+  font-size: 12.5px !important;
+  font-weight: 400 !important;
+  color:rgb(146, 142, 142) !important;
+}
+.footer-parttw a {
+  color:white;
+  font-weight: 600;
+  transition: color .18s;
+}
+.footer-parttw a:hover { color: var(--ft-orange-l); }
+
+.footer-hr{
+     color: 4px solid #d6d6d6 !important; 
+}
+.footer-left h4{
+ font-size: 17px;
+}
+

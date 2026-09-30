@@ -1,0 +1,218 @@
+/* ── City page extra styles ─────────────────────────── */
+.city-hero {
+    background:radial-gradient(circle, rgba(21, 53, 158, 1) 1%, rgba(0, 0, 0, 1) 55%);
+    padding: 7rem 2rem 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.city-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 55% 50% at 20% 60%, rgba(99,102,241,.15) 0%, transparent 65%),
+        radial-gradient(ellipse 45% 45% at 80% 35%, rgba(245,158,11,.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+.city-hero-inner { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
+.city-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: .35rem 1rem;
+    border: 1px solid rgba(99,102,241,.4);
+    border-radius: 20px; font-size: 12px; font-weight: 600;
+    color: #818cf8; letter-spacing: .5px; margin-bottom: 1.25rem;
+    background: rgba(99,102,241,.08);
+}
+.city-tag::before {
+    content: ''; width: 6px; height: 6px; border-radius: 50%;
+    background: #818cf8; flex-shrink: 0;
+    animation: cpulse 2s infinite;
+}
+@keyframes cpulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+.city-hero h1 {
+    font-size: clamp(28px, 5vw, 54px);
+    font-weight: 800; line-height: 1.1; letter-spacing: -1.5px;
+    color: #f1f5f9; margin-bottom: 1.25rem;
+}
+.city-hero h1 span {   font-style: normal;
+    background: linear-gradient(135deg, #fcd34d, #f97316);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+.city-hero p {
+    font-size: 16px; color: rgba(241,245,249,.6);
+    line-height: 1.8; max-width: 640px; margin: 0 auto 2rem;
+}
+.city-hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.city-hero-btns .btn-primary {
+    padding: .8rem 2rem; background: #f59e0b; color: #0f172a;
+    border-radius: 7px; font-weight: 700; font-size: 15px;
+    border: none; cursor: pointer; transition: all .2s;
+    box-shadow: 0 6px 20px rgba(245,158,11,.35);
+}
+.city-hero-btns .btn-primary:hover { background: #fbbf24; transform: translateY(-2px); }
+.city-hero-btns .btn-outline {
+    padding: .8rem 2rem;
+    border: 1.5px solid rgba(255,255,255,.2); color: #f1f5f9;
+    border-radius: 7px; font-weight: 500; font-size: 15px;
+    background: transparent; cursor: pointer; transition: all .2s;
+}
+.city-hero-btns .btn-outline:hover { border-color: #f59e0b; color: #f59e0b; }
+
+/* ── Stats bar ───────────────────────────────────────── */
+.city-stats {
+    display: flex; justify-content: center; gap: 0;
+    background: #1e293b;
+    border-top: 1px solid rgba(255,255,255,.07);
+    border-bottom: 1px solid rgba(255,255,255,.07);
+    flex-wrap: wrap;
+}
+.city-stat-item {
+    flex: 1; min-width: 150px; padding: 1.5rem 1rem;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,.07);
+}
+.city-stat-item:last-child { border-right: none; }
+.city-stat-item strong {
+    display: block; font-size: 28px; font-weight: 800;
+    color: #f59e0b; line-height: 1;
+}
+.city-stat-item span { font-size: 12px; color: rgba(241,245,249,.5); text-transform: uppercase; letter-spacing: .5px; }
+
+/* ── Why section ─────────────────────────────────────── */
+.city-why {
+    background: transparent;
+}
+.city-why-inner { max-width: 1100px; margin: 0rem 3rem; }
+.city-section-tag {
+    font-size: 11px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: #f59e0b; display: block; margin-bottom: .75rem;
+}
+.city-why h2 {
+    font-size: clamp(24px, 3.5vw, 40px); font-weight: 800;
+    color: #f1f5f9; letter-spacing: -1px; margin-bottom: .75rem;
+}
+.city-why h2 span {  background: linear-gradient(135deg, #fcd34d, #f97316);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent }
+.city-why > .city-why-inner > p { color: rgba(241,245,249,.55); font-size: 15px; line-height: 1.8; max-width: 600px; margin-bottom: 3rem; }
+.why-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+}
+.why-card {
+    background: #1e293b; border: 1px solid rgba(255,255,255,.07);
+    border-radius: 14px; padding: 1.5rem;
+    transition: border-color .25s, transform .25s;
+}
+.why-card:hover { border-color: rgba(245,158,11,.4); transform: translateY(-3px); }
+.why-icon { font-size: 26px; margin-bottom: .75rem; }
+.why-card h4 { font-size: 15px; font-weight: 700; color: #f1f5f9; margin-bottom: .4rem; }
+.why-card p { font-size: 13px; color: rgba(241,245,249,.5); line-height: 1.6; }
+
+/* ── Courses section ─────────────────────────────────── */
+.city-courses {
+    background:transparent; padding: 5rem 2rem;
+    border-top: 1px solid rgba(255,255,255,.05);
+}
+.city-courses-inner { max-width: 1150px; margin: 0 auto; }
+.city-courses h2 {
+    font-size: clamp(24px, 3.5vw, 40px); font-weight: 800;
+    color: #f1f5f9; letter-spacing: -1px; margin-bottom: .6rem;
+}
+.city-courses h2 span {   background: linear-gradient(135deg, #fcd34d, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+.city-courses > .city-courses-inner > p { color: rgba(241,245,249,.5); font-size: 15px; line-height: 1.8; margin-bottom: 2.5rem; }
+.courses-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+.course-card {
+    background: #1e293b;
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 14px; padding: 1.6rem;
+    transition: all .25s; position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+}
+.course-card::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(245,158,11,.06), transparent);
+    opacity: 0; transition: opacity .25s;
+     pointer-events: none;
+}
+.course-card:hover { border-color: rgba(245,158,11,.4); transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.4); }
+.course-card:hover::before { opacity: 1; }
+.course-card-icon {
+    width: 48px; height: 48px; border-radius: 12px;
+    background: rgba(245,158,11,.12);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; margin-bottom: 1rem;
+}
+.course-card-badge {
+    display: inline-block; font-size: 10px; font-weight: 700;
+    letter-spacing: .8px; text-transform: uppercase;
+    padding: .2rem .6rem; border-radius: 20px;
+    background: rgba(99,102,241,.18); color: #818cf8;
+    margin-bottom: .75rem;
+}
+.course-card h3 { font-size: 16px; font-weight: 700; color: #f1f5f9; margin-bottom: .5rem; line-height: 1.3; }
+.course-card p { font-size: 13px; color: rgba(241,245,249,.5); line-height: 1.65; flex: 1; margin-bottom: 1.25rem; }
+.course-card-link {
+    display: inline-flex; align-items: center; gap: .4rem;
+    font-size: 13px; font-weight: 600; color: #f59e0b;
+    transition: gap .2s; text-decoration: none;
+}
+.course-card-link:hover { gap: .7rem; }
+
+/* ── About city section ──────────────────────────────── */
+.city-about {
+    background: #1e293b; padding: 5rem 2rem;
+    border-top: 1px solid rgba(255,255,255,.05);
+}
+.city-about-inner { max-width: 900px; margin: 0 auto; }
+.city-about h2 { font-size: clamp(22px, 3vw, 36px); font-weight: 800; color: #f1f5f9; letter-spacing: -.8px; margin-bottom: 1rem; }
+.city-about h2 span {   background: linear-gradient(135deg, #fcd34d, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+.city-about p { font-size: 15px; color: rgba(241,245,249,.6); line-height: 1.9; margin-bottom: 1rem; }
+.city-about p span {  background: linear-gradient(135deg, #fcd34d, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; font-weight: 600;}
+/* ── CTA band ────────────────────────────────────────── */
+.city-cta {
+    background: linear-gradient(135deg, #050237 0%, #0f172a 100%);
+    padding: 5rem 2rem; text-align: center;
+    border-top: 1px solid rgba(99,102,241,.2);
+}
+.city-cta h2 {
+     font-size: clamp(24px, 4vw, 46px);
+     font-weight: 800; color: #f1f5f9; 
+     letter-spacing: -1px; margin-bottom: .75rem; 
+    }
+.city-cta h2 span {  
+    background: linear-gradient(135deg, #fcd34d, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    }
+.city-cta p { font-size: 16px; color: rgba(241,245,249,.55); max-width: 480px; margin: 0 auto 2rem; line-height: 1.8; }
+.cta-form { display: flex; gap: .75rem; max-width: 440px; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
+.cta-input {
+    flex: 1; min-width: 200px; padding: .85rem 1rem;
+    background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.15);
+    border-radius: 7px; color: #f1f5f9; font-size: 14px; outline: none;
+    transition: border-color .2s;
+}
+.cta-input:focus { border-color: #f59e0b; }
+.cta-input::placeholder { color: rgba(241,245,249,.35); }
+.cta-note { font-size: 12px; color: rgba(241,245,249,.35); margin-top: 1rem; }
+
+/* Responsive */
+@media(max-width:640px){
+    .city-stats { flex-direction: column;margin: 20px 30px;border-radius: 10px; }
+    .city-stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.07); }
+    .city-hero h1 { letter-spacing: -.5px; }
+    .city-hero-btns { flex-direction: column; align-items: center; }
+    .cta-form { flex-direction: column; }
+    .cta-input, .city-cta .btn-primary { width: 100%; }
+}

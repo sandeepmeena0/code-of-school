@@ -1,0 +1,1318 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+    background: radial-gradient(circle, rgba(51, 74, 204, 1) 0%, rgba(0, 0, 0, 1) 56%);
+}
+/* Body padding to prevent content from going under fixed navbar */
+body {
+    padding-top: 100px;     background-color:#000000; 
+    min-height: 200vh; /* For demonstration of fixed navbar and scrolling */
+    margin: 0; /* Remove default body margin */
+    font-family: Arial, sans-serif; /* A basic font for readability */
+}
+
+/* FOR NAVIGATION BAR */
+header {
+    display: flex;
+    padding: 15px 30px 15px 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    align-items: center;
+    height: 100px; /* Fixed height for the header */
+    box-sizing: border-box; /* Include padding in height */
+}
+
+nav {
+    display: flex;
+    height: 70px; /* Height for the nav content within header */
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.nav-image {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0; /* Prevent shrinking on smaller screens */
+}
+
+/* FOR IMAGE OF NAV BAR */
+.nav-image img {
+    height: 70px;
+    max-height: 70px;
+    width: auto;
+}
+
+/* PAGES LIKE HOME ABOUTUS */
+.nav-pg {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.nav-page {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-page li {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.nav-page li a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.nav-page li a:hover,
+.nav-page li a.active { /* Added active state for the Courses link */
+    color: blue;
+}
+.nav-page li a:active {
+    transform: translateY(1px); /* Slight push down effect */
+    color: darkblue; /* Darker blue on press */
+}
+
+
+/* FOR BUTTON OF NAV BAR */
+.nav-but {
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0; /* Prevent shrinking on smaller screens */
+}
+
+.nav-but button {
+    background-color: blueviolet;
+    padding: 15px 14px;
+    color: white;
+    font-size: 17px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.nav-but button:hover {
+    background: linear-gradient(180deg, rgba(211, 231, 232, 1) 0%, rgba(216, 216, 232, 1) 51%, rgba(227, 216, 216, 1) 100%);
+    padding: 17px 16px;
+    color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hamburger Menu Icon (Hidden by default on desktop) */
+.hamburger-menu {
+    display: none; /* Controlled by media queries */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+/* Dropdown Panel for Courses (Desktop) */
+.dropdown-panel {
+    display: none; /* Hidden by default, shown by JS */
+    position: fixed;
+    /* Position relative to the parent header/nav for full width */
+    top: 100px; /* Height of the header */
+    left: 500px;
+    width: 50%; /* Spans full width of the header */
+    box-shadow: 10px 10px 10px rgba(255, 255, 255,0.9);
+    color: black;
+    border: 1px solid rgba(255, 255, 255,0.6);
+    z-index: 999; /* Below the header but above other content */
+    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+    overflow: hidden; /* Ensure content stays within border-radius */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Subtle shadow */
+    box-sizing: border-box; /* Include padding/border in width */
+}
+
+.dropdown-panel.show-dropdown { /* Class added by JS to show the dropdown */
+    display: flex;
+}
+
+.dropdown-panel .categories {
+    width: 30%;
+    border-right: 1px solid #ccc;
+    color: white;
+    background-color: rgba(18, 18, 192,0.1); /* Slightly more opaque */
+    padding: 10px 0; /* Add some vertical padding */
+    box-sizing: border-box;
+}
+
+.dropdown-panel .categories li {
+    list-style: none;
+    padding: 10px 20px; /* Increased padding for better click area */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    white-space: nowrap; /* Prevent category text wrapping */
+}
+
+.dropdown-panel .categories li:hover,
+.dropdown-panel .categories li.active {
+    background-color: rgba(220, 220, 220, 0.2); /* Lighter gray hover/active */
+    /* Removed border styles here as they can interfere with clean design */
+}
+
+.dropdown-panel .courses {
+    width: 70%;
+    padding: 15px; /* Increased padding */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Gap between course items */
+    list-style: none;
+    margin: 0;
+    background-color: rgba(18, 18, 192, 0.2); /* Lighter blue, less opaque */
+    border-bottom-right-radius: 10px;
+    box-sizing: border-box;
+    justify-content: flex-start; /* Align courses to the start */
+    align-content: flex-start; /* Align rows to the start */
+}
+
+.dropdown-panel .courses li {
+    width: calc(50% - 5px); /* Two columns with gap */
+    border-radius: 5px; /* Slightly more rounded */
+    height: 40px; /* Taller items */
+    padding: 0 10px; /* Horizontal padding for text */
+    box-sizing: border-box;
+    line-height: 40px; /* Vertically center text */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text to the left */
+    border: 1px solid rgba(18, 18, 192, 0.2); /* Border matching background */
+    cursor: pointer;
+    color: #ffffff; /* Darker text for readability */
+    background-color: rgba(255, 255, 255,0.2); /* White background for course items */
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.dropdown-panel .courses li:hover {
+    background-color: rgba(255, 255, 255,0.4); 
+    box-shadow: 4px 4px 10px rgba(255, 255, 255,0.2);
+   
+    border: rgba(255, 255, 255,0.5) solid 1px;
+    color: white;
+}
+
+/* Mobile Navigation Overlay (Hidden by default) */
+.mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999; /* Higher z-index to cover everything */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align items from the top */
+    padding-top: 70px; /* Space from the top */
+    box-sizing: border-box;
+
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s 0.3s, pointer-events 0s 0.3s;
+}
+
+.mobile-nav-overlay.active {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s 0s, pointer-events 0s 0s;
+}
+
+.mobile-nav-overlay .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 10000; /* Ensure close button is clickable */
+}
+
+.mobile-nav-overlay ul.mobile-nav-page {
+    list-style: none;
+    padding: 0;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px; /* Adjusted margin for overall layout */
+    margin-bottom: 20px; /* Space before button */
+}
+
+.mobile-nav-overlay ul.mobile-nav-page li {
+    margin: 15px 0;
+    width: 100%; /* Make list items take full width for better tapping */
+    text-align: center;
+}
+
+.mobile-nav-overlay ul.mobile-nav-page li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 10px 20px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.mobile-nav-overlay ul.mobile-nav-page li a:hover {
+    color: blue;
+}
+
+/* Mobile Courses Sub-Dropdown (nested) */
+.mobile-courses-dropdown {
+    display: none; /* Hidden by default, shown by JS */
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly visible background */
+    border-radius: 5px;
+    max-height: 0; /* For collapse effect */
+    overflow: hidden; /* Hide overflow during collapse */
+    transition: max-height 0.3s ease-out; /* Smooth transition */
+}
+
+.mobile-courses-dropdown.active {
+    display: block; /* Show the block */
+    max-height: 300px; /* Adjust as needed to fit all courses, or use 'none' for instant */
+    /* Consider a dynamic max-height based on content for more precise animation */
+}
+
+.mobile-courses-dropdown li {
+    margin: 0; /* Reset margin */
+}
+
+.mobile-courses-dropdown li a {
+    font-size: 18px; /* Smaller font for sub-items */
+    padding: 8px 15px; /* Adjust padding */
+    color: lightgray; /* Different color for sub-items */
+    display: block;
+}
+
+.mobile-courses-dropdown li a:hover {
+    color: skyblue; /* Hover color for sub-items */
+}
+
+
+.mobile-nav-overlay .mobile-nav-button {
+    width: auto;
+    margin-top: 30px;
+    justify-content: center;
+    display: flex;
+}
+.mobile-nav-overlay .mobile-nav-button button {
+    padding: 12px 20px;
+    font-size: 18px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+.mobile-nav-overlay .mobile-nav-button button:hover {
+    background: linear-gradient(180deg, rgba(211, 231, 232, 1) 0%, rgba(216, 216, 232, 1) 51%, rgba(227, 216, 216, 1) 100%);
+    color: blue;
+}
+
+/* Tablets and smaller desktops (max-width: 1024px) */
+@media (max-width: 1224px) {
+    header {
+        padding: 10px 15px;
+        height: 80px; /* Slightly reduced header height */
+    }
+    nav {
+        height: 50px; /* Reduced nav content height */
+    }
+
+    .nav-image {
+        width: 18%; /* Adjusted width */
+    }
+
+    .nav-image img {
+        height: 50px;
+        max-height: 50px;
+    }
+
+    .nav-pg {
+        width: 55%; /* Adjusted width */
+    }
+
+    .nav-page li a {
+        font-size: 15px;
+        padding: 0 6px; /* Reduced padding */
+    }
+
+    .nav-but {
+        width: 20%; /* Adjusted width */
+    }
+
+    .nav-but button {
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+
+    /* Dropdown panel position for smaller screens */
+    .dropdown-panel {
+        top: 80px; /* Adjust based on new header height */
+        left:400px;
+    }
+}
+
+@media (max-width:990px) {
+      .dropdown-panel {
+        top: 80px; /* Adjust based on new header height */
+        left:300px;
+    }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 780px) {
+    header {
+        height: 70px; /* Mobile header height */
+        padding: 10px 15px; /* Consistent padding */
+    }
+    nav {
+        height: 50px;
+        justify-content: space-between;
+    }
+
+    .nav-image {
+        width: auto;
+        flex-grow: 1; /* Allow image to take available space */
+    }
+
+    .nav-image img {
+        height: 45px; /* Smaller logo for mobile */
+        max-height: 45px;
+    }
+
+    /* Hide desktop navigation links and button */
+    .nav-pg,
+    .nav-but {
+        display: none;
+    }
+
+    /* Hide desktop dropdown on mobile */
+    .dropdown-panel {
+        display: none !important; /* Force hide the desktop dropdown */
+    }
+
+    /* Show hamburger menu icon */
+    .hamburger-menu {
+        display: block;
+        margin-right: 15px;
+    }
+
+    /* Mobile overlay adjustments */
+    .mobile-nav-overlay {
+        padding-top: 50px; /* Adjusted padding */
+    }
+    .mobile-nav-overlay .close-btn {
+        top: 15px;
+        right: 15px;
+        font-size: 35px;
+    }
+    .mobile-nav-overlay ul.mobile-nav-page {
+        margin-top: 40px; /* Adjusted margin */
+    }
+    .mobile-nav-overlay ul.mobile-nav-page li a {
+        font-size: 22px;
+        padding: 8px 15px;
+    }
+    .mobile-nav-overlay .mobile-nav-button button {
+        padding: 10px 18px;
+        font-size: 16px;
+    }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 8px 10px;
+        height: 60px; /* Even smaller header height */
+    }
+    nav {
+        height: 40px;
+    }
+
+    .nav-image img {
+        height: 40px;
+        max-height: 40px;
+    }
+
+    .hamburger-menu {
+        font-size: 28px;
+        margin-right: 10px;
+    }
+
+    .mobile-nav-overlay {
+        padding-top: 40px;
+    }
+    .mobile-nav-overlay .close-btn {
+        font-size: 30px;
+    }
+    .mobile-nav-overlay ul.mobile-nav-page li a {
+        font-size: 18px;
+        padding: 6px 12px;
+    }
+    .mobile-nav-overlay .mobile-nav-button button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Extra small mobile devices (max-width: 280px) */
+@media (max-width: 280px) {
+    header {
+        padding: 5px 8px;
+        height: 50px;
+    }
+    nav {
+        height: 35px;
+    }
+
+    .nav-image img {
+        height: 35px; /* Smallest logo size */
+        max-height: 35px;
+    }
+
+    .hamburger-menu {
+        font-size: 24px;
+        margin-right: 8px;
+    }
+
+    .mobile-nav-overlay {
+        padding-top: 30px;
+    }
+    .mobile-nav-overlay .close-btn {
+        font-size: 28px;
+        top: 10px;
+        right: 10px;
+    }
+    .mobile-nav-overlay ul.mobile-nav-page li {
+        margin: 10px 0;
+    }
+    .mobile-nav-overlay ul.mobile-nav-page li a {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+    .mobile-nav-overlay .mobile-nav-button {
+        margin-top: 20px;
+    }
+    .mobile-nav-overlay .mobile-nav-button button {
+        padding: 6px 12px;
+        font-size: 12px;
+        width: 90%;
+        max-width: 150px;
+    }
+}
+/* section */
+.place-section-two {
+    display: flex;
+    flex-direction: column;
+}
+
+.sec-two-partone {
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Use min-height to ensure it takes at least full viewport height */
+}
+
+.sec-two-partone a {
+    text-decoration: none;
+}
+
+#two-partone-headone {
+    font-size: 35px;
+    font-family: sans-serif;
+    padding: 30px 30px 10px 30px;
+    color: rgb(195, 195, 231);
+    text-align: center;
+}
+
+.two-partone-para {
+    font-size: 17px;
+    font-family: sans-serif;
+    padding: 20px;
+    color: white;
+    text-wrap: inherit;
+    text-align: center;
+    width: 70%; /* Limit width for readability on large screens */
+    max-width: 900px; /* Add a max-width for very large screens */
+}
+
+.two-partone-one {
+    display: flex;
+    margin: 30px;
+    width: 80%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Add gap for spacing between cards */
+}
+
+.card-width {
+    width: 32%; /* Default width for three cards per row */
+    min-width: 280px; /* Minimum width for cards to prevent them from becoming too small */
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 30px;  Removed as gap handles spacing */
+}
+
+.two-partone-one-card {
+    width: 92%;
+    height: 250px;
+    background-color: rgba(69, 69, 247, 0.1);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    border: solid rgba(126, 157, 236, 0.5) 1px;
+    transition: all 0.3s ease;
+}
+
+.two-partone-one-card:hover {
+    height: 258px;
+    box-shadow: 4px 3px 80px rgb(73, 73, 179, 0.3);
+}
+
+.two-partone-one-card img {
+    width: 33%;
+    max-width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: rgba(247, 243, 243, 0.4) solid 1px;
+    object-fit: cover;
+    padding: 5px;
+}
+
+.two-partone-one-head {
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 5px;
+    color: white;
+    text-align: center;
+}
+
+.two-partone-one-headtwo {
+    font-size: 15px;
+    font-family: sans-serif;
+    padding: 3px;
+    color: white;
+    text-align: center;
+}
+
+.two-partone-one-para {
+    font-size: 14px;
+    font-family: sans-serif;
+    padding: 2px;
+    color: white;
+    text-align: center;
+}
+
+#two-partone-btn {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: sans-serif;
+    background-color: rgba(139, 45, 227, 0.2);
+    border-radius: 10px;
+    font-weight: 600;
+    color: white;
+    border: rgba(250, 246, 246, 0.5) solid 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+}
+
+#two-partone-btn:hover {
+    padding: 12px 22px;
+    background-color: rgba(139, 45, 227, 0.3);
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* Tablets and larger phones (e.g., landscape orientation) */
+@media (max-width: 1200px) {
+
+    .two-partone-one {
+        width: 100%;
+        margin: 10px 0; /* Adjust margin for full width */
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center stacked cards */
+        
+    }
+
+    #two-partone-headone {
+        font-size: 30px;
+        padding: 20px;
+    }
+
+    .two-partone-para {
+        font-size: 16px;
+        width: 80%;
+    }
+
+    .two-partone-one {
+        width: 90%;
+        margin: 20px;
+    }
+
+    .card-width {
+        width: 75%; /* Two cards per row */
+        height: 400px;
+    }
+
+     .two-partone-one-card {
+       height: 400px;
+    }
+}
+
+/* Smaller tablets and large phones (portrait) */
+@media (max-width: 768px) {
+    #two-partone-headone {
+        font-size: 28px;
+        padding: 15px;
+    }
+
+    .two-partone-para {
+        font-size: 15px;
+        width: 90%;
+        padding: 15px;
+    }
+
+    .two-partone-one {
+        width: 95%;
+        margin: 15px;
+        gap: 20px;
+    }
+
+    .card-width {
+        width: 48%; /* Still two cards per row, but adjusts to smaller screen */
+        min-width: 250px; /* Ensure cards don't get too small */
+    }
+
+    .two-partone-one-card {
+        height: auto; /* Allow height to adjust based on content */
+        min-height: 240px; /* Maintain a minimum height */
+    }
+
+    .two-partone-one-card:hover {
+        height: auto; /* Reset hover height to auto */
+    }
+
+    .two-partone-one-card img {
+        width: 40%;
+        max-width: 100px;
+        height: 100px;
+    }
+
+    .two-partone-one-head {
+        font-size: 18px;
+    }
+
+    .two-partone-one-headtwo {
+        font-size: 14px;
+    }
+
+    .two-partone-one-para {
+        font-size: 13px;
+    }
+
+    #two-partone-btn {
+        font-size: 16px;
+        padding: 8px 18px;
+    }
+
+    #two-partone-btn:hover {
+        padding: 10px 20px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    #two-partone-headone {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .two-partone-para {
+        font-size: 14px;
+        width: 95%;
+        padding: 10px;
+    }
+
+    .two-partone-one {
+        width: 100%;
+        margin: 10px 0; /* Adjust margin for full width */
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center stacked cards */
+        gap: 20px;
+    }
+
+    .card-width {
+        width: 90%; /* One card per row, taking up most of the width */
+        max-width: 350px; /* Limit max width for very large mobile screens */
+        margin-bottom: 0; /* Remove margin-bottom as gap handles spacing */
+    }
+
+    .two-partone-one-card {
+        width: 100%; /* Make card fill its container */
+        height: auto; /* Allow height to adjust */
+        min-height: 220px;
+    }
+
+    .two-partone-one-card img {
+        width: 35%;
+        max-width: 90px;
+        height: 90px;
+    }
+
+    .two-partone-one-head {
+        font-size: 17px;
+    }
+
+    .two-partone-one-headtwo {
+        font-size: 13px;
+    }
+
+    .two-partone-one-para {
+        font-size: 12px;
+    }
+
+    #two-partone-btn {
+        font-size: 15px;
+        padding: 7px 15px;
+        margin-top: 20px;
+    }
+
+    #two-partone-btn:hover {
+        padding: 9px 17px;
+    }
+}
+
+/* Smallest mobile devices */
+@media (max-width: 320px) {
+    #two-partone-headone {
+        font-size: 20px;
+    }
+
+    .two-partone-para {
+        font-size: 13px;
+    }
+
+    .two-partone-one-card img {
+        width: 40%;
+        max-width: 80px;
+        height: 80px;
+    }
+
+    .two-partone-one-head {
+        font-size: 16px;
+    }
+}
+
+
+/* FOOTER */
+.footer-partone {
+    width: 100%;
+    /* height: 100%; removed fixed height for responsiveness */
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    padding: 100px; /* Will adjust for smaller screens */
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Allows columns to wrap to the next line */
+    gap: 30px; /* Adds space between wrapped items */
+}
+
+/* FOOTER FIRST SECTION INFORAG */
+.footer-inforag {
+    width: 30%; /* Will adjust */
+    /* justify-content: space-between; This is for flex containers, not direct content. */
+}
+
+.footer-image {
+    padding-bottom: 25px;
+}
+
+.footer-image img {
+    width: 65%; /* Will adjust */
+    height: auto; /* Ensure image scales proportionally */
+    display: block; /* Removes extra space below image */
+}
+
+.footer-dis {
+    font-size: 17px;
+    font-weight: 550;
+    color: white;
+    padding-bottom: 25px;
+    line-height: 1.6; /* Improve readability */
+}
+
+.footer-logo svg {
+    color: white;
+    margin-right: 13px;
+    font-size: 24px; /* Default size for social icons */
+}
+
+/* FOOTER QUICKLINKS */
+.footer-quicklink {
+    width: 15%; /* Will adjust */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-quicklink  ul{margin-top: none !important;}
+.footer-quicklink a {
+    text-decoration: none;
+    color: white;
+    display: block; /* Make the whole link clickable */
+}
+
+.footer-quicklink a:hover {
+    color: rgb(84, 18, 150);
+    transition: color 0.3s ease;
+}
+
+#heading {
+    font-size: 19px;
+    font-family: sans-serif;
+    color: white;
+    padding-bottom: 25px;
+    white-space: nowrap; /* Prevents heading from wrapping unless explicitly forced */
+}
+
+.footer-quicklink li {
+    display: flex; /* Keep display flex for icon/text alignment if desired */
+    font-size: 16px;
+    font-weight: 700;
+    color: white; /* Redundant if a is styled */
+    padding-bottom: 20px;
+    font-family: sans-serif;
+    /* text-decoration: none; This is on the a tag */
+}
+
+.footer-login-btn{display:flex !important;
+justify-content:start !important;
+height: 25%;
+align-items: center;
+}
+
+.footer-login-btn a{display:flex !important;
+justify-content:start !important;
+height: 25%;
+width: 70%;
+align-items: center;
+}
+.footer-login-btn button{
+    display: flex;
+    justify-content: center;
+    background-color: blueviolet;
+    padding: 20px 25px;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    width: 90%;
+}
+
+.footer-login-btn button:hover{
+     background: linear-gradient(180deg, rgba(211, 231, 232, 1) 0%, rgba(216, 216, 232, 1) 51%, rgba(227, 216, 216, 1) 100%);
+     padding: 22px 27px;
+    color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-quicklink li:hover {
+    color: rgb(84, 18, 150); /* Applied to li directly, but a:hover is more specific */
+    transition: color 0.3s ease;
+}
+
+/* FOOTER SERVICES */
+.footer-service {
+    width: 20%; /* Will adjust */
+}
+
+#heading-two {
+    font-size: 19px;
+    font-family: sans-serif;
+    color: white;
+    padding-bottom: 25px;
+    white-space: nowrap;
+}
+
+.footer-service li {
+    display: flex;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    padding-bottom: 20px;
+    font-family: sans-serif;
+    text-decoration: none; /* Redundant if a is styled */
+}
+
+.footer-service a { /* Add a style for service links */
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.footer-service a:hover {
+    color: rgb(84, 18, 150);
+    transition: color 0.3s ease;
+}
+
+
+/* FOOTER CONTACTS */
+.footer-contact {
+    width: 15%; /* Will adjust */
+}
+
+#heading-three {
+    font-size: 19px;
+    font-family: sans-serif;
+    color: white;
+    padding-bottom: 25px;
+    white-space: nowrap;
+}
+
+.footer-contact-loc,
+.footer-contact-phoneno,
+.footer-contact-mail,
+.footer-contact-time {
+    display: flex;
+    padding-bottom: 20px;
+    align-items: flex-start; /* Align icon to top if text wraps */
+}
+
+.footer-contact-logo {
+    margin-right: 13px;
+    padding-top: 5px; /* Aligns icon with text */
+    color: white;
+    font-size: 18px; /* Consistent icon size */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.footer-contact-location a,
+.contact-no a,
+.mail-add a {
+    text-decoration: none;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: white;
+    display: block; /* Make links block level to fill space */
+    line-height: 1.4; /* Improve readability for contact text */
+}
+
+.footer-contact-location a:hover,
+.contact-no a:hover,
+.mail-add a:hover {
+    color: rgb(84, 18, 150);
+    transition: color 0.3s ease;
+}
+
+.contact-no li,
+.mail-add li,
+.office li {
+    list-style-type: none; /* Remove default list bullets */
+    padding-bottom: 3px;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: white; /* Redundant if a is styled */
+}
+
+/* FOOTER-PARTTWO (Copyright/Bottom Bar) */
+.footer-parttwo {
+    display: flex;
+    padding: 30px; /* Will adjust */
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(37, 16, 16);
+    color: white;
+    border-top: solid white 0.5px;
+    font-size: 15px; /* Default font size for copyright */
+    text-align: center; /* Ensure text is centered */
+}
+
+.footer-parttwo a{
+    color:white;
+    text-decoration: none;
+    
+}
+
+
+/* --------------------------------------------------- */
+/* RESPONSIVE STYLES (MEDIA QUERIES)                   */
+/* --------------------------------------------------- */
+
+/* Tablets and smaller desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .footer-partone {
+        padding: 60px; /* Reduce padding */
+        gap: 40px; /* Increase gap between columns */
+    }
+
+    /* Adjust widths for 2 columns or 3 if space allows */
+    .footer-inforag {
+        width: 45%; /* Two columns per row */
+    }
+
+    .footer-quicklink,
+    .footer-service,
+    .footer-contact {
+        width: 45%; /* Two columns per row */
+    }
+
+    .footer-image img {
+        width: 80%; /* Make image larger within its column */
+    }
+
+    .footer-dis {
+        font-size: 16px;
+    }
+
+    #heading,
+    #heading-two,
+    #heading-three {
+        font-size: 18px; /* Slightly smaller headings */
+        padding-bottom: 20px;
+    }
+
+    .footer-quicklink li,
+    .footer-service li,
+    .footer-contact-location a,
+    .contact-no li,
+    .mail-add li,
+    .office li {
+        font-size: 15px; /* Slightly smaller link text */
+        padding-bottom: 15px;
+    }
+
+    .footer-logo svg {
+        font-size: 22px; /* Smaller social icons */
+    }
+
+    .footer-contact-logo {
+        font-size: 16px; /* Smaller contact icons */
+    }
+
+    .footer-parttwo {
+        padding: 25px;
+        font-size: 14px;
+    }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .footer-partone {
+        padding: 40px 20px; /* Further reduce padding */
+        flex-direction: column; /* Stack all columns vertically */
+        align-items: center; /* Center items when stacked */
+        gap: 30px; /* Space between stacked sections */
+    }
+
+    .footer-login-btn{display:flex !important;
+justify-content:center !important;
+
+}
+
+    .footer-inforag,
+    .footer-quicklink,
+    .footer-service,
+    .footer-contact {
+        width: 90%; /* Each column takes almost full width */
+        text-align: center; /* Center text within columns */
+        padding: 0; /* Remove column-specific padding, use section padding */
+    }
+
+    /* Adjust specific elements to be centered for mobile */
+    .footer-image {
+        padding-bottom: 15px;
+    }
+    .footer-image img {
+        width: 60%; /* Adjust image size for mobile */
+        max-width: 200px; /* Prevent image from becoming too large */
+        margin: 0 auto; /* Center the image */
+    }
+
+    .footer-dis {
+        font-size: 15px;
+        padding-bottom: 15px;
+    }
+
+    .footer-logo {
+        text-align: center; /* Center social icons */
+        margin-top: 10px;
+    }
+    .footer-logo svg {
+        font-size: 20px;
+        margin: 0 8px; /* Adjust margin between icons */
+    }
+
+    #heading,
+    #heading-two,
+    #heading-three {
+        font-size: 17px; /* Smaller headings */
+        padding-bottom: 15px;
+        white-space: normal; /* Allow headings to wrap if needed */
+    }
+
+    /* Center list items for quicklinks/services */
+    .footer-quicklink ul,
+    .footer-service ul {
+        list-style: none; /* Ensure no bullets if padding is messed up */
+        padding: 0;
+    }
+    .footer-quicklink li,
+    .footer-service li {
+        justify-content: center; /* Center list items if they contain text only */
+        font-size: 14px;
+        padding-bottom: 12px;
+    }
+
+    /* Contact info adjustments */
+    .footer-contact-loc,
+    .footer-contact-phoneno,
+    .footer-contact-mail,
+    .footer-contact-time {
+        justify-content: center; /* Center the icon+text block */
+        flex-direction: row; /* Keep icon and text side-by-side */
+        align-items: flex-start; /* Align icon to top */
+        padding-bottom: 15px;
+        text-align: left; /* Text itself remains left-aligned relative to icon */
+    }
+
+    .footer-contact-logo {
+        margin-right: 10px;
+        padding-top: 2px; /* Smaller padding for icon alignment */
+        font-size: 15px; /* Smaller icons */
+    }
+
+    .footer-contact-location a,
+    .contact-no a,
+    .mail-add a,
+    .office li {
+        font-size: 14px;
+        text-align: left; /* Ensures text is left aligned within its area */
+    }
+
+    .footer-parttwo {
+        padding: 20px;
+        font-size: 13px;
+    }
+}
+
+/* Extra small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .footer-partone {
+        padding: 30px 15px; /* Smallest padding */
+        gap: 25px; /* Smaller gap */
+    }
+
+    .footer-inforag,
+    .footer-quicklink,
+    .footer-service,
+    .footer-contact {
+        width: 95%; /* Take maximum width */
+    }
+
+    .footer-image img {
+        width: 50%;
+        max-width: 150px;
+    }
+
+    .footer-dis {
+        font-size: 14px;
+        padding-bottom: 10px;
+    }
+
+    .footer-logo svg {
+        font-size: 18px;
+        margin: 0 6px;
+    }
+
+    #heading,
+    #heading-two,
+    #heading-three {
+        font-size: 16px;
+        padding-bottom: 10px;
+    }
+
+    .footer-quicklink li,
+    .footer-service li {
+        font-size: 13px;
+        padding-bottom: 10px;
+    }
+
+    .footer-contact-loc,
+    .footer-contact-phoneno,
+    .footer-contact-mail,
+    .footer-contact-time {
+        padding-bottom: 10px;
+    }
+
+    .footer-contact-logo {
+        margin-right: 8px;
+        font-size: 14px;
+    }
+
+    .footer-contact-location a,
+    .contact-no a,
+    .mail-add a,
+    .office li {
+        font-size: 13px;
+    }
+
+    .footer-parttwo {
+        padding: 15px;
+        font-size: 12px;
+    }
+}

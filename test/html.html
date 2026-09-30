@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>HTML Course in Indore | Code of School</title>
+
+
+     <meta name="description"
+          content="Learn HTML from scratch in Indore with Code of School. Build web pages, master tags, forms, tables, and start your journey in web development." />
+     <link rel="canonical" href="https://codeofschool.com/courses/html" />
+     <meta name="keywords"
+          content="HTML course Indore, HTML training Indore, Learn HTML Indore, HTML classes Indore, Web Development basics Indore" />
+
+     <!-- Open Graph (Facebook, LinkedIn) -->
+     <meta property="og:title" content="HTML Course in Indore | Code of School" />
+     <meta property="og:description"
+          content="Hands-on HTML training with projects. Start your career in web development with Code of School." />
+     <meta property="og:url" content="https://codeofschool.com/courses/html" />
+     <meta property="og:image" content="https://codeofschool.com/img/cos-white-logo.webp" />
+
+     <!-- Twitter -->
+     <meta name="twitter:title" content="HTML Course in Indore | Code of School" />
+     <meta name="twitter:description"
+          content="Learn HTML, the foundation of web development. Beginner-friendly training in Indore with Code of School." />
+     <meta name="twitter:image" content="https://codeofschool.com/img/cos-white-logo.webp" />
+
+     <!-- Favicons -->
+     <link rel="icon" href="https://codeofschool.com/img/cos-white-logo.webp" type="image/webp" sizes="32x32" />
+     <link rel="icon" href="https://codeofschool.com/img/cos-white-logo.webp" type="image/webp" sizes="48x48" />
+     <link rel="apple-touch-icon" href="https://codeofschool.com/img/cos-white-logo.webp" />
+     <link rel="manifest" href="/site.webmanifest" />
+
+     <link rel="stylesheet" href="../header-footer.css">
+     <link rel="stylesheet" href="./main.css">
+
+</head>
+
+<body>
+     <div class="main">
+          <header>
+               <nav>
+                    <div class="nav-image">
+                         <a href="/"><img src="../img/cos-white-logo.webp" alt="Code OF School"></a>
+                    </div>
+
+                    <div class="nav-pg">
+
+                         <ul class="nav-page">
+                              <li><a href="/">Home</a></li>
+                              <li><a href="../about-us.html">About Us</a></li>
+                              <li><a href="../placement.html">Our Placements</a></li>
+                              <li><a href="../contact-us.html">Contact Us</a></li>
+                         </ul>
+                    </div>
+
+                    <div class="nav-but">
+                         <a href="./scholarship.html" target="_blank">
+                              <button>Scholarship</button>
+                         </a>
+                    </div>
+
+                    <div class="hamburger-menu" id="hamburger-icon">
+                         &#9776; </div>
+               </nav>
+          </header>
+          <div class="dropdown-panel" id="dropdown-panel">
+               <ul class="categories" id="category-list">
+                    <li data-category="all">All</li>
+                    <li data-category="web">Web Dev</li>
+                    <li data-category="language">Languages</li>
+                    <li data-category="app">Mobile.Dev</li>
+                    <li data-category="ai">Data & AI</li>
+                    <li data-category="other">Other</li>
+               </ul>
+               <ul class="courses" id="course-list">
+               </ul>
+          </div>
+
+          <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+               <div class="close-btn" id="close-mobile-nav">&times;</div>
+               <ul class="mobile-nav-page">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="../about-us.html">About Us</a></li>
+                    <!-- <li><a href="../course.html" id="mobile-courses-link">Courses ▼</a></li> -->
+                    <li><a href="../placement.html">Our Placements</a></li>
+                    <li><a href="../contact-us.html">Contact Us</a></li>
+               </ul>
+               <div class="mobile-nav-button">
+                    <a href="./scholarship.html" target="_blank">
+                         <button>Scholarship</button>
+                    </a>
+               </div>
+          </div>
+     </div>
+     <script src="../script.js"></script>
+
+     </header>
+
+
+     <div class="container">
+          <!-- Heading -->
+          <div class="top">
+               <h1>HTML & CSS</h1>
+          </div>
+          <!-- Language Toggle Buttons -->
+          <div class="language-toggle">
+               <button class="lang-btn " onclick="ELanguage()">
+                    English
+               </button>
+               <button class="lang-btn" onclick="HLanguage()">
+                    <!-- हिंदी -->Hindi
+               </button>
+          </div>
+
+
+          <!-- First Section -->
+          <section class="section-one">
+               <div class="notice">
+                    <h2>📌 Important Notice & Guidelines</h2>
+                    <ul>
+                         <li><strong>Scholarship Rule:</strong> The percentage of marks you score in the test will
+                              be equal to the percentage of scholarship you receive.</li>
+                         <li><strong>Weekly Test:</strong> Tests will be conducted every Friday.</li>
+                         <li><strong>Result Update:</strong> Your marks/results will be updated on the WhatsApp
+                              Channel every Saturday.</li>
+                         <li><strong>New Batches:</strong> New batches will start every Monday.</li>
+                    </ul>
+               </div>
+          </section>
+
+
+          <div id="englishContent">
+               <!-- Section 1 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>1. Introduction to HTML</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content" id="section-content-id">
+                         <div>
+                              <p><strong>HTML (HyperText Markup Language)</strong> is the standard language for creating
+                                   web
+                                   pages. It structures content on the web using elements and tags. The basic structure
+                                   includes <code>&lt;!DOCTYPE html&gt;</code>,
+                                   <code>&lt;html&gt;</code>,<code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code>.
+                              </p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;HTML & CSS&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello World!&lt;/h1&gt;
+  &lt;p&gt;Welcome to my website.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+
+                              </div>
+                              <div class="output-example">
+                                   <strong>Page title:</strong> HTML & CSS<br><br>
+                                   <h1 style="margin: 10px 0; color: #333;">Hello World!</h1>
+                                   <p style="margin: 10px 0;">Welcome to my website.</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <!-- Section 2 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>2. HTML Tags and Elements</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content" id="section-content-id">
+                         <div>
+                              <p>Tags define structure and type of content.Common tags include headings, paragraphs,
+                                   links,
+                                   images, lists, and containers.
+                              </p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+ &lt;h2&gt;About Me&lt;/h2&gt;
+ &lt;p&gt;I am learning HTML &amp; CSS.&lt;/p&gt;
+ &lt;a href="https://google.com"&gt;Google&lt;/a&gt;
+ &lt;img src="https://via.placeholder.com/100" alt="Sample"&gt;
+ &lt;ul&gt;
+      &lt;li&gt;HTML&lt;/li&gt;
+      &lt;li&gt;CSS&lt;/li&gt;
+     &lt;li&gt;JavaScript&lt;/li&gt;
+ &lt;/ul&gt;
+          </pre>
+                              </div>
+                              <div class="output-example">
+                                   <h2>About Me</h2>
+                                   <p>I am learning HTML & CSS.</p>
+                                   <a href="https://google.com" target="_blank">Google</a><br><br>
+                                   <img src="https://via.placeholder.com/100" alt="Sample"><br>
+                                   <ul>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JavaScript</li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <!-- Section 3 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>3. Attributes in HTML</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>Attributes provide additional information about elements. Examples: id, class, src,
+                                   href,
+                                   alt, title.
+                              </p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;img src="https://via.placeholder.com/120"
+ alt="Company Logo" title="Our Logo"&gt;
+&lt;a href="https://example.com" target="_blank"&gt;
+  Open Link
+&lt;/a&gt;
+          </pre>
+                              </div>
+                              <div class="output-example">
+                                   <img src="https://via.placeholder.com/120" alt="Company Logo"
+                                        title="Our Logo"><br><br>
+                                   <a href="https://example.com" target="_blank">Open Link</a>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <!-- Section 4 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>4. Forms in HTML</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>Forms are used to collect user input. Elements include input, textarea, button, select.
+                              </p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;form&gt;
+  &lt;input type="text" placeholder="Enter Name"&gt;
+  &lt;input type="email" placeholder="Enter Email"&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+    </pre>
+                              </div>
+                              <div class="output-example">
+                                   <form>
+                                        <input type="text" placeholder="Enter Name"><br><br>
+                                        <input type="email" placeholder="Enter Email"><br><br>
+                                        <button type="submit">Submit</button>
+                                   </form>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <!-- Section 5 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>5. Introduction to CSS</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content" id="section-content-id">
+                         <div>
+                              <p>CSS styles the HTML content. It changes colors, fonts, spacing, layout, and visual
+                                   appearance.</p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;style&gt;
+  p {
+    color: blue;
+    font-size: 16px;
+  }
+&lt;/style&gt;
+
+&lt;p&gt;This is a styled paragraph.&lt;/p&gt;
+    </pre>
+
+                              </div>
+                              <div class="output-example">
+                                   <p style="color:blue;font-size:16px;">This is a styled paragraph.</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <!-- Section 6 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>6. Selectors in CSS</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content" id="section-content-id">
+                         <div>
+                              <p>Selectors define which HTML elements the CSS styles apply to. Types: element, class,
+                                   id,
+                                   group, universal.</p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+ <pre>
+&lt;style&gt;
+  p { color: green; }
+  .highlight { background-color: yellow; }
+  #main { width: 50%; }
+&lt;/style&gt;
+
+&lt;p&gt;This is green text.&lt;/p&gt;
+&lt;p class="highlight"&gt;This has yellow background.&lt;/p&gt;
+&lt;div id="main"&gt;This div is 50% width.&lt;/div&gt;
+    
+                              </pre>
+
+                              </div>
+                              <div class="output-example">
+                                   <p style="color:green;">This is green text.</p>
+                                   <p style="background-color:yellow;">This has yellow background.</p>
+                                   <div style="width:50%;background:#eee;">This div is 50% width.</div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <!-- Section 7 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>7. Box Model in CSS</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content" id="section-content-id">
+                         <div>
+                              <p>Every HTML element is a rectangular box. Components: content, padding, border, margin.
+                              </p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+<pre>
+&lt;style&gt;
+div {
+  width: 200px;
+  padding: 10px;
+  border: 2px solid black;
+  margin: 20px;
+}
+&lt;/style&gt;
+
+&lt;div&gt;Box Model Example&lt;/div&gt;
+    </pre>
+
+                              </div>
+                              <div class="output-example">
+                                   <div style="width:200px;padding:10px;border:2px solid black;margin:20px;">
+                                        Box Model Example
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <!-- Section 8 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>8. CSS Positioning</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content" id="section-content-id">
+                         <div>
+                              <p>CSS positioning controls the placement of elements on the page: static, relative,
+                                   absolute,
+                                   fixed, sticky.</p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+<pre>
+&lt;style&gt;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: coral;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+&lt;/style&gt;
+
+&lt;div class="box"&gt;&lt;/div&gt;
+    </pre>
+
+                              </div>
+                              <div class="output-example">
+                                   <div
+                                        style="width:100px;height:100px;background-color:coral;position:absolute;top:20px;left:50px;">
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <!-- Section 9 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>9. Flexbox in CSS</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content" id="section-content-id-sl">
+                         <div>
+                              <p>Flexbox provides a flexible way to layout items inside a container.</p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+ <pre>
+&lt;style&gt;
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box {
+  width: 50px;
+  height: 50px;
+  background-color: teal;
+}
+&lt;/style&gt;
+
+&lt;div class="flex-box"&gt;
+  &lt;div class="box"&gt;&lt;/div&gt;
+  &lt;div class="box"&gt;&lt;/div&gt;
+  &lt;div class="box"&gt;&lt;/div&gt;
+&lt;/div&gt;
+    </pre>
+
+                              </div>
+                              <div class="output-example">
+                                   <style>
+                                        .flex-box {
+                                             display: flex;
+                                             justify-content: space-between;
+                                             align-items: center;
+                                        }
+
+                                        .box {
+                                             width: 50px;
+                                             height: 50px;
+                                             background-color: teal;
+                                        }
+                                   </style>
+                                   <div class="flex-box">
+                                        <div class="box"></div>
+                                        <div class="box"></div>
+                                        <div class="box"></div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <!-- Section 10 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>10. Grid in CSS</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content" id="section-content-id-sl">
+                         <div>
+                              <p>Grid layout divides space into rows and columns.</p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+<pre>
+&lt;style&gt;
+.grid-demo{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.box1 {
+  background-color: orange;
+  height: 40px;
+  width:40px;
+}
+&lt;/style&gt;
+
+&lt;div class="grid"&gt;
+  &lt;div class="box1"&gt;&lt;/div&gt;
+  &lt;div class="box1"&gt;&lt;/div&gt;
+  &lt;div class="box1"&gt;&lt;/div&gt;
+  &lt;div class="box1"&gt;&lt;/div&gt;
+  &lt;div class="box1"&gt;&lt;/div&gt;
+  &lt;div class="box1"&gt;&lt;/div&gt;
+&lt;/div&gt;
+    </pre>
+
+                              </div>
+                              <div class="output-example">
+                                   <style>
+                                        .grid-demo {
+                                             display: grid;
+                                             grid-template-columns: repeat(3, 1fr);
+                                             gap: 10px;
+                                        }
+
+                                        .box1 {
+                                             background-color: orange;
+                                             height: 40px;
+                                             width: 40px;
+                                        }
+                                   </style>
+                                   <div class="grid-demo">
+                                        <div class="box1"></div>
+                                        <div class="box1"></div>
+                                        <div class="box1"></div>
+                                        <div class="box1"></div>
+                                        <div class="box1"></div>
+                                        <div class="box1"></div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <!-- Section 11 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>11. Lists in HTML</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content" id="section-content-id-sl">
+                         <div>
+                              <p>Lists are used to group related items. There are two main types: Ordered lists
+                                   (&lt;ol&gt;)
+                                   and Unordered lists (&lt;ul&gt;).</p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;h3&gt;Unordered List&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Apple&lt;/li&gt;
+  &lt;li&gt;Banana&lt;/li&gt;
+  &lt;li&gt;Mango&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Ordered List&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Step 1&lt;/li&gt;
+  &lt;li&gt;Step 2&lt;/li&gt;
+  &lt;li&gt;Step 3&lt;/li&gt;
+&lt;/ol&gt;
+    </pre>
+
+                              </div>
+                              <div class="output-example">
+                                   <h3>Unordered List</h3>
+                                   <ul>
+                                        <li>Apple</li>
+                                        <li>Banana</li>
+                                        <li>Mango</li>
+                                   </ul>
+                                   <h3>Ordered List</h3>
+                                   <ol>
+                                        <li>Step 1</li>
+                                        <li>Step 2</li>
+                                        <li>Step 3</li>
+                                   </ol>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <!-- Section 12 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>12. Tables in HTML</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content" id="section-content-id-sl">
+                         <div>
+                              <p>Tables are used to display data in rows and columns using &lt;table&gt;, &lt;tr&gt;,
+                                   &lt;th&gt;, &lt;td&gt; tags.</p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;John&lt;/td&gt;
+    &lt;td&gt;25&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Emma&lt;/td&gt;
+    &lt;td&gt;22&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+    </pre>
+                              </div>
+                              <div class="output-example">
+                                   <table border="1">
+                                        <tr>
+                                             <th>Name</th>
+                                             <th>Age</th>
+                                        </tr>
+                                        <tr>
+                                             <td>John</td>
+                                             <td>25</td>
+                                        </tr>
+                                        <tr>
+                                             <td>Emma</td>
+                                             <td>22</td>
+                                        </tr>
+                                   </table>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <!-- Section 13 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>13. HTML5 Semantic Tags</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content" id="section-content-id">
+                         <div>
+                              <p>Semantic tags like &lt;header&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;article&gt;,
+                                   &lt;footer&gt; improve accessibility and SEO.</p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;header&gt;My Website&lt;/header&gt;
+&lt;nav&gt;
+  &lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;a href="#"&gt;About&lt;/a&gt;
+&lt;/nav&gt;
+&lt;section&gt;
+  &lt;article&gt;
+    &lt;h3&gt;Article Title&lt;/h3&gt;
+    &lt;p&gt;This is an article.&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/section&gt;
+&lt;footer&gt;Copyright 2025&lt;/footer&gt;
+    </pre>
+                              </div>
+                              <div class="output-example">
+                                   <h2>My Website</h2>
+                                   <nav>
+                                        <a href="#">Home</a> |
+                                        <a href="#">About</a>
+                                   </nav>
+                                   <h3>
+                                        Article Title
+                                   </h3>
+                                   <p>
+                                        This is an article
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <!-- Section 14-->
+               <div class="section" >
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>14. Embedding Multimedia</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content" id="section-content-id">
+                         <div>
+                              <p>HTML allows embedding images, audio, and video using &lt;img&gt;, &lt;audio&gt;,
+                                   &lt;video&gt; tags.</p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;img src="https://via.placeholder.com/120"&gt;
+&lt;audio controls&gt;
+  &lt;source src="sample.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+&lt;video width="200" controls&gt;
+  &lt;source src="sample.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+    </pre>
+                              </div>
+                              <div class="output-example">
+                                   <img src="https://via.placeholder.com/120" alt="Sample"><br><br>
+                                   <audio controls>
+                                        <source src="sample.mp3" type="audio/mpeg">
+                                   </audio><br><br>
+                                   <video width="200" controls>
+                                        <source src="sample.mp4" type="video/mp4">
+                                   </video>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <!-- Section 15-->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>15. CSS Shadows & Borders</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content" id="section-content-id-sl">
+                         <div>
+                              <p>Shadows and borders improve the visual design of elements.
+                                   <b>box-shadow</b> adds shadow around elements, <b>text-shadow</b> adds shadow to
+                                   text,
+                                   and <b>border-radius</b> creates rounded corners.
+                              </p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example" id="code-example-css">
+                                   <pre>
+&lt;style&gt;
+.box {
+  width: 200px;
+  padding: 20px;
+  background-color: white;
+  border: 2px solid #333;
+  border-radius: 15px;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+}
+h3 {
+  text-shadow: 2px 2px 4px gray;
+}
+&lt;/style&gt;
+
+&lt;div class="box"&gt;
+  &lt;h3&gt;Shadow Box&lt;/h3&gt;
+  &lt;p&gt;This box has rounded corners and a shadow.&lt;/p&gt;
+&lt;/div&gt;
+    </pre>
+                              </div>
+                              <div class="output-example">
+                                   <style>
+                                        .box-demo {
+                                             width: 200px;
+                                             padding: 20px;
+                                             background-color: white;
+                                             border: 2px solid #333;
+                                             border-radius: 15px;
+                                             box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+                                        }
+
+                                        .box-demo h3 {
+                                             text-shadow: 2px 2px 4px gray;
+                                        }
+                                   </style>
+                                   <div class="box-demo">
+                                        <h3>Shadow Box</h3>
+                                        <p>This box has rounded corners and a shadow.</p>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+
+          <div id="hindiContent" class="hidden">
+               <!-- Section 1 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>1. HTML का परिचय</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p><strong>HTML (हाइपरटेक्स्ट मार्कअप लैंग्वेज)</strong> वेब पेज बनाने की मानक भाषा है।
+                                   यह वेब पर सामग्री को तत्वों और टैग्स की मदद से संरचित करता है।
+                                   इसकी बुनियादी संरचना में <code>&lt;!DOCTYPE html&gt;</code>,
+                                   <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, और <code>&lt;body&gt;</code>
+                                   शामिल होते हैं।
+                              </p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Hello World&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Hello World!&lt;/h1&gt;
+&lt;p&gt;Welcome to my website.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <strong>पेज का टाइटल:</strong> HTML & CSS<br><br>
+                                   <h1 style="margin: 10px 0; color: #333;">Hello World!</h1>
+                                   <p style="margin: 10px 0;">Welcome to my website.</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- Section 2 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>2. HTML टैग और एलिमेंट्स</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>टैग्स सामग्री की संरचना और प्रकार को परिभाषित करते हैं।
+                                   सामान्य टैग्स में हेडिंग्स, पैराग्राफ, लिंक, इमेज, सूचियां और कंटेनर शामिल हैं।
+                              </p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;h2&gt;About Me&lt;/h2&gt;
+&lt;p&gt;I am learning HTML &amp; CSS.&lt;/p&gt;
+&lt;a href="https://google.com"&gt;Google&lt;/a&gt;
+&lt;img src="https://via.placeholder.com/100" alt="Sample"&gt;
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <h2>About Me</h2>
+                                   <p>I am learning HTML & CSS.</p>
+                                   <a href="https://google.com" target="_blank">Google</a><br><br>
+                                   <img src="https://via.placeholder.com/100" alt="Sample"><br>
+                                   <ul>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JavaScript</li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- Section 3 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>3. HTML में एट्रिब्यूट्स</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>एट्रिब्यूट्स एलिमेंट्स के बारे में अतिरिक्त जानकारी प्रदान करते हैं।
+                                   उदाहरण: id, class, src, href, alt, title।
+                              </p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;img src="https://via.placeholder.com/120"
+ alt="Company Logo" title="Our Logo"&gt;
+&lt;a href="https://example.com" target="_blank"&gt;
+  Open Link
+&lt;/a&gt;
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <img src="https://via.placeholder.com/120" alt="Company Logo"
+                                        title="Our Logo"><br><br>
+                                   <a href="https://example.com" target="_blank">Open Link</a>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- Section 4 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>4. HTML में फॉर्म</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>फॉर्म का उपयोग उपयोगकर्ता से इनपुट लेने के लिए किया जाता है।
+                                   सामान्य एलिमेंट्स: input, textarea, button, select।
+                              </p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;form&gt;
+  &lt;input type="text" placeholder="Enter Name"&gt;
+  &lt;input type="email" placeholder="Enter Email"&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <form>
+                                        <input type="text" placeholder="Enter Name"><br><br>
+                                        <input type="email" placeholder="Enter Email"><br><br>
+                                        <button type="submit">Submit</button>
+                                   </form>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- Section 5 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>5. CSS का परिचय</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>CSS का उपयोग HTML सामग्री को स्टाइल करने के लिए किया जाता है।
+                                   यह रंग, फॉन्ट, स्पेसिंग, लेआउट और विजुअल लुक बदलता है।
+                              </p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;style&gt;
+  p {
+    color: blue;
+    font-size: 16px;
+  }
+&lt;/style&gt;
+
+&lt;p&gt;This is a styled paragraph.&lt;/p&gt;
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p style="color:blue;font-size:16px;">This is a styled paragraph.</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- Section 6 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>6. CSS सेलेक्टर्स</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>सेलेक्टर्स यह तय करते हैं कि कौन से HTML एलिमेंट्स पर CSS लागू होगी।
+                                   प्रकार: element, class, id, group, universal।
+                              </p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;style&gt;
+  p { color: green; }
+  .highlight { background-color: yellow; }
+  #main { width: 50%; }
+&lt;/style&gt;
+
+&lt;p&gt;This is green text.&lt;/p&gt;
+&lt;p class="highlight"&gt;This has yellow background.&lt;/p&gt;
+&lt;div id="main"&gt;This div is 50% width.&lt;/div&gt;
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <p style="color:green;">This is green text.</p>
+                                   <p style="background-color:yellow;">This has yellow background.</p>
+                                   <div style="width:50%;background:#eee;">This div is 50% width.</div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <!-- Section 7 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>7. CSS बॉक्स मॉडल</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>हर HTML एलिमेंट एक आयताकार बॉक्स की तरह होता है। इसके हिस्से होते हैं: कंटेंट, पैडिंग,
+                                   बॉर्डर और मार्जिन।</p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;style&gt;
+div {
+  width: 200px;
+  padding: 10px;
+  border: 2px solid black;
+  margin: 20px;
+}
+&lt;/style&gt;
+
+&lt;div&gt;बॉक्स मॉडल उदाहरण&lt;/div&gt;
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <div style="width:200px;padding:10px;border:2px solid black;margin:20px;">
+                                        बॉक्स मॉडल उदाहरण
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- Section 8 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>8. CSS पोज़िशनिंग</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>CSS पोज़िशनिंग पेज पर एलिमेंट्स की स्थिति को नियंत्रित करती है: static, relative,
+                                   absolute, fixed, sticky।</p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;style&gt;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: coral;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+&lt;/style&gt;
+
+&lt;div class="box"&gt;&lt;/div&gt;
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <div
+                                        style="width:100px;height:100px;background-color:coral;position:absolute;top:20px;left:50px;">
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- Section 9 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>9. CSS फ्लेक्सबॉक्स</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>फ्लेक्सबॉक्स एक कंटेनर के अंदर आइटम्स को लचीले तरीके से लेआउट करने का तरीका प्रदान करता
+                                   है।</p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;style&gt;
+.flex-demo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box {
+  width: 50px;
+  height: 50px;
+  background-color: teal;
+}
+&lt;/style&gt;
+
+&lt;div class="flex-demo"&gt;
+  &lt;div class="box"&gt;&lt;/div&gt;
+  &lt;div class="box"&gt;&lt;/div&gt;
+  &lt;div class="box"&gt;&lt;/div&gt;
+&lt;/div&gt;
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <style>
+                                        .flex-demo {
+                                             display: flex;
+                                             justify-content: space-between;
+                                             align-items: center;
+                                        }
+
+                                        .box {
+                                             width: 50px;
+                                             height: 50px;
+                                             background-color: teal;
+                                        }
+                                   </style>
+                                   <div class="flex-demo">
+                                        <div class="box"></div>
+                                        <div class="box"></div>
+                                        <div class="box"></div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- Section 10 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>10. CSS ग्रिड</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>ग्रिड लेआउट पेज को पंक्तियों और स्तंभों में विभाजित करता है।</p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;style&gt;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.box {
+  background-color: orange;
+  height: 80px;
+}
+&lt;/style&gt;
+
+&lt;div class="grid-demo"&gt;
+  &lt;div class="box1"&gt;&lt;/div&gt;
+  &lt;div class="box1"&gt;&lt;/div&gt;
+  &lt;div class="box1"&gt;&lt;/div&gt;
+  &lt;div class="box1"&gt;&lt;/div&gt;
+  &lt;div class="box1"&gt;&lt;/div&gt;
+  &lt;div class="box1"&gt;&lt;/div&gt;
+&lt;/div&gt;
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <div class="grid-demo">
+                                        <style>
+                                             .grid-demo {
+                                                  display: grid;
+                                                  grid-template-columns: repeat(3, 1fr);
+                                                  gap: 10px;
+                                             }
+
+                                             .box1 {
+                                                  background-color: orange;
+                                                  height: 40px;
+                                                  width: 40px;
+                                             }
+                                        </style>
+                                        <div class="box1"></div>
+                                        <div class="box1"></div>
+                                        <div class="box1"></div>
+                                        <div class="box1"></div>
+                                        <div class="box1"></div>
+                                        <div class="box1"></div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <!-- Section 11 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>11. HTML में सूचियाँ (Lists)</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>सूचियों का उपयोग संबंधित आइटम को समूहित करने के लिए किया जाता है। मुख्य दो प्रकार हैं:
+                                   क्रमबद्ध सूची (&lt;ol&gt;) और अक्रमबद्ध सूची (&lt;ul&gt;)।</p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;h3&gt;अक्रमबद्ध सूची&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;सेब&lt;/li&gt;
+  &lt;li&gt;केला&lt;/li&gt;
+  &lt;li&gt;आम&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;क्रमबद्ध सूची&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;कदम 1&lt;/li&gt;
+  &lt;li&gt;कदम 2&lt;/li&gt;
+  &lt;li&gt;कदम 3&lt;/li&gt;
+&lt;/ol&gt;
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <h3>अक्रमबद्ध सूची</h3>
+                                   <ul>
+                                        <li>सेब</li>
+                                        <li>केला</li>
+                                        <li>आम</li>
+                                   </ul>
+                                   <h3>क्रमबद्ध सूची</h3>
+                                   <ol>
+                                        <li>कदम 1</li>
+                                        <li>कदम 2</li>
+                                        <li>कदम 3</li>
+                                   </ol>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- Section 12 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>12. HTML में तालिकाएँ (Tables)</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content">
+                         <div>
+                              <p>तालिकाओं का उपयोग डेटा को पंक्तियों और स्तंभों में दिखाने के लिए किया जाता है। इसके लिए
+                                   &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt; टैग का उपयोग होता है।</p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;नाम&lt;/th&gt;
+    &lt;th&gt;आयु&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;जॉन&lt;/td&gt;
+    &lt;td&gt;25&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;एम्मा&lt;/td&gt;
+    &lt;td&gt;22&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <table border="1">
+                                        <tr>
+                                             <th>नाम</th>
+                                             <th>आयु</th>
+                                        </tr>
+                                        <tr>
+                                             <td>जॉन</td>
+                                             <td>25</td>
+                                        </tr>
+                                        <tr>
+                                             <td>एम्मा</td>
+                                             <td>22</td>
+                                        </tr>
+                                   </table>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- Section 13 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>13. HTML5 सेमांटिक टैग्स</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content" id="section-content-id">
+                         <div>
+                              <p>सेमांटिक टैग्स जैसे &lt;header&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;article&gt;,
+                                   &lt;footer&gt; वेबसाइट की संरचना, एक्सेसिबिलिटी और SEO को बेहतर बनाते हैं।</p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;header&gt;मेरी वेबसाइट&lt;/header&gt;
+&lt;nav&gt;
+  &lt;a href="#"&gt;मुखपृष्ठ&lt;/a&gt;
+  &lt;a href="#"&gt;परिचय&lt;/a&gt;
+&lt;/nav&gt;
+&lt;section&gt;
+  &lt;article&gt;
+    &lt;h3&gt;लेख का शीर्षक&lt;/h3&gt;
+    &lt;p&gt;यह एक लेख है।&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/section&gt;
+&lt;footer&gt;कॉपीराइट 2025&lt;/footer&gt;
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <h2>मेरी वेबसाइट</h2>
+                                   <nav>
+                                        <a href="#">मुखपृष्ठ</a> |
+                                        <a href="#">परिचय</a>
+                                        <h3>
+                                             लेख का शीर्षक
+                                        </h3>
+                                        <p>
+                                             यह एक लेख है।
+                                        </p>
+
+                                   </nav>
+
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- Section 14 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>14. मल्टीमीडिया एम्बेड करना</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content" id="section-content-id">
+                         <div>
+                              <p>HTML में छवियाँ, ऑडियो और वीडियो एम्बेड करने के लिए &lt;img&gt;, &lt;audio&gt;,
+                                   &lt;video&gt; टैग का उपयोग किया जाता है।</p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;img src="https://via.placeholder.com/120"&gt;
+&lt;audio controls&gt;
+  &lt;source src="sample.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+&lt;video width="200" controls&gt;
+  &lt;source src="sample.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <img src="https://via.placeholder.com/120" alt="Sample"><br><br>
+                                   <audio controls>
+                                        <source src="sample.mp3" type="audio/mpeg">
+                                   </audio><br><br>
+                                   <video width="200" controls>
+                                        <source src="sample.mp4" type="video/mp4">
+                                   </video>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- Section 15 -->
+               <div class="section">
+                    <div class="section-header" onclick="toggleSection(this)">
+                         <h2>15. CSS शैडोज़ और बॉर्डर्स</h2>
+                         <button class="toggle-btn">Show</button>
+                    </div>
+                    <div class="section-content" id="section-content-id">
+                         <div>
+                              <p>शैडोज़ और बॉर्डर्स एलिमेंट्स के डिज़ाइन को बेहतर बनाते हैं।
+                                   <b>box-shadow</b> एलिमेंट्स के चारों ओर छाया जोड़ता है,
+                                   <b>text-shadow</b> टेक्स्ट में छाया जोड़ता है,
+                                   और <b>border-radius</b> किनारों को गोल करता है।
+                              </p>
+                         </div>
+
+                         <div class="code-section">
+                              <div class="code-example">
+                                   <pre>
+&lt;style&gt;
+.box {
+  width: 200px;
+  padding: 20px;
+  background-color: white;
+  border: 2px solid #333;
+  border-radius: 15px;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+}
+h3 {
+  text-shadow: 2px 2px 4px gray;
+}
+&lt;/style&gt;
+
+&lt;div class="box"&gt;
+  &lt;h3&gt;शैडो बॉक्स&lt;/h3&gt;
+  &lt;p&gt;इस बॉक्स में गोल किनारे और छाया है।&lt;/p&gt;
+&lt;/div&gt;
+        </pre>
+                              </div>
+                              <div class="output-example">
+                                   <div class="box-demo">
+                                        <h3>शैडो बॉक्स</h3>
+                                        <p>इस बॉक्स में गोल किनारे और छाया है।</p>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+          </div>
+
+
+     </div>
+     <section class="section-final">
+          <h1>Best of Luck to All Students! </h1>
+          <p>Give your best in the test, stay focused, and keep learning something new every day. Believe in
+               yourself,
+               and let each lesson make you stronger and smarter.</p>
+     </section>
+  <!-- WhatsApp -->
+        <a href="https://wa.me/919977723584?text=Hi%20I%20need%20help" class="whatsapp-float" id="whatsappButton"
+            target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
+            <span class="notification-dot"></span>
+        </a>
+
+     <footer>
+
+          <div class="footer-partone">
+
+               <div class="footer-inforag">
+                    <div class="footer-image"><img src="../img/cos-white-logo.webp" alt="Code OF School"></div>
+                    <div class="footer-dis">
+                         <p>
+                              Code of School by Inforag Technology empowers future tech innovators through hands-on
+                              training in coding, data science, AI, and full-stack development. Our practical,
+                              industry-driven curriculum ensures students gain job-ready skills and real-world project
+                              experience.</p>
+                    </div>
+                    <div class="footer-logo">
+                         <a href="https://www.instagram.com/codeofschool/" target="_blank"><svg
+                                   xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                   class="bi bi-instagram" viewBox="0 0 16 16">
+                                   <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                              </svg></a>
+
+                         <a href="https://www.linkedin.com/company/code-of-school" target="_blank"><svg
+                                   xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                   class="bi bi-linkedin" viewBox="0 0 16 16">
+                                   <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                              </svg></a>
+
+                         <a href="https://www.facebook.com/codeofschool" target="_blank"><svg
+                                   xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                   class="bi bi-facebook" viewBox="0 0 16 16">
+                                   <path
+                                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                              </svg></a>
+
+                         <a href="https://x.com/codeofschool" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                                   width="20" height="20" fill="currentColor" class="bi bi-twitter-x"
+                                   viewBox="0 0 16 16">
+                                   <path
+                                        d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                              </svg></a>
+                    </div>
+               </div>
+
+               <div class="footer-quicklink">
+                    <ul>
+                         <h3 id="heading">Quick Links</h3>
+                         <li><a href="/">Home</a></li>
+                         <li><a href="../about-us.html">About Us</a></li>
+                         <li><a href="../contact-us.html">Contact Us</a></li>
+                         <li>
+                              <h3>Legal & Info </h3>
+                         </li>
+                         <li><a href="../Frequently-asked-questions.html">FAQ</a></li>
+                         <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                         <li><a href="../termsandcondition.html">Terms & Conditions</a></li>
+                    </ul>
+                    <div class="footer-login-btn"><a href="../login.html"><button>Login</button></a></div>
+               </div>
+
+               <div class="footer-service">
+                   <ul>
+                    <li><a href="./marketing.html">Digital Marketing with AI</a></li>
+                    <li><a href="./frontend.html">Full Stack Development</a></li>
+                    <li><a href="./mern.html">MERN Stack Development</a></li>
+                    <li><a href="./frontend.html">Frontend Development</a></li>
+                    <li><a href="./mobile_app.html">Mobile App Development</a></li>
+                    <li><a href="./data_science.html">Data Science</a></li>
+                    <li><a href="./analysis.html">Data Analysis</a></li>
+                    <li><a href="./ui_ux.html">UI/UX Design</a></li>
+                    <li><a href="./python.html">Python</a></li>
+                    <li><a href="./c.html">C & C++</a></li>
+                </ul>
+               </div>
+
+               <div class="footer-contact">
+                    <h3 id="heading-three">Contact Us</h3>
+
+                    <div class="footer-contact-loc">
+                         <div class="footer-contact-logo">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                   class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                   <path
+                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                              </svg>
+                         </div>
+                         <div class="footer-contact-location">
+                              <a href="https://www.google.com/maps/place/Inforag+Technology+-+Web+%7C+App+%7C+Digital+Marketing+%7C+Software+Company+in+Indore/@22.7496616,75.8953251,3a,75y/data=!3m8!1e2!3m6!1sAF1QipP1gRwG7pwN49gQMMzKXwBFGqWpqR2oBXTp7Kna!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fp%2FAF1QipP1gRwG7pwN49gQMMzKXwBFGqWpqR2oBXTp7Kna%3Dw114-h86-k-no!7i4160!8i3120!4m7!3m6!1s0x3962fd13477b7e61:0x8cfc2e3f59b0c1b3!8m2!3d22.749631!4d75.8954539!10e5!16s%2Fg%2F11x1jbjxtj?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D"
+                                   target="_blank">Office No. 421 Fourth Floor, Shagun Tower, Rasoma Square, Vijay
+                                   Nagar,
+                                   Ratna Lok Colony, Indore, Madhya Pradesh 452010</a>
+                         </div>
+                    </div>
+
+                    <div class="footer-contact-phoneno">
+                         <div class="footer-contact-logo"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                   fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                   <path fill-rule="evenodd"
+                                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                              </svg>
+                         </div>
+                         <div class="contact-no">
+                              <ul>
+                                   <li><a href="tel:9977723584">+91 99777-23-584</a></li>
+                                   <li><a href="tel:9977701948">+91 99777-019-48</a></li>
+                                   <li><a href="tel:9165234695">+91 9165-234-695</a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="footer-contact-mail">
+                         <div class="footer-contact-logo">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                   class="bi bi-send" viewBox="0 0 16 16">
+                                   <path
+                                        d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
+                              </svg>
+                         </div>
+                         <div class="mail-add">
+                              <ul>
+                                   <li><a href="mailto:thecodeofschool@gmail.com">thecodeofschool@gmail.com</a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="footer-contact-time">
+                         <div class="footer-contact-logo">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                   class="bi bi-clock-fill" viewBox="0 0 16 16">
+                                   <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                              </svg>
+                         </div>
+
+                         <div class="office">
+                              <ul>
+                                   <li>Mon-Sat : 10:00 - 20:00 </li>
+                                   <!-- <li>Sat: 12:00 18:00 </li> -->
+                                   <li>Sunday : Closed </li>
+                              </ul>
+                         </div>
+                    </div>
+               </div>
+
+
+
+          </div>
+          <div class="footer-parttwo">
+               <h3>Copyright &#169; 2025 <a href="https://inforag.com/" target="_blank">Inforag Technology</a> All
+                    rights reserved</h3>
+          </div>
+
+     </footer>
+
+     <script src="./main.js"></script>
+
+</body>
+
+
+
+</html>

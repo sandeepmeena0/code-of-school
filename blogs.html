@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs & Career Insights | Code of School Indore</title>
+    <meta name="description"
+        content="Read the latest tech, coding, full-stack web development, and digital marketing insights, tutorials, and career roadmaps from Code of School mentors in Indore." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://codeofschool.com/blogs.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Blogs & Tech Insights | Code of School" />
+    <meta property="og:description"
+        content="Read comprehensive guides, industry tips, and tutorials on Full Stack, Python, Java, Digital Marketing, AI, and IT careers." />
+    <meta property="og:url" content="https://codeofschool.com/blogs.html" />
+    <meta property="og:image" content="https://codeofschool.com/img/cos-white-logo2.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/cos-white-logo2.png" type="image/webp" />
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./header-footer.css">
+    <link rel="stylesheet" href="./home_location.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./blogs/blog-style.css">
+
+    <style>
+        .nav-page li a.active-link {
+            color: #f97316 !important;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body class="blog-page-body">
+    <div class="main">
+
+        <!-- ========================================================
+             SITE HEADER / NAVIGATION BAR
+             ======================================================== -->
+        <header>
+            <nav>
+                <div class="nav-image">
+                    <a href="index.html"><img src="./img/cos-white-logo.webp" alt="Code of School Logo"></a>
+                </div>
+
+                <div class="nav-pg">
+                    <ul class="nav-page">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="course.html" id="courses-link">Courses ▼</a></li>
+                        <li><a href="blogs.html" class="active-link">Blogs</a></li>
+                        <li><a href="placement.html">Our Placements</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-but">
+                    <a href="tel:+919977723584" class="call-btn">
+                        <i class="fa-solid fa-phone"></i> Enroll Now
+                    </a>
+                </div>
+
+                <div class="hamburger-menu" id="hamburger-icon">&#9776;</div>
+            </nav>
+        </header>
+
+        <!-- Courses Dropdown Panel -->
+        <div class="dropdown-panel" id="dropdown-panel">
+            <ul class="categories" id="category-list">
+                <li data-category="all">All</li>
+                <li data-category="web">Web Dev</li>
+                <li data-category="language">Languages</li>
+                <li data-category="app">Mobile.Dev</li>
+                <li data-category="ai">Data & AI</li>
+                <li data-category="other">Other</li>
+            </ul>
+            <ul class="courses" id="course-list"></ul>
+        </div>
+
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+            <div class="close-btn" id="close-mobile-nav">&times;</div>
+            <ul class="mobile-nav-page">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="course.html" id="mobile-courses-link">Courses ▼</a></li>
+                <li><a href="blogs.html" style="color:#f97316; font-weight:700;">Blogs</a></li>
+                <li><a href="placement.html">Our Placements</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+            <div class="mobile-nav-button">
+                <a href="tel:+919977723584" class="call-btn">
+                    <i class="fa-solid fa-phone"></i> Enroll Now
+                </a>
+            </div>
+        </div>
+
+        <!-- ========================================================
+             BLOG HERO SECTION
+             ======================================================== -->
+        <section class="blog-hero">
+            <span class="blog-hero-badge"><i class="fa-solid fa-fire"></i> Tech & Career Insights</span>
+            <h1>Explore Articles, Guides & <span class="gradient-text">Tutorials</span></h1>
+            <p>Practical guides on Full Stack Development, Python, MERN, AI, SEO, and Digital Marketing curated by industry mentors at Code of School.</p>
+        </section>
+
+        <!-- ========================================================
+             SEARCH & CATEGORY FILTERS
+             ======================================================== -->
+        <section class="blog-controls-wrapper">
+            <div class="blog-search-bar">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="blogSearchInput" placeholder="Search blogs by title or topic..." onkeyup="filterBlogs()">
+            </div>
+
+            <div class="blog-category-tabs">
+                <button class="category-tab-btn active" onclick="setCategory('all', this)">
+                    <i class="fa-solid fa-layer-group"></i> All Articles
+                </button>
+                <button class="category-tab-btn" onclick="setCategory('web', this)">
+                    <i class="fa-solid fa-code"></i> Full Stack & Web
+                </button>
+                <button class="category-tab-btn" onclick="setCategory('marketing', this)">
+                    <i class="fa-solid fa-bullhorn"></i> Digital Marketing
+                </button>
+                <button class="category-tab-btn" onclick="setCategory('ai', this)">
+                    <i class="fa-solid fa-brain"></i> AI & Data Science
+                </button>
+                <button class="category-tab-btn" onclick="setCategory('career', this)">
+                    <i class="fa-solid fa-graduation-cap"></i> Career Roadmaps
+                </button>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             BLOGS GRID CONTAINER
+             ======================================================== -->
+        <main class="blogs-container">
+            <div class="blogs-grid" id="blogsGrid">
+
+                <!-- ═══════════════════════════════════════════════════
+                     CARD 1: Full Stack Roadmap
+                     ═══════════════════════════════════════════════════ -->
+                <article class="blog-card" data-category="web career">
+                    <div class="blog-card-thumb">
+                        <img src="./img/fullstack-hero.png" alt="Full Stack Developer Roadmap">
+                        <span class="blog-card-badge badge-web">Full Stack</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/Fullstack-Developer/full-stack-roadmap-guide.html">Full Stack Developer Roadmap 2026: From Beginner to Pro</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            A complete step-by-step learning guide covering HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB for freshers and college students.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/Fullstack-Developer/full-stack-roadmap-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ═══════════════════════════════════════════════════
+                     CARD 2: Digital Marketing with AI
+                     ═══════════════════════════════════════════════════ -->
+                <article class="blog-card" data-category="marketing ai">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/Marketing is all about offering solutions!.jpeg" alt="AI in Digital Marketing">
+                        <span class="blog-card-badge badge-digital">Digital Marketing</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/Digital-Marketing/ai-digital-marketing-future.html">How AI is Transforming Digital Marketing in 2026</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Discover how AI tools, automated bidding, generative ad copy, and smart audience targeting are reshaping high-ROI marketing campaigns.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/Digital-Marketing/ai-digital-marketing-future.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ═══════════════════════════════════════════════════
+                     CARD 3: MERN Stack Guide
+                     ═══════════════════════════════════════════════════ -->
+                <article class="blog-card" data-category="web">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/MERN.jpeg" alt="What is MERN Stack">
+                        <span class="blog-card-badge badge-web">Web Dev</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/Fullstack-Developer/what-is-mern.html">What is MERN Stack? Complete Architecture & Career Scope</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Understand MongoDB, Express.js, React.js, and Node.js synergy, why startups prefer MERN, and salary packages for MERN developers in India.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/Fullstack-Developer/what-is-mern.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ═══════════════════════════════════════════════════
+                     CARD 4: SEO Career Guide
+                     ═══════════════════════════════════════════════════ -->
+                <article class="blog-card" data-category="marketing career">
+                    <div class="blog-card-thumb">
+                        <img src="./img/closeup-business-woman-making-notes-document-1536x1025.jpg" alt="SEO Career Guide">
+                        <span class="blog-card-badge badge-digital">SEO & Growth</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/Digital-Marketing/seo-career-guide.html">Complete Guide to Building a High-Paying Career in SEO</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Learn On-Page, Off-Page, and Technical SEO essentials, keyword research strategies, and how to rank websites on Google Page 1.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/Digital-Marketing/seo-career-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ═══════════════════════════════════════════════════
+                     CARD 5: Freshers Interview Tips
+                     ═══════════════════════════════════════════════════ -->
+                <article class="blog-card" data-category="career web">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/data.jpg" alt="Developer Interviews">
+                        <span class="blog-card-badge badge-ai">Interview Prep</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/Fullstack-Developer/developer-interviews.html">How Freshers Can Crack Technical Coding Interviews</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Essential tips on project showcase, GitHub portfolio presentation, live coding challenges, and HR interview questions for IT placements.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/Fullstack-Developer/developer-interviews.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ═══════════════════════════════════════════════════
+                     CARD 6: Social Media Marketing Strategies
+                     ═══════════════════════════════════════════════════ -->
+                <article class="blog-card" data-category="marketing">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/video-editing.jpg" alt="Social Media Strategy">
+                        <span class="blog-card-badge badge-digital">Social Media</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 4 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/Digital-Marketing/social-media-marketing-guide.html">Social Media Marketing Guide: Growth Hacks for 2026</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Master Instagram Reels algorithms, LinkedIn B2B lead generation, and YouTube video marketing to grow business brands organically.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/Digital-Marketing/social-media-marketing-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ========================================================
+                     HOW TO ADD NEW BLOG MANUALLY (INSTRUCTION COMMENT):
+                     1. Copy 'blogs/blog-template.html' and rename to your new blog file.
+                     2. Write your content in that file.
+                     3. Copy one of the <article class="blog-card"> blocks above, 
+                        update the title, link, thumbnail, category, and paste here!
+                     ======================================================== -->
+
+            </div>
+        </main>
+
+        <!-- ========================================================
+             CALL TO ACTION BANNER
+             ======================================================== -->
+        <section style="max-width: 1200px; margin: 0 auto 80px; padding: 0 20px;">
+            <div class="article-course-cta">
+                <h3>Ready to Kickstart Your Career in Tech or Marketing?</h3>
+                <p>Join Code of School in Indore for classroom training, real-world industry projects, 1-on-1 mentorship, and 100% placement support.</p>
+                <a href="contact-us.html" class="article-cta-btn">Book Free Demo Session <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             SITE FOOTER
+             ======================================================== -->
+        <footer>
+            <div class="footer-partone">
+                <!-- Brand -->
+                <div class="footer-inforag">
+                    <div class="footer-image">
+                        <a href="index.html"><img src="./img/cos-white-logo.webp" alt="Code of School Logo"></a>
+                    </div>
+                    <div class="footer-dis">
+                        <p>Code of School by Inforag Technology empowers future tech innovators through hands-on training in coding, data science, AI, and full-stack development.</p>
+                    </div>
+                    <div class="footer-log">
+                        <div class="logo-box"><img src="./img/course_img/cmmi-removebg-preview-3.png" alt="CMMI"></div>
+                        <div class="logo-box"><img src="./img/course_img/iso-final-removebg-preview-1.png" alt="ISO"></div>
+                        <div class="logo-box"><img src="./img/course_img/iso-removebg-preview-1.png" alt="ISO"></div>
+                        <div class="logo-box"><img src="./img/course_img/msme-removebg-preview.png" alt="MSME"></div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-quicklink">
+                    <ul>
+                        <h3 id="heading">Quick Links</h3>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="course.html">Courses</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="placement.html">Our Placement</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><h3>Legal &amp; Info</h3></li>
+                        <li><a href="Frequently-asked-questions.html">FAQ</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="termsandcondition.html">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-contact">
+                    <h3 id="heading-three">Connect With Us</h3>
+                    <div class="footer-contact-loc">
+                        <div class="footer-contact-logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                            </svg>
+                        </div>
+                        <div class="footer-contact-location">
+                            <a href="https://maps.google.com" target="_blank">
+                                <b>Head Office (Indore):</b> Office No. 421 Fourth Floor, Shagun Tower, Rasoma Square, Vijay Nagar, Indore, MP 452010
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-contact-phoneno">
+                        <div class="footer-contact-logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                            </svg>
+                        </div>
+                        <div class="contact-no">
+                            <ul class="phone-list">
+                                <li><a href="tel:9977723584">+91 9977-723-584 ,</a></li>
+                                <li><a href="tel:9165234695">+91 9165-234-695</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <div class="footer-parttwo">
+                <h3>Copyright &#169; 2026 <a href="https://inforag.com/" target="_blank">Inforag Technology</a> All rights reserved</h3>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript for Filter & Mobile Menu -->
+    <script src="script.js"></script>
+    <script>
+        let currentCategory = 'all';
+
+        function setCategory(cat, btnElement) {
+            currentCategory = cat;
+            document.querySelectorAll('.category-tab-btn').forEach(b => b.classList.remove('active'));
+            if (btnElement) btnElement.classList.add('active');
+            filterBlogs();
+        }
+
+        function filterBlogs() {
+            const query = document.getElementById('blogSearchInput').value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.blog-card');
+
+            cards.forEach(card => {
+                const title = card.querySelector('.blog-card-title').innerText.toLowerCase();
+                const desc = card.querySelector('.blog-card-desc').innerText.toLowerCase();
+                const categories = card.getAttribute('data-category') || '';
+
+                const matchesCategory = (currentCategory === 'all') || categories.includes(currentCategory);
+                const matchesSearch = title.includes(query) || desc.includes(query);
+
+                if (matchesCategory && matchesSearch) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
