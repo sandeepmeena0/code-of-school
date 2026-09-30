@@ -93,13 +93,25 @@
             </div>
         </div>
 
-        <!-- ========================================================
-             BLOG HERO SECTION
-             ======================================================== -->
-        <section class="blog-hero">
-            <span class="blog-hero-badge"><i class="fa-solid fa-fire"></i> Tech & Career Insights</span>
-            <h1>Explore Articles, Guides & <span class="gradient-text">Tutorials</span></h1>
-            <p>Practical guides on Full Stack Development, Python, MERN, AI, SEO, and Digital Marketing curated by industry mentors at Code of School.</p>
+        <!-- WhatsApp Floating Button -->
+        <a href="https://wa.me/919977723584?text=Hi%20I%20need%20help" class="whatsapp-float" id="whatsappButton" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" loading="lazy" decoding="async">
+            <span class="notification-dot"></span>
+        </a>
+
+                <!-- FIRST-SECTION-BLOGS-PAGE -->
+        <section class="hero-section">
+            <div class="home-part-one">
+                <div class="content-first-home-page">
+                    <p id="home-para-one"><i class="fa-solid fa-fire"></i> TECH & CAREER INSIGHTS</p>
+                </div>
+                <div class="home-head-one-content">
+                    <h1 id="home-head-one">Explore Articles, Guides & <span class="gradient-text">Tutorials</span></h1>
+                </div>
+                <div>
+                    <p id="home-para-two">Practical guides on Full Stack Development, Python, MERN, AI, SEO, and Digital Marketing curated by industry mentors at Code of School.</p>
+                </div>
+            </div>
         </section>
 
         <!-- ========================================================
@@ -116,16 +128,28 @@
                     <i class="fa-solid fa-layer-group"></i> All Articles
                 </button>
                 <button class="category-tab-btn" onclick="setCategory('web', this)">
-                    <i class="fa-solid fa-code"></i> Full Stack & Web
+                    <i class="fa-solid fa-code"></i> Web & Full Stack
                 </button>
-                <button class="category-tab-btn" onclick="setCategory('marketing', this)">
-                    <i class="fa-solid fa-bullhorn"></i> Digital Marketing
+                <button class="category-tab-btn" onclick="setCategory('python', this)">
+                    <i class="fa-brands fa-python"></i> Python & Django
+                </button>
+                <button class="category-tab-btn" onclick="setCategory('java', this)">
+                    <i class="fa-brands fa-java"></i> Java
+                </button>
+                <button class="category-tab-btn" onclick="setCategory('language', this)">
+                    <i class="fa-solid fa-terminal"></i> C++ & DSA
                 </button>
                 <button class="category-tab-btn" onclick="setCategory('ai', this)">
                     <i class="fa-solid fa-brain"></i> AI & Data Science
                 </button>
+                <button class="category-tab-btn" onclick="setCategory('marketing', this)">
+                    <i class="fa-solid fa-bullhorn"></i> Digital Marketing
+                </button>
+                <button class="category-tab-btn" onclick="setCategory('design', this)">
+                    <i class="fa-solid fa-palette"></i> Design & Video
+                </button>
                 <button class="category-tab-btn" onclick="setCategory('career', this)">
-                    <i class="fa-solid fa-graduation-cap"></i> Career Roadmaps
+                    <i class="fa-solid fa-graduation-cap"></i> Career Guides
                 </button>
             </div>
         </section>
@@ -136,18 +160,16 @@
         <main class="blogs-container">
             <div class="blogs-grid" id="blogsGrid">
 
-                <!-- ═══════════════════════════════════════════════════
-                     CARD 1: Full Stack Roadmap
-                     ═══════════════════════════════════════════════════ -->
+                <!-- CARD: Full Stack Developer Roadmap 2026: From Beginner to Pro -->
                 <article class="blog-card" data-category="web career">
                     <div class="blog-card-thumb">
-                        <img src="./img/fullstack-hero.png" alt="Full Stack Developer Roadmap">
+                        <img src="./img/fullstack-hero.png" alt="Full Stack Developer Roadmap 2026: From Beginner to Pro" loading="lazy" decoding="async">
                         <span class="blog-card-badge badge-web">Full Stack</span>
                     </div>
                     <div class="blog-card-body">
                         <div class="blog-card-meta">
                             <span><i class="fa-regular fa-calendar"></i> May 2026</span>
-                            <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+                            <span><i class="fa-regular fa-clock"></i> 7 min read</span>
                         </div>
                         <h2 class="blog-card-title">
                             <a href="./blogs/Fullstack-Developer/full-stack-roadmap-guide.html">Full Stack Developer Roadmap 2026: From Beginner to Pro</a>
@@ -165,12 +187,523 @@
                     </div>
                 </article>
 
-                <!-- ═══════════════════════════════════════════════════
-                     CARD 2: Digital Marketing with AI
-                     ═══════════════════════════════════════════════════ -->
+                <!-- CARD: What is MERN Stack? Complete Architecture & Career Scope -->
+                <article class="blog-card" data-category="web">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/MERN.jpeg" alt="What is MERN Stack? Complete Architecture & Career Scope" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-web">MERN Stack</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/Fullstack-Developer/what-is-mern.html">What is MERN Stack? Complete Architecture & Career Scope</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Understand MongoDB, Express.js, React.js, and Node.js synergy, why startups prefer MERN, and salary packages for MERN developers in India.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/Fullstack-Developer/what-is-mern.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: MEAN Stack Architecture & Roadmap: MongoDB, Express, Angular & Node.js -->
+                <article class="blog-card" data-category="web">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/angular.jpg" alt="MEAN Stack Architecture & Roadmap: MongoDB, Express, Angular & Node.js" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-web">MEAN Stack</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/mean-stack-developer-guide.html">MEAN Stack Architecture & Roadmap: MongoDB, Express, Angular & Node.js</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Complete guide to MEAN Stack development. Master MongoDB, Express.js, Angular, Node.js, TypeScript, REST APIs, and full stack architecture.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/mean-stack-developer-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: Python Full Stack Developer Roadmap 2026: Django, React, Databases & Careers -->
+                <article class="blog-card" data-category="web python career">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/py_full_stack.jpg" alt="Python Full Stack Developer Roadmap 2026: Django, React, Databases & Careers" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-web">Python Full Stack</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/python-full-stack-career-guide.html">Python Full Stack Developer Roadmap 2026: Django, React, Databases & Careers</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Complete guide to becoming a Python Full Stack Developer in 2026. Learn Python, Django, REST APIs, React, PostgreSQL, and career placement tips.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/python-full-stack-career-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: Building Scalable Web Apps with Python & Django: Architecture & Best Practices -->
+                <article class="blog-card" data-category="web python">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/py_dj.jpg" alt="Building Scalable Web Apps with Python & Django: Architecture & Best Practices" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-web">Python Django</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/django-python-web-development-guide.html">Building Scalable Web Apps with Python & Django: Architecture & Best Practices</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Master Django web framework. Learn MVT architecture, Django ORM, authentication, REST framework, PostgreSQL, and scalable deployments.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/django-python-web-development-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: Java Full Stack Developer Roadmap 2026: Spring Boot, Microservices & React -->
+                <article class="blog-card" data-category="web java career">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/download.jpeg" alt="Java Full Stack Developer Roadmap 2026: Spring Boot, Microservices & React" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-web">Java Full Stack</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/java-full-stack-developer-guide.html">Java Full Stack Developer Roadmap 2026: Spring Boot, Microservices & React</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Roadmap to become a Java Full Stack Developer in 2026. Master Java 21, Spring Boot, Microservices, Hibernate, REST APIs, React, and MySQL.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/java-full-stack-developer-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: Next.js Full Stack Web Development: App Router, Server Actions & SEO -->
+                <article class="blog-card" data-category="web">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/next.jpg" alt="Next.js Full Stack Web Development: App Router, Server Actions & SEO" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-web">Next.js</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/nextjs-full-stack-guide.html">Next.js Full Stack Web Development: App Router, Server Actions & SEO</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Master Next.js 15 full stack development. Learn App Router, React Server Components (RSC), Server Actions, SSR, SSG, and SEO optimization.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/nextjs-full-stack-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: Modern Frontend Development with React: Hooks, Redux & Performance -->
+                <article class="blog-card" data-category="web">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/react_a.jpg" alt="Modern Frontend Development with React: Hooks, Redux & Performance" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-web">React.js</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/react-frontend-development-guide.html">Modern Frontend Development with React: Hooks, Redux & Performance</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Master modern frontend development using React.js. Learn React Hooks, state management with Redux Toolkit, Tailwind CSS, and API integration.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/react-frontend-development-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: Mastering Angular Framework: Components, Services, RxJS & Enterprise Apps -->
+                <article class="blog-card" data-category="web">
+                    <div class="blog-card-thumb">
+                        <img src="./img/fullstack_images/angular.png" alt="Mastering Angular Framework: Components, Services, RxJS & Enterprise Apps" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-web">Angular</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/angular-development-guide.html">Mastering Angular Framework: Components, Services, RxJS & Enterprise Apps</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Comprehensive guide to Angular framework. Learn TypeScript, Angular CLI, Standalone Components, RxJS observables, Services, and Dependency Injection.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/angular-development-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: Modern PHP & MySQL Development: Backend Architecture, APIs & Security -->
+                <article class="blog-card" data-category="web">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/php.jpg" alt="Modern PHP & MySQL Development: Backend Architecture, APIs & Security" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-web">PHP & MySQL</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/php-web-development-guide.html">Modern PHP & MySQL Development: Backend Architecture, APIs & Security</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Master PHP 8 and MySQL. Learn object-oriented PHP, PDO database security, RESTful APIs, MVC architecture, and backend development.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/php-web-development-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: Custom WordPress Theme & Plugin Development: Complete 2026 Guide -->
+                <article class="blog-card" data-category="web other">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/wordpress.jpg" alt="Custom WordPress Theme & Plugin Development: Complete 2026 Guide" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-web">WordPress</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/wordpress-development-guide.html">Custom WordPress Theme & Plugin Development: Complete 2026 Guide</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Learn custom WordPress development. Build bespoke themes, plugins, WooCommerce e-commerce stores, and headless WordPress setups.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/wordpress-development-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: Building Cross-Platform Mobile Apps with React Native & Expo in 2026 -->
+                <article class="blog-card" data-category="app web">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/react_native.jpg" alt="Building Cross-Platform Mobile Apps with React Native & Expo in 2026" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-web">React Native</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/react-native-mobile-app-guide.html">Building Cross-Platform Mobile Apps with React Native & Expo in 2026</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Learn React Native for iOS and Android. Master Expo, React Navigation, Redux, Native Device APIs, Push Notifications, and App Store releases.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/react-native-mobile-app-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: Python for AI & Machine Learning: 2026 Roadmap, Frameworks & Use Cases -->
+                <article class="blog-card" data-category="ai python">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/python.jpg" alt="Python for AI & Machine Learning: 2026 Roadmap, Frameworks & Use Cases" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-ai">Python AI & ML</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/python-ai-ml-roadmap.html">Python for AI & Machine Learning: 2026 Roadmap, Frameworks & Use Cases</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Master Artificial Intelligence and Machine Learning using Python. Learn NumPy, Pandas, Scikit-Learn, TensorFlow, PyTorch, and NLP models.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/python-ai-ml-roadmap.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: Data Science with AI: The Complete Career Guide & Roadmap for 2026 -->
+                <article class="blog-card" data-category="ai career">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/dara_science.jpg" alt="Data Science with AI: The Complete Career Guide & Roadmap for 2026" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-ai">Data Science</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/data-science-with-ai-guide.html">Data Science with AI: The Complete Career Guide & Roadmap for 2026</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Learn Data Science with AI in 2026. Explore data modeling, statistical inference, feature engineering, predictive analytics, and big data tools.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/data-science-with-ai-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: Data Analytics Career Roadmap 2026: SQL, Power BI, Python & Excel -->
+                <article class="blog-card" data-category="ai career">
+                    <div class="blog-card-thumb">
+                        <img src="./img/fullstack_images/data_analytics.jpg" alt="Data Analytics Career Roadmap 2026: SQL, Power BI, Python & Excel" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-ai">Data Analysis</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/data-analytics-career-guide.html">Data Analytics Career Roadmap 2026: SQL, Power BI, Python & Excel</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Step-by-step roadmap to become a Data Analyst. Master SQL queries, Power BI dashboards, Advanced Excel, and Python data visualization.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/data-analytics-career-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: Machine Learning Mastery Guide: Supervised, Unsupervised & Deep Learning -->
+                <article class="blog-card" data-category="ai">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/ml.jpg" alt="Machine Learning Mastery Guide: Supervised, Unsupervised & Deep Learning" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-ai">Machine Learning</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/machine-learning-roadmap.html">Machine Learning Mastery Guide: Supervised, Unsupervised & Deep Learning</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Comprehensive guide to Machine Learning. Learn regression, classification, clustering, neural networks, hyperparameter tuning, and ML deployment.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/machine-learning-roadmap.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: Core & Advanced Java Guide: OOP, Multithreading, Collections & JDBC -->
+                <article class="blog-card" data-category="language java">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/Core Java Course Training Institute in Jaipur India.jpeg" alt="Core & Advanced Java Guide: OOP, Multithreading, Collections & JDBC" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-language">Java Core & Adv</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/java-core-and-advanced-guide.html">Core & Advanced Java Guide: OOP, Multithreading, Collections & JDBC</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Master Core and Advanced Java. Understand Object-Oriented Programming, Exception Handling, Collections Framework, Multithreading, and JDBC.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/java-core-and-advanced-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: DSA with Java: LeetCode Patterns, Big O & Placement Interview Guide -->
+                <article class="blog-card" data-category="language java career">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/dsa.jpg" alt="DSA with Java: LeetCode Patterns, Big O & Placement Interview Guide" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-language">Java DSA</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/java-dsa-mastery-guide.html">DSA with Java: LeetCode Patterns, Big O & Placement Interview Guide</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Crack technical placement rounds with Java DSA. Learn Collections, Recursion, Binary Trees, Graphs, Dynamic Programming, and LeetCode strategies.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/java-dsa-mastery-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: Mastering Data Structures & Algorithms in C++ for Tech Placements -->
+                <article class="blog-card" data-category="language career">
+                    <div class="blog-card-thumb">
+                        <img src="./img/fullstack_images/cplus.png" alt="Mastering Data Structures & Algorithms in C++ for Tech Placements" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-language">C++ & DSA</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/dsa-cpp-coding-interview-guide.html">Mastering Data Structures & Algorithms in C++ for Tech Placements</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Complete guide to mastering DSA in C++. Learn Arrays, Linked Lists, Trees, Graphs, Dynamic Programming, and crack coding interviews.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/dsa-cpp-coding-interview-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: C & C++ Programming for Beginners: Memory Management, Pointers & Logic -->
+                <article class="blog-card" data-category="language">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/c_cpp.jpg" alt="C & C++ Programming for Beginners: Memory Management, Pointers & Logic" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-language">C & C++</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/c-cpp-programming-guide.html">C & C++ Programming for Beginners: Memory Management, Pointers & Logic</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Start your programming journey with C and C++. Learn variables, memory pointers, dynamic allocation, OOP, and strong problem-solving skills.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/c-cpp-programming-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: How AI is Transforming Digital Marketing in 2026 -->
                 <article class="blog-card" data-category="marketing ai">
                     <div class="blog-card-thumb">
-                        <img src="./img/course_img/Marketing is all about offering solutions!.jpeg" alt="AI in Digital Marketing">
+                        <img src="./img/course_img/Marketing is all about offering solutions!.jpeg" alt="How AI is Transforming Digital Marketing in 2026" loading="lazy" decoding="async">
                         <span class="blog-card-badge badge-digital">Digital Marketing</span>
                     </div>
                     <div class="blog-card-body">
@@ -194,41 +727,10 @@
                     </div>
                 </article>
 
-                <!-- ═══════════════════════════════════════════════════
-                     CARD 3: MERN Stack Guide
-                     ═══════════════════════════════════════════════════ -->
-                <article class="blog-card" data-category="web">
-                    <div class="blog-card-thumb">
-                        <img src="./img/course_img/MERN.jpeg" alt="What is MERN Stack">
-                        <span class="blog-card-badge badge-web">Web Dev</span>
-                    </div>
-                    <div class="blog-card-body">
-                        <div class="blog-card-meta">
-                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
-                            <span><i class="fa-regular fa-clock"></i> 7 min read</span>
-                        </div>
-                        <h2 class="blog-card-title">
-                            <a href="./blogs/Fullstack-Developer/what-is-mern.html">What is MERN Stack? Complete Architecture & Career Scope</a>
-                        </h2>
-                        <p class="blog-card-desc">
-                            Understand MongoDB, Express.js, React.js, and Node.js synergy, why startups prefer MERN, and salary packages for MERN developers in India.
-                        </p>
-                        <div class="blog-card-footer">
-                            <div class="blog-author-info">
-                                <div class="blog-author-avatar">CS</div>
-                                <span class="blog-author-name">Code of School</span>
-                            </div>
-                            <a href="./blogs/Fullstack-Developer/what-is-mern.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- ═══════════════════════════════════════════════════
-                     CARD 4: SEO Career Guide
-                     ═══════════════════════════════════════════════════ -->
+                <!-- CARD: Complete Guide to Building a High-Paying Career in SEO -->
                 <article class="blog-card" data-category="marketing career">
                     <div class="blog-card-thumb">
-                        <img src="./img/closeup-business-woman-making-notes-document-1536x1025.jpg" alt="SEO Career Guide">
+                        <img src="./img/closeup-business-woman-making-notes-document-1536x1025.jpg" alt="Complete Guide to Building a High-Paying Career in SEO" loading="lazy" decoding="async">
                         <span class="blog-card-badge badge-digital">SEO & Growth</span>
                     </div>
                     <div class="blog-card-body">
@@ -252,41 +754,10 @@
                     </div>
                 </article>
 
-                <!-- ═══════════════════════════════════════════════════
-                     CARD 5: Freshers Interview Tips
-                     ═══════════════════════════════════════════════════ -->
-                <article class="blog-card" data-category="career web">
-                    <div class="blog-card-thumb">
-                        <img src="./img/course_img/data.jpg" alt="Developer Interviews">
-                        <span class="blog-card-badge badge-ai">Interview Prep</span>
-                    </div>
-                    <div class="blog-card-body">
-                        <div class="blog-card-meta">
-                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
-                            <span><i class="fa-regular fa-clock"></i> 6 min read</span>
-                        </div>
-                        <h2 class="blog-card-title">
-                            <a href="./blogs/Fullstack-Developer/developer-interviews.html">How Freshers Can Crack Technical Coding Interviews</a>
-                        </h2>
-                        <p class="blog-card-desc">
-                            Essential tips on project showcase, GitHub portfolio presentation, live coding challenges, and HR interview questions for IT placements.
-                        </p>
-                        <div class="blog-card-footer">
-                            <div class="blog-author-info">
-                                <div class="blog-author-avatar">CS</div>
-                                <span class="blog-author-name">Code of School</span>
-                            </div>
-                            <a href="./blogs/Fullstack-Developer/developer-interviews.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- ═══════════════════════════════════════════════════
-                     CARD 6: Social Media Marketing Strategies
-                     ═══════════════════════════════════════════════════ -->
+                <!-- CARD: Social Media Marketing Guide: Growth Hacks for 2026 -->
                 <article class="blog-card" data-category="marketing">
                     <div class="blog-card-thumb">
-                        <img src="./img/course_img/video-editing.jpg" alt="Social Media Strategy">
+                        <img src="./img/audience-segmentation-abstract-concept-illustration-1536x1536-1.png" alt="Social Media Marketing Guide: Growth Hacks for 2026" loading="lazy" decoding="async">
                         <span class="blog-card-badge badge-digital">Social Media</span>
                     </div>
                     <div class="blog-card-body">
@@ -310,13 +781,167 @@
                     </div>
                 </article>
 
-                <!-- ========================================================
-                     HOW TO ADD NEW BLOG MANUALLY (INSTRUCTION COMMENT):
-                     1. Copy 'blogs/blog-template.html' and rename to your new blog file.
-                     2. Write your content in that file.
-                     3. Copy one of the <article class="blog-card"> blocks above, 
-                        update the title, link, thumbnail, category, and paste here!
-                     ======================================================== -->
+                <!-- CARD: Why Indore is Becoming Central India's Biggest Digital Hub -->
+                <article class="blog-card" data-category="marketing career">
+                    <div class="blog-card-thumb">
+                        <img src="./img/Indore ( Head ) Office2.jpg.jpeg" alt="Why Indore is Becoming Central India's Biggest Digital Hub" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-digital">Indore Growth</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/Digital-Marketing/indore-digital-growth.html">Why Indore is Becoming Central India's Biggest Digital Hub</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Explore IT startup booms, performance marketing opportunities, and why Indore students are building high-paying digital careers.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/Digital-Marketing/indore-digital-growth.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: UI/UX Design Career Blueprint: Figma, Wireframing, Psychology & Portfolios -->
+                <article class="blog-card" data-category="design career">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/ui-ux.jpg" alt="UI/UX Design Career Blueprint: Figma, Wireframing, Psychology & Portfolios" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-digital">UI/UX Design</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/ui-ux-design-career-guide.html">UI/UX Design Career Blueprint: Figma, Wireframing, Psychology & Portfolios</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Become a professional UI/UX Designer in 2026. Master Figma, user research, wireframing, interactive prototyping, and design systems.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/ui-ux-design-career-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: Professional Video Editing & Motion Graphics: Premiere Pro & After Effects -->
+                <article class="blog-card" data-category="other design">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/video-editing.jpg" alt="Professional Video Editing & Motion Graphics: Premiere Pro & After Effects" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-digital">Video Editing</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/video-editing-career-guide.html">Professional Video Editing & Motion Graphics: Premiere Pro & After Effects</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Master professional video editing. Learn Adobe Premiere Pro, After Effects, color grading, sound design, YouTube edits, and social media reels.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/video-editing-career-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: Graphic Design Fundamentals: Photoshop, Illustrator, Branding & Visuals -->
+                <article class="blog-card" data-category="other design">
+                    <div class="blog-card-thumb">
+                        <img src="./img/art.jpg" alt="Graphic Design Fundamentals: Photoshop, Illustrator, Branding & Visuals" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-digital">Graphic Design</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/graphic-design-mastery-guide.html">Graphic Design Fundamentals: Photoshop, Illustrator, Branding & Visuals</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Master graphic design and visual branding. Learn Adobe Photoshop, Illustrator, InDesign, typography, color theory, social media creatives, and print media.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/graphic-design-mastery-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: Business Development Executive (BDE) in IT: High-Growth Sales Career Guide -->
+                <article class="blog-card" data-category="career other">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/7740c42ff80e80cab457718231d3e0e6.jpg" alt="Business Development Executive (BDE) in IT: High-Growth Sales Career Guide" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-digital">BDE & IT Sales</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/bde-it-sales-career-guide.html">Business Development Executive (BDE) in IT: High-Growth Sales Career Guide</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Step-by-step career guide for Business Development Executives in IT companies. Learn client acquisition, B2B lead generation, cold pitching, and deal closures.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/bde-it-sales-career-guide.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD: How Freshers Can Crack Technical Coding Interviews -->
+                <article class="blog-card" data-category="career web">
+                    <div class="blog-card-thumb">
+                        <img src="./img/course_img/cos classroom4.JPG" alt="How Freshers Can Crack Technical Coding Interviews" loading="lazy" decoding="async">
+                        <span class="blog-card-badge badge-ai">Interview Prep</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="./blogs/Fullstack-Developer/developer-interviews.html">How Freshers Can Crack Technical Coding Interviews</a>
+                        </h2>
+                        <p class="blog-card-desc">
+                            Essential tips on project showcase, GitHub portfolio presentation, live coding challenges, and HR interview questions for IT placements.
+                        </p>
+                        <div class="blog-card-footer">
+                            <div class="blog-author-info">
+                                <div class="blog-author-avatar">CS</div>
+                                <span class="blog-author-name">Code of School</span>
+                            </div>
+                            <a href="./blogs/Fullstack-Developer/developer-interviews.html" class="blog-read-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
 
             </div>
         </main>
@@ -352,16 +977,16 @@
 
                     <div class="footer-log">
                         <div class="logo-box">
-                            <img src="./img/course_img/cmmi-removebg-preview-3.png" alt="CMMI">
+                            <img src="./img/course_img/cmmi-removebg-preview-3.png" alt="CMMI" loading="lazy" decoding="async">
                         </div>
                         <div class="logo-box">
-                            <img src="./img/course_img/iso-final-removebg-preview-1.png" alt="ISO">
+                            <img src="./img/course_img/iso-final-removebg-preview-1.png" alt="ISO" loading="lazy" decoding="async">
                         </div>
                         <div class="logo-box">
-                            <img src="./img/course_img/iso-removebg-preview-1.png" alt="ISO">
+                            <img src="./img/course_img/iso-removebg-preview-1.png" alt="ISO" loading="lazy" decoding="async">
                         </div>
                         <div class="logo-box">
-                            <img src="./img/course_img/msme-removebg-preview.png" alt="MSME">
+                            <img src="./img/course_img/msme-removebg-preview.png" alt="MSME" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -491,7 +1116,7 @@
 
                     <h3 id="heading-two">Get in Touch</h3>
                     <img src="./img/new-map.jpeg" alt="Courses Image"
-                        style="width:100%; border-radius:8px; margin-top:1rem;">
+                        style="width:100%; border-radius:8px; margin-top:1rem;" loading="lazy" decoding="async">
 
                     <div class="footer-contact-phoneno">
                         <div class="footer-contact-logo">
@@ -761,7 +1386,7 @@
 
     <!-- JavaScript for Filter & Mobile Menu -->
     <script src="script.js"></script>
-    <script>
+        <script>
         let currentCategory = 'all';
 
         function setCategory(cat, btnElement) {
@@ -772,16 +1397,16 @@
         }
 
         function filterBlogs() {
-            const query = document.getElementById('blogSearchInput').value.toLowerCase().trim();
+            const query = (document.getElementById('blogSearchInput')?.value || '').toLowerCase().trim();
             const cards = document.querySelectorAll('.blog-card');
 
             cards.forEach(card => {
-                const title = card.querySelector('.blog-card-title').innerText.toLowerCase();
-                const desc = card.querySelector('.blog-card-desc').innerText.toLowerCase();
-                const categories = card.getAttribute('data-category') || '';
+                const title = (card.querySelector('.blog-card-title')?.innerText || '').toLowerCase();
+                const desc = (card.querySelector('.blog-card-excerpt')?.innerText || card.querySelector('.blog-card-desc')?.innerText || '').toLowerCase();
+                const categories = (card.getAttribute('data-category') || '').toLowerCase();
 
-                const matchesCategory = (currentCategory === 'all') || categories.includes(currentCategory);
-                const matchesSearch = title.includes(query) || desc.includes(query);
+                const matchesCategory = (currentCategory === 'all') || categories.split(' ').includes(currentCategory);
+                const matchesSearch = !query || title.includes(query) || desc.includes(query);
 
                 if (matchesCategory && matchesSearch) {
                     card.style.display = 'flex';

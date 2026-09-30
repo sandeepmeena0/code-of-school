@@ -975,6 +975,7 @@ footer::after {
 /* ── Contact column ───────────────────────────────────────────────── */
 .footer-contact {
   position: relative;
+  width: 100%;
 }
 .footer-contact-loc,
 .footer-contact-phoneno,
@@ -985,19 +986,22 @@ footer::after {
   gap: .75rem;
   padding: .7rem 0;
   border-bottom: 1px solid var(--ft-border2);
+  width: 100%;
+  box-sizing: border-box;
 }
 .footer-contact-loc:last-of-type,
 .footer-contact-time { border-bottom: none; }
 
 /* Icon containers */
 .footer-contact-logo {
-  width: 30px; height: 30px;
+  width: 32px; height: 32px;
   border-radius: 8px;
   background: var(--ft-surface);
   border: 1px solid var(--ft-border);
   display: flex; align-items: center; justify-content: center;
   color: var(--ft-orange);
   flex-shrink: 0;
+  margin-top: 2px;
   transition: all .2s;
 }
 .footer-contact-loc:hover .footer-contact-logo,
@@ -1009,30 +1013,45 @@ footer::after {
 }
 
 /* Location text */
+.footer-contact-location {
+  flex: 1;
+  min-width: 0;
+}
 .footer-contact-location a {
   font-size: 13.5px;
   color: var(--ft-muted);
-  line-height: 1.75;
+  line-height: 1.65;
   transition: color .18s;
   text-decoration: none;
-
+  display: block;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 .footer-contact-location a:hover { color: var(--ft-white); }
 .footer-contact-location a b { color: var(--ft-white); font-weight: 600; }
 
 /* Phone / mail / time */
+.contact-no,
+.mail-add,
+.office {
+  flex: 1;
+  min-width: 0;
+}
+
 .contact-no ul,
 .mail-add ul,
-.office ul { list-style: none; padding: 0; margin: 6px 0px; }
+.office ul { list-style: none; padding: 0; margin: 4px 0px; }
 
 .contact-no ul li a,
 .mail-add ul li a {
   font-size: 14px;
   color: var(--ft-muted);
   display: block;
-  padding: .1rem 0;
+  padding: .15rem 0;
   transition: color .18s;
   text-decoration: none;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 .contact-no ul li a:hover,
 .mail-add ul li a:hover { color: var(--ft-orange-l); }
@@ -1040,8 +1059,9 @@ footer::after {
 .office ul li {
   font-size: 12.5px;
   color: var(--ft-muted);
-  padding: .1rem 0;
-  line-height: 1.7;
+  padding: .15rem 0;
+  line-height: 1.6;
+  word-break: break-word;
 }
 
 /* ═══════════════════════════════════════════════════════════════════
@@ -1177,28 +1197,38 @@ footer::after {
   .footer-offer { grid-template-columns: 1fr; gap: 1rem; }
 }
 @media (max-width: 768px) {
-  .footer-partone { grid-template-columns: 1fr; padding: 2.5rem 1rem 2rem; gap: 2rem; }
+  .footer-partone { grid-template-columns: 1fr; padding: 2rem 1.25rem 1.75rem; gap: 2.25rem; }
   .footer-partone > div { padding: 0 !important; }
   .footer-partone > div::before { display: none !important; }
   .footer-offer { padding: 1.25rem; }
   .footer-parttwo { padding: 1rem 1.25rem; flex-direction: column; text-align: center; }
   .footer-parttwo::after { width: 100%; text-align: center; }
-    .footer-image{display: flex;justify-content: center;}
+  .footer-image { display: flex; justify-content: flex-start; }
+  .footer-image img { width: 135px; height: auto; max-width: 100%; object-fit: contain; }
+  .footer-log { flex-wrap: wrap; justify-content: flex-start; gap: 8px; }
+  .logo-box { width: 64px; height: 64px; }
 }
 @media (max-width: 480px) {
   .footer-logo a { width: 34px; height: 34px; border-radius: 8px; }
-
-  .footer-image img { height: 100px;width: 100%; }
+  .footer-image img { width: 125px; height: auto; object-fit: contain; }
+  .logo-box { width: 58px; height: 58px; border-radius: 12px; }
+  .footer-contact-loc,
+  .footer-contact-phoneno,
+  .footer-contact-mail,
+  .footer-contact-time {
+    padding: .55rem 0;
+  }
 }
 .footer-coures a{
     display:inline-block
-  
 }
 .phone-list {
   display: flex;
-  gap: 10px; /* space between numbers */
+  flex-wrap: wrap;
+  gap: 8px 12px;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 /* .footer-offer{
     display: grid;
@@ -1269,4 +1299,62 @@ footer::after {
 }
 .footer-hr{
     color: #888686;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  transition: transform 0.3s ease, bottom 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(252, 29, 29);
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+@media (max-width: 600px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .whatsapp-float img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .notification-dot {
+    width: 10px;
+    height: 10px;
+    top: 6px;
+    right: 8px;
+  }
 }

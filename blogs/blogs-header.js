@@ -299,6 +299,25 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 //For Whatsapp   
+function ensureWhatsappButton() {
+    let whatsappButton = document.getElementById("whatsappButton");
+    if (!whatsappButton) {
+        whatsappButton = document.createElement("a");
+        whatsappButton.href = "https://wa.me/919977723584?text=Hi%20I%20need%20help";
+        whatsappButton.className = "whatsapp-float";
+        whatsappButton.id = "whatsappButton";
+        whatsappButton.target = "_blank";
+        whatsappButton.setAttribute("aria-label", "WhatsApp Chat");
+        whatsappButton.innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" loading="lazy" decoding="async"><span class="notification-dot"></span>';
+        document.body.appendChild(whatsappButton);
+    }
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener("DOMContentLoaded", ensureWhatsappButton);
+} else {
+    ensureWhatsappButton();
+}
 
 window.addEventListener("scroll", () => {
     const whatsappButton = document.getElementById("whatsappButton");
@@ -306,8 +325,7 @@ window.addEventListener("scroll", () => {
 
     if (!footer || !whatsappButton) return;
 
-    const footerTop = footer.offsetTop;
-    const scrollY = window.scrollY;
+    const scrollY = window.scrollY || window.pageYOffset;
     const windowHeight = window.innerHeight;
 
     // Total page height before footer
